@@ -1,0 +1,51 @@
+.header
+  background: $lightblue
+  position: relative
+  .logo
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -50px
+  .schedule
+    display: inline-block
+    vertical-align: middle
+    margin-right: 45px
+  .btn
+    vertical-align: middle
+    margin-right: 45px
+  .phone-number
+    display: inline-block
+    vertical-align: middle
+
+.header__inner
+  padding-left: 250px
+  position: relative
+
+.header__row
+  text-align: right
+  line-height: 70px
+  height: 70px
+  & + &
+    border-top: 1px solid #D0D5DF
+
+
+.nav
+  display: inline-block
+  vertical-align: middle
+  line-height: normal
+  font-size: 0
+
+.nav__link
+  display: inline-block
+  padding: 14px
+  font-size: 13px
+  +spacing(70)
+  text-decoration: none
+  color: #052E75
+  text-transform: uppercase
+  &:first-child
+    padding-left: 0
+  &:last-child
+    padding-right: 0
+  &.is-active
+    color: #6B6C6D

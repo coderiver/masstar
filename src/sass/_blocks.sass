@@ -1,0 +1,87 @@
+.btn
+  display: inline-block
+  min-width: 180px
+  height: 35px
+  box-sizing: border-box
+  border-radius: 3px
+  background: #FFF
+  box-shadow: 1px 2px 3px 0px rgb(0, 17, 48)
+  +spacing(70)
+  +family
+  text-align: center
+  font-size: 13px
+  font-weight: bold
+  text-transform: uppercase
+  > span
+    display: inline-block
+    vertical-align: middle
+  &:active
+    transform: translate(0, 1px)
+    box-shadow: none
+  .icon
+    margin-right: 10px
+
+a.btn
+  line-height: 35px
+
+.btn_blue
+  color: #1165AB
+  box-shadow: 1px 2px 3px 0px rgb(136, 169, 226)
+
+
+.icon
+  display: inline-block
+
+
+.logo
+  display: block
+  +hidetext
+  +sprite(logo)
+
+
+.schedule
+  display: inline-block
+  font-size: 13px
+  line-height: normal
+
+.schedule__time
+  color: $lightgray
+  margin-right: 10px
+  display: inline-block
+  vertical-align: middle
+
+.schedule__days
+  display: inline-block
+  vertical-align: middle
+  font-size: 0
+  white-space: nowrap
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-left: 4px
+    background: #D0D5E0
+    width: 11px
+    height: 11px
+    border-radius: 50%
+    &:first-child
+      margin-left: 0
+    &.is-workday
+      background: #012C77
+
+
+.phone-number
+  font-size: 13px
+  line-height: normal
+  color: $lightgray
+  > span,
+  > a
+    display: inline-block
+    vertical-align: middle
+  > span
+    margin-right: 10px
+  > a
+    text-decoration: none
+    font-size: 22px
+    font-weight: bold
+    color: #012C77
+    +spacing(30)

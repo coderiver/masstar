@@ -1,0 +1,35 @@
+$icons: (
+  logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 211px, TH: 125px, IMG: '../img/icons.png'),
+  phone-blue: (X: 0px, Y:-109px, W: 16px, H: 16px, TW: 211px, TH: 125px, IMG: '../img/icons.png'),
+);
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr) {
+  $icon: map-get($icons, $icon);
+  @return map-get($icon, $attr);
+}
+
+@mixin sprite($iconName) {
+  background-image: url(icon-attr($iconName, IMG));
+  width: icon-attr($iconName, W);
+  height: icon-attr($iconName, H);
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y);
+}
+
+
+
+.icon-logo {
+  width: 211px;
+  height: 99px;
+  background-image: url('../img/icons.png');
+  background-position: 0px 0px;
+}
+
+.icon-phone-blue {
+  width: 16px;
+  height: 16px;
+  background-image: url('../img/icons.png');
+  background-position: 0px -109px;
+}
+

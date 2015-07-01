@@ -1,0 +1,11 @@
+@function em($size, $context: 16)
+  @return ($size/$context) * 1em
+
+@function img-url($image)
+  @return url('../img/#{$image}')
+
+=image($image)
+  background-image: img-url($image)
+
+=spacing($value:0)
+  letter-spacing: $value / 1000 + em
