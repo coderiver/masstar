@@ -1,0 +1,167 @@
+.menu-wrapper
+  height: 470px
+  margin-bottom: -100px
+
+
+.menu
+  position: relative
+  background: #0C419E
+  min-height: 67px
+  &:after
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 100%
+    left: 0
+    right: 0
+    width: 740px
+    height: 0
+    margin: auto
+    background-color: #000B20
+    box-shadow: 0 0 100px 22px #000B20
+
+.menu__head
+  position: absolute
+  z-index: 3
+  top: 0
+  left: 0
+  right: 0
+  +clr
+
+.menu__btn
+  position: relative
+  width: 33.333%
+  float: left
+  background: #012C77
+  height: 67px
+  color: #FFF
+  font-size: 22px
+  line-height: normal
+  font-weight: normal
+  +spacing(50)
+  > span
+    display: inline-block
+    padding-right: 20px
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      top: 50%
+      right: 4px
+      margin: -4px -2px 0 0
+      +arr(5,8,#FFF,r)
+  &:before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 3px
+    background: #001740
+  &:nth-child(2)
+    background: #0C419E
+    &:before
+      background: #092556
+  &:last-child
+    background: #1165AB
+    &:before
+      background: #0F4B7D
+  &.is-active
+    background: none
+    &:before
+      display: none
+    > span
+      &:after
+        margin: -2px -4px 0 0
+        +arr(8,5,#FFF,b)
+
+.menu__tab
+  display: none
+  position: relative
+  padding: 112px 0 0 33.333%
+  box-sizing: border-box
+  height: 470px
+  font-size: 0
+  background: #012C77 img-url('tiger.png') no-repeat 100% 50%
+  overflow: hidden
+  &:before
+    content: ""
+    position: absolute
+    z-index: 0
+    bottom: 60px
+    right: 230px
+    width: 0
+    height: 0
+    box-shadow: 0 0 285px 285px rgba(133, 167, 237, 0.25)
+  &:nth-child(2)
+    background-color: #0C419E
+  &:last-child
+    background-color: #1165AB
+  &.is-active
+    display: block
+
+.menu__pic
+  position: absolute
+  z-index: 1
+  top: 0
+  bottom: 0
+  left: 0
+  width: 33.333%
+
+.menu__tab-column
+  position: relative
+  z-index: 1
+  width: 50%
+  box-sizing: border-box
+  display: inline-block
+  vertical-align: top
+  padding-right: 40px
+  font-size: 15px
+
+.menu__list
+  font-size: 18px
+  +spacing(30)
+  color: #FFF
+  > li
+    margin-top: 17px
+    &:before
+      content: ""
+      display: inline-block
+      vertical-align: middle
+      margin-right: 15px
+      width: 0
+      height: 0
+      border: 3px solid
+      border-radius: 50%
+    &:first-child
+      margin-top: 0
+  a
+    text-decoration: none
+    border-bottom: 1px solid
+    border-color: #4E6EA6
+    border-color: rgba(#FFF, 0.3)
+    color: inherit
+    +trans
+    &:hover
+      color: $red
+      border-color: $red
+      border-color: rgba($red, 0.3)
+
+.menu__promo
+  color: #B8C1D7
+  font-style: italic
+  +spacing(30)
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: -40px
+    bottom: 0
+    width: 1px
+    background: #4E6EA6
+    background: rgba(#FFF, 0.3)
+  p + p
+    margin-top: 10px
+
+.bg-glass
+  background: img-url('glass.png') no-repeat 50% 100%

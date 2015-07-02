@@ -1,5 +1,5 @@
 .header
-  background: $lightblue
+  background: $lightbg
   position: relative
   .logo
     position: absolute
@@ -25,6 +25,7 @@
   text-align: right
   line-height: 70px
   height: 70px
+  white-space: nowrap
   & + &
     border-top: 1px solid #D0D5DF
 
@@ -43,9 +44,74 @@
   text-decoration: none
   color: #052E75
   text-transform: uppercase
+  +trans(color)
   &:first-child
     padding-left: 0
   &:last-child
     padding-right: 0
+  &:hover
+    color: $red
   &.is-active
     color: #6B6C6D
+
+.main-page
+  background: $lightbg
+
+.map-wrapper
+  padding: 180px 0
+  background: #070E1D img-url('map.jpg') no-repeat center center
+  background-size: cover
+
+.text
+  color: #CFD0D2
+  font-size: 15px
+  +spacing(30)
+  > p
+    margin: 15px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+
+.columns
+  margin: 0 -10px
+  +clr
+
+.columns__text,
+.columns__figure
+  float: left
+  width: 50%
+  box-sizing: border-box
+  padding: 0 10px
+
+.columns__text
+  padding-top: 35px
+
+
+.slider
+  background: $lightbg
+  padding: 50px 40px 55px
+  box-sizing: border-box
+  +clr
+
+.slider__slide
+  float: left
+  position: relative
+  padding-left: 120px
+  .title
+    margin-bottom: 7px
+  .text
+    color: #717274
+
+.slider__img
+  position: absolute
+  top: 0
+  left: 0
+  width: 96px
+  height: 139px
+  box-shadow: 0 5px 25px -5px rgba(#002360, 0.28)
+  img
+    display: block
+    max-width: 100%
+

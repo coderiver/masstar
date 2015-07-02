@@ -1,13 +1,11 @@
-// require('jquery');
-// require('modernizr');
+global.jQuery = global.$ = require('jquery');
 
-var accordion = require('./modules/accordion');
+var Menu = require('./modules/menu.js');
 
-accordion(
-    '.accordion',
-    '.accordion__item',
-    '.accordion__btn',
-    '.accordion__content'
-    );
+$(document).ready(function() {
 
-console.log('Hello World!');
+    console.log('Hello World!');
+
+    var menu = new Menu('.menu');
+
+});

@@ -10,11 +10,9 @@
   "author": "coderiver || buschidos",
   "license": "ISC",
   "browser": {
-    "jquery": "./bower_components/jquery/dist/jquery.js",
     "modernizr": "./bower_components/modernizr/modernizr.js"
   },
   "browserify-shim": {
-    "jquery": "$",
     "modernizr": "Modernizr"
   },
   "browserify": {
@@ -24,7 +22,8 @@
     ]
   },
   "jscsConfig": {
-    "preset": "airbnb"
+    "preset": "airbnb",
+    "validateIndentation": 4
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
@@ -50,5 +49,9 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.2.3"
+  },
+  "dependencies": {
+    "jquery": "^1.11.3",
+    "slick-carousel": "^1.5.5"
   }
 }

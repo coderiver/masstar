@@ -9,3 +9,10 @@
 
 =spacing($value:0)
   letter-spacing: $value / 1000 + em
+
+=smoothfont
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+=trans($prop: all, $dur: 0.2, $func: linear)
+  transition: #{$prop} #{$dur}s #{$func}

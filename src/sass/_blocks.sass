@@ -3,6 +3,7 @@
   min-width: 180px
   height: 35px
   box-sizing: border-box
+  padding: 0 10px
   border-radius: 3px
   background: #FFF
   box-shadow: 1px 2px 3px 0px rgb(0, 17, 48)
@@ -11,10 +12,16 @@
   text-align: center
   font-size: 13px
   font-weight: bold
+  font-style: normal
   text-transform: uppercase
+  text-decoration: none
+  color: #000
+  +trans(color)
   > span
     display: inline-block
     vertical-align: middle
+  &:hover
+    color: $red
   &:active
     transform: translate(0, 1px)
     box-shadow: none
@@ -27,6 +34,12 @@ a.btn
 .btn_blue
   color: #1165AB
   box-shadow: 1px 2px 3px 0px rgb(136, 169, 226)
+
+.btn_w230
+  min-width: 230px
+
+.btn-wrap
+  margin-top: 30px
 
 
 .icon
@@ -83,5 +96,71 @@ a.btn
     text-decoration: none
     font-size: 22px
     font-weight: bold
-    color: #012C77
+    color: $link
     +spacing(30)
+
+
+.title
+  display: block
+  margin-bottom: 25px
+  font-size: 30px
+  font-weight: bold
+  color: #FFF
+  +spacing(50)
+
+.title_small
+  font-size: 24px
+  +spacing(30)
+
+.title_link
+  display: inline-block
+  font-size: 24px
+  color: $link
+  > span, > a
+    border-bottom: 1px solid
+    border-color: $link
+    border-color: rgba($link, 0.3)
+    +trans
+  > a
+    text-decoration: none
+    color: inherit
+  &:hover
+    > span, > a
+      color: $red
+      border-color: rgba($red, 0.3)
+
+
+.number
+  width: 240px
+  height: 240px
+  box-sizing: border-box
+  padding: 35px 40px
+  background: #01348C
+  color: #FFF
+
+.number__value
+  display: inline-block
+  vertical-align: bottom
+  font-size: 100px
+  font-weight: bold
+  line-height: 1
+  @for $i from 1 through 100
+  text-shadow: 1px 1px 0 #00276E, 2px 2px 0 #00276E, 3px 3px 0 #00276E, 4px 4px 0 #00276E, 5px 5px 0 #00276E, 6px 6px 0 #00276E
+
+.number__vertical
+  display: inline-block
+  vertical-align: bottom
+  font-size: 18px
+  width: 18px
+  transform: rotate(-90deg)
+  transform-origin: 0 0
+  font-weight: bold
+  text-transform: uppercase
+  +spacing(30)
+  text-shadow: -1px 1px 0 #00276E, -2px 2px 0 #00276E, -3px 3px 0 #00276E, -4px 4px 0 #00276E
+
+.number__text
+  margin-top: -5px
+  display: block
+  font-size: 15px
+  line-height: 1.47
