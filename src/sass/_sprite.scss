@@ -1,6 +1,7 @@
 $icons: (
-  logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 211px, TH: 125px, IMG: '../img/icons.png'),
-  phone-blue: (X: 0px, Y:-109px, W: 16px, H: 16px, TW: 211px, TH: 125px, IMG: '../img/icons.png'),
+  logo-small: (X: 0px, Y:-109px, W: 117px, H: 37px, TW: 211px, TH: 146px, IMG: '../img/icons.png'),
+  logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 211px, TH: 146px, IMG: '../img/icons.png'),
+  phone-blue: (X: -127px, Y:-109px, W: 16px, H: 16px, TW: 211px, TH: 146px, IMG: '../img/icons.png'),
 );
 
 
@@ -19,6 +20,13 @@ $icons: (
 
 
 
+.icon-logo-small {
+  width: 117px;
+  height: 37px;
+  background-image: url('../img/icons.png');
+  background-position: 0px -109px;
+}
+
 .icon-logo {
   width: 211px;
   height: 99px;
@@ -30,6 +38,6 @@ $icons: (
   width: 16px;
   height: 16px;
   background-image: url('../img/icons.png');
-  background-position: 0px -109px;
+  background-position: -127px -109px;
 }
 

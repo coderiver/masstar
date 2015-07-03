@@ -11,7 +11,7 @@
   +family
   text-align: center
   font-size: 13px
-  font-weight: bold
+  +f(b)
   font-style: normal
   text-transform: uppercase
   text-decoration: none
@@ -95,7 +95,7 @@ a.btn
   > a
     text-decoration: none
     font-size: 22px
-    font-weight: bold
+    +f(b)
     color: $link
     +spacing(30)
 
@@ -104,9 +104,17 @@ a.btn
   display: block
   margin-bottom: 25px
   font-size: 30px
-  font-weight: bold
+  +f(b)
   color: #FFF
   +spacing(50)
+  > a
+    color: inherit
+    text-decoration: none
+    border-bottom: 1px solid
+    +trans
+    &:hover
+      color: $red
+      border-color: rgba($red, 0.3)
 
 .title_small
   font-size: 24px
@@ -116,18 +124,23 @@ a.btn
   display: inline-block
   font-size: 24px
   color: $link
-  > span, > a
+  +spacing(30)
+  > a, > span
     border-bottom: 1px solid
     border-color: $link
     border-color: rgba($link, 0.3)
     +trans
-  > a
-    text-decoration: none
-    color: inherit
-  &:hover
-    > span, > a
+  > span
+    &:hover
       color: $red
+      border-color: $red
       border-color: rgba($red, 0.3)
+
+.title_white
+  color: #FFF
+  > a
+    border-color: #FFF
+    border-color: rgba(#FFF, 0.3)
 
 
 .number
@@ -137,15 +150,15 @@ a.btn
   padding: 35px 40px
   background: #01348C
   color: #FFF
+  overflow: hidden
 
 .number__value
   display: inline-block
   vertical-align: bottom
   font-size: 100px
-  font-weight: bold
+  +f(b)
   line-height: 1
-  @for $i from 1 through 100
-  text-shadow: 1px 1px 0 #00276E, 2px 2px 0 #00276E, 3px 3px 0 #00276E, 4px 4px 0 #00276E, 5px 5px 0 #00276E, 6px 6px 0 #00276E
+  +longshadow(#00276E)
 
 .number__vertical
   display: inline-block
@@ -154,13 +167,60 @@ a.btn
   width: 18px
   transform: rotate(-90deg)
   transform-origin: 0 0
-  font-weight: bold
+  +f(b)
   text-transform: uppercase
   +spacing(30)
-  text-shadow: -1px 1px 0 #00276E, -2px 2px 0 #00276E, -3px 3px 0 #00276E, -4px 4px 0 #00276E
+  +longshadowmod(#00276E)
 
 .number__text
+  position: relative
+  z-index: 2
   margin-top: -5px
   display: block
   font-size: 15px
   line-height: 1.47
+
+
+.text
+  color: #151515
+  font-size: 15px
+  +spacing(30)
+  > p
+    margin: 15px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+.text_light
+  +color(light)
+
+.text_gray
+  +color(gray)
+
+
+.news
+  display: block
+  text-decoration: none
+  color: $link
+  font-size: 18px
+  +f(b)
+  +spacing(30)
+  line-height: 1.55
+  & + &
+    margin-top: 23px
+  &:hover
+    .news__title
+      color: $red
+      border-color: rgba($red, 0.3)
+
+.news__title
+  border-bottom: 1px solid
+  border-color: rgba($link, 0.3)
+  +trans
+
+.news__date
+  margin-left: 15px
+  +f(r)
+  font-size: 15px
+  +color(gray)

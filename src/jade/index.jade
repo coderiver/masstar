@@ -14,9 +14,10 @@ block content
     .l
       .columns
         .columns__text
-          .text
-            h2.title.title_white
-              | Доставка по всей территории Российской Федерации
+          h2.title.title_white
+            | Доставка по всей территории Российской Федерации
+
+          .text.text_light
             p.
               Компания «Масстар» поставляет органическое стекло (акриловое стекло)
               на российский рынок уже более 18 лет. Мы ежемесячно отгружаем десятки
@@ -36,7 +37,7 @@ block content
               .title.title_link
                 a(href="#")
                   | Сертификаты
-              .text
+              .text.text_gray
                 p.
                   Сертификат, подтверждающий уникальное дилерское партнёрство
                   с российским производителем органического стекла
@@ -48,5 +49,44 @@ block content
               | Тонны
             spam.number__text.
               Оргстекла ежемесячно отгружаем сотням наших клиентов
-
   //END map-wrapper
+
+  //BEGIN columns
+  .l
+    .columns
+      .columns__figure
+        a(href="#").tile
+          .tile__head(style="background-image:url('img/news.jpg')")
+            span.tile__label
+              | 25 Сентября 2015
+          .tile__content
+            strong.title.title_link
+              span
+                | «Масстар» заканчивает строительство экранов на М-5 «Урал»
+            p.text.text_gray.
+              Работы были начаты в 2012 года и сейчас выходят
+              на завершающую стадию. Срок окончания работ – сентябрь
+              2014 года.
+      .columns__text
+        .news-block
+          h2.title.title_white
+            a(href="#") Новости и события
+
+          a.news(href="#")
+            strong.news__title
+              | Сатинированные (матированные) оргстекло
+              | и поликарбонат перестали быть дефицитными продуктами
+            span.news__date
+              | 25 Сентября 2015
+          a.news(href="#")
+            strong.news__title
+              | Компания «Масстар» начала монтаж экранов на Дмитровском шоссе
+            span.news__date
+              | 18 Сентября 2015
+          a.news(href="#")
+            strong.news__title
+              | «Масстар» заканчивает строительство экранов на М-5 «Урал»
+            span.news__date
+              | 3 Сентября 2015
+  //END columns
+

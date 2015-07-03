@@ -34,7 +34,17 @@
   display: inline-block
   vertical-align: middle
   line-height: normal
+
+.nav__list
   font-size: 0
+  li
+    display: inline-block
+    &:first-child
+      .nav__link
+        padding-left: 0
+    &:last-child
+      .nav__link
+        padding-right: 0
 
 .nav__link
   display: inline-block
@@ -45,10 +55,7 @@
   color: #052E75
   text-transform: uppercase
   +trans(color)
-  &:first-child
-    padding-left: 0
-  &:last-child
-    padding-right: 0
+
   &:hover
     color: $red
   &.is-active
@@ -59,19 +66,9 @@
 
 .map-wrapper
   padding: 180px 0
+  margin: -100px 0
   background: #070E1D img-url('map.jpg') no-repeat center center
   background-size: cover
-
-.text
-  color: #CFD0D2
-  font-size: 15px
-  +spacing(30)
-  > p
-    margin: 15px 0
-    &:first-child
-      margin-top: 0
-    &:last-child
-      margin-bottom: 0
 
 
 .columns
@@ -101,8 +98,6 @@
   padding-left: 120px
   .title
     margin-bottom: 7px
-  .text
-    color: #717274
 
 .slider__img
   position: absolute
@@ -115,3 +110,94 @@
     display: block
     max-width: 100%
 
+.tile
+  display: block
+  text-decoration: none
+  &:hover
+    .title_link
+      > span
+        color: $red
+        border-color: rgba($red, 0.3)
+
+.tile__head
+  position: relative
+  height: 245px
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+
+.tile__label
+  position: absolute
+  bottom: 26px
+  left: 26px
+  font-size: 15px
+  line-height: 1.47
+  font-style: normal
+  font-weight: normal
+  color: #FFF
+  background: $link
+  border-radius: 3px
+  padding: 3px 10px
+
+.tile__content
+  background: #FFF
+  padding: 26px 28px 35px
+
+
+.news-block
+  padding-left: 40px
+  .title
+    margin-bottom: 60px
+
+
+.links
+  padding: 50px 0
+  border: solid #D0D3DD
+  border-width: 1px 0
+  font-size: 18px
+  line-height: 1.55
+  +spacing(30)
+  +clr
+  a
+    text-decoration: none
+    display: inline-block
+    color: $link
+    +trans(color)
+    &:hover
+      color: $red
+
+.links__list
+  float: left
+  width: 25%
+  > li
+    margin-top: 22px
+    &:first-child
+      margin-top: 0
+
+
+.footer
+  margin-top: 60px
+
+.footer__row
+  display: table
+  table-layout: fixed
+  border-collapse: collapse
+
+.footer__row_align-mid
+  .footer__cell
+    vertical-align: middle
+
+.footer__cell
+  display: table-cell
+  width: 33.333%
+  height: 150px
+  box-sizing: border-box
+  padding: 35px 0 25px
+  &:first-child
+    width: 245px
+  &:last-child
+    width: 245px
+    text-align: right
+
+.footer__bottom
+  background: #FFF

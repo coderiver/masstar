@@ -3,8 +3,31 @@ $lightgray: #ADAFB2
 $link: #012C77
 $red: #E43C3C
 
++font("Calibri-Bold", Calibri-Bold)
++font("Calibri-BoldItalic", Calibri-BoldItalic)
++font("Calibri-Italic", Calibri-Italic)
++font("Calibri", Calibri)
+
+=f($name, $font-size: null, $letter-spacing: null)
+  $font-family: null
+  @if $name == "r"
+    $font-family: "Calibri"
+  @if $name == "b"
+    $font-family: "Calibri-Bold"
+  @if $name == "bi"
+    $font-family: "Calibri-BoldItalic"
+  @if $name == "i"
+    $font-family: "Calibri-Italic"
+  font-family: $font-family, Helvetica, Arial, sans-serif
+  font-weight: normal
+  @if $font-size != null
+    font-size: $font-size + px
+  @if $letter-spacing != null
+    letter-spacing: $letter-spacing + em
+
 =family
-  font-family: Calibri, Open Sans, Helvetica, Arial, sans-serif
+  // font-family: Calibri, Helvetica, Arial, sans-serif
+  +f(r)
 
 body
   +family
@@ -15,3 +38,6 @@ body
 
 button
   +family
+
+b, strong
+  +f(b)
