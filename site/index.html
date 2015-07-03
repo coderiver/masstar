@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Main</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=1050">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
@@ -141,16 +141,36 @@
             </div>
             <div class="columns__figure">
               <div class="slider">
-                <div class="slider__slide">
-                  <div class="slider__img"><img src="img/certificats/cert.jpg" alt=""></div>
-                  <div class="title title_link"><a href="#">Сертификаты</a></div>
-                  <div class="text text_gray">
-                    <p>
-                      Сертификат, подтверждающий уникальное дилерское партнёрство
-                      с российским производителем органического стекла
-                      заводом «Дзержинское оргстекло»
-                    </p>
+                <div class="slider__slides">
+                  <div class="slide">
+                    <div class="slide__img"><img src="img/certificats/cert.jpg" alt=""></div>
+                    <div class="slide__content">
+                      <div class="title title_link"><a href="#">Сертификаты</a></div>
+                      <div class="text text_gray">
+                        <p>
+                          Сертификат, подтверждающий уникальное дилерское партнёрство
+                          с российским производителем органического стекла
+                          заводом «Дзержинское оргстекло»
+                        </p>
+                      </div>
+                    </div>
                   </div>
+                  <div class="slide">
+                    <div class="slide__img"><img src="img/certificats/cert.jpg" alt=""></div>
+                    <div class="slide__content">
+                      <div class="title title_link"><a href="#">Сертификаты</a></div>
+                      <div class="text text_gray">
+                        <p>
+                          Сертификат, подтверждающий уникальное дилерское партнёрство
+                          с российским производителем
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider__buttons">
+                  <button type="button" class="slider__prev"></button>
+                  <button type="button" class="slider__next"></button>
                 </div>
               </div>
               <div class="number"><strong class="number__value">23</strong><span class="number__vertical">Тонны</span>
@@ -225,18 +245,40 @@
         <!--END links-->
         <div class="footer__row footer__row_align-mid">
           <div class="footer__cell"><a href="/" class="icon icon-logo-small"></a></div>
-          <div class="footer__cell"></div>
-          <div class="footer__cell"></div>
+          <div class="footer__cell">
+            <div class="phone-number phone-number_large"><span class="text text_gray">Многоканальный телефон</span><br><a href="tel:4952150144">(495) 215-01-44</a></div>
+          </div>
+          <div class="footer__cell">
+            <div class="schedule"><span class="schedule__time">9:00–18:00</span>
+              <ul class="schedule__days">
+                <li class="is-workday"></li>
+                <li class="is-workday"></li>
+                <li class="is-workday"></li>
+                <li class="is-workday"></li>
+                <li class="is-workday"></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
         <div class="l">
           <div class="footer__row">
             <div class="footer__cell"><span class="text text_gray">© «Масстар» 1992–2015</span></div>
-            <div class="footer__cell"><span class="text">
+            <div class="footer__cell"><span class="text text_gray">
                 125319, г. Москва, ул. Черняховского,
-                <br> д. 19 («ЖБИ №23»)</span></div>
-            <div class="footer__cell"></div>
+                <br> д. 19 («ЖБИ №23»)</span>
+              <ul class="footer__links">
+                <li><a href="mailto:info@masstar.ru">info@masstar.ru</a></li>
+                <li><a href="#">Как доехать</a></li>
+                <li><a href="#">Карта сайта</a></li>
+              </ul>
+            </div>
+            <div class="footer__cell">
+              <div class="footer__made-in"><span class="text text_gray">Made in:</span><a href="#" class="flex-logotype">Flex Media</a></div>
+            </div>
           </div>
         </div>
       </div>

@@ -87,28 +87,71 @@
 
 
 .slider
+  position: relative
   background: $lightbg
-  padding: 50px 40px 55px
   box-sizing: border-box
+
+.slider__slides
   +clr
 
-.slider__slide
+.slider__buttons
+  position: absolute
+  bottom: 30px
+  right: 30px
+
+.slider__prev,
+.slider__next
+  width: 24px
+  height: 24px
+  line-height: 24px
+  background: #FFF
+  box-shadow: 2px 2px 0 0 #D1D7E2
+  border-radius: 50%
+  text-align: center
+  line-height: normal
+  &:active
+    transform: translate(0,1px)
+    box-shadow: none
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    position: relative
+.slider__prev
+  margin-right: 3px
+  &:before
+    +arr(6,8,#BBC3D1, l)
+    left: -1px
+.slider__next
+  &:before
+    +arr(6,8,#BBC3D1, r)
+    left: 1px
+
+.slide
   float: left
   position: relative
-  padding-left: 120px
+  padding: 50px 40px 55px
+  +clr
   .title
     margin-bottom: 7px
+  display: none
+  &:first-child
+    display: block
+  &.slick-slide
+    display: block
 
-.slider__img
-  position: absolute
-  top: 0
-  left: 0
+.slide__img
+  float: left
   width: 96px
   height: 139px
   box-shadow: 0 5px 25px -5px rgba(#002360, 0.28)
   img
     display: block
     max-width: 100%
+
+.slide__content
+  margin-left: 120px
+
 
 .tile
   display: block
@@ -182,10 +225,18 @@
   display: table
   table-layout: fixed
   border-collapse: collapse
+  width: 100%
+  font-size: 15px
 
 .footer__row_align-mid
   .footer__cell
     vertical-align: middle
+    padding-top: 50px
+  .phone-number
+    margin: -20px 0 0 -50px
+  .icon-logo-small
+    position: relative
+    top: 10px
 
 .footer__cell
   display: table-cell
@@ -201,3 +252,35 @@
 
 .footer__bottom
   background: #FFF
+
+.footer__links
+  margin-top: 23px
+  +spacing(30)
+  color: $link
+  font-size: 0
+  > li
+    font-size: 15px
+    display: inline-block
+    vertical-align: middle
+    &:before
+      content: "|"
+      display: inline-block
+      margin: 0 15px
+      vertical-align: middle
+      color: #CECECE
+    &:first-child
+      &:before
+        content: none
+  a
+    color: inherit
+    display: inline-block
+    text-decoration: none
+    +trans
+    &:hover
+      color: $red
+
+.footer__made-in
+  font-size: 15px
+  color: #000
+  .flex-logotype
+    margin-left: 10px

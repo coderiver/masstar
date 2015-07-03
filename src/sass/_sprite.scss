@@ -1,7 +1,9 @@
 $icons: (
-  logo-small: (X: 0px, Y:-109px, W: 117px, H: 37px, TW: 211px, TH: 146px, IMG: '../img/icons.png'),
-  logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 211px, TH: 146px, IMG: '../img/icons.png'),
-  phone-blue: (X: -127px, Y:-109px, W: 16px, H: 16px, TW: 211px, TH: 146px, IMG: '../img/icons.png'),
+  flex-logo: (X: -173px, Y:-109px, W: 29px, H: 31px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
+  logo-small: (X: 0px, Y:-109px, W: 117px, H: 37px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
+  logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
+  phone-blue: (X: 0px, Y:-156px, W: 16px, H: 16px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
+  phone-large: (X: -127px, Y:-109px, W: 36px, H: 36px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
 );
 
 
@@ -20,6 +22,13 @@ $icons: (
 
 
 
+.icon-flex-logo {
+  width: 29px;
+  height: 31px;
+  background-image: url('../img/icons.png');
+  background-position: -173px -109px;
+}
+
 .icon-logo-small {
   width: 117px;
   height: 37px;
@@ -37,6 +46,13 @@ $icons: (
 .icon-phone-blue {
   width: 16px;
   height: 16px;
+  background-image: url('../img/icons.png');
+  background-position: 0px -156px;
+}
+
+.icon-phone-large {
+  width: 36px;
+  height: 36px;
   background-image: url('../img/icons.png');
   background-position: -127px -109px;
 }

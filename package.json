@@ -23,7 +23,8 @@
   },
   "jscsConfig": {
     "preset": "airbnb",
-    "validateIndentation": 4
+    "validateIndentation": 4,
+    "disallowMultipleVarDecl": "exceptUndefined"
   },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",

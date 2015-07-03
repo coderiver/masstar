@@ -7,7 +7,24 @@ footer.footer
       .footer__cell
         a.icon.icon-logo-small(href="/")
       .footer__cell
+        .phone-number.phone-number_large
+          span.text.text_gray
+            | Многоканальный телефон
+          br
+          a(href="tel:4952150144")
+            | (495) 215-01-44
       .footer__cell
+        .schedule
+          span.schedule__time
+            | 9:00–18:00
+          ul.schedule__days
+            li.is-workday
+            li.is-workday
+            li.is-workday
+            li.is-workday
+            li.is-workday
+            li
+            li
 
   .footer__bottom
     .l
@@ -16,8 +33,16 @@ footer.footer
           span.text.text_gray
             | © «Масстар» 1992–2015
         .footer__cell
-          span.text.
+          span.text.text_gray.
             125319, г. Москва, ул. Черняховского,
             <br> д. 19 («ЖБИ №23»)
+          ul.footer__links
+            li: a(href="mailto:info@masstar.ru") info@masstar.ru
+            li: a(href="#") Как доехать
+            li: a(href="#") Карта сайта
         .footer__cell
+          .footer__made-in
+            span.text.text_gray Made in:
+            a.flex-logotype(href="#")
+              | Flex Media
 //END footer

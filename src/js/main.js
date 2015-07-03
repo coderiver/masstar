@@ -1,11 +1,20 @@
 global.jQuery = global.$ = require('jquery');
+require('slick-carousel');
 
-var Menu = require('./modules/menu.js');
+var Menu   = require('./modules/menu.js');
+var Slider = require('./modules/slider.js');
 
 $(document).ready(function() {
 
-    console.log('Hello World!');
+    var menu, slider;
 
-    var menu = new Menu('.menu');
+    menu = new Menu('.menu');
+
+    slider = $('.slider');
+    if (slider.length) {
+        slider.each(function(index, el) {
+            new Slider(el);
+        });
+    };
 
 });
