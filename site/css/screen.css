@@ -25,7 +25,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "Calibri-BoldItalic"; src: url("../fonts/Calibri-BoldItalic.eot"); src: url("../fonts/Calibri-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/Calibri-BoldItalic.woff2") format("woff2"), url("../fonts/Calibri-BoldItalic.woff") format("woff"), url("../fonts/Calibri-BoldItalic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "Calibri-Italic"; src: url("../fonts/Calibri-Italic.eot"); src: url("../fonts/Calibri-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Calibri-Italic.woff2") format("woff2"), url("../fonts/Calibri-Italic.woff") format("woff"), url("../fonts/Calibri-Italic.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "Calibri"; src: url("../fonts/Calibri.eot"); src: url("../fonts/Calibri.eot?#iefix") format("embedded-opentype"), url("../fonts/Calibri.woff2") format("woff2"), url("../fonts/Calibri.woff") format("woff"), url("../fonts/Calibri.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { font-family: "Calibri", Helvetica, Arial, sans-serif; font-weight: normal; background: #FFF; font-size: 16px; line-height: 1.4; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: "Calibri", Helvetica, Arial, sans-serif; font-weight: normal; background: #FFF; color: #151515; font-size: 16px; line-height: 1.4; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
 button { font-family: "Calibri", Helvetica, Arial, sans-serif; font-weight: normal; }
 
@@ -103,7 +103,7 @@ a.btn { line-height: 35px; }
 .phone-number_large > a { font-size: 48px; }
 .phone-number_large > span { margin-bottom: 9px; }
 
-.title { display: block; margin-bottom: 25px; font-size: 30px; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; color: #151515; letter-spacing: 0.05em; }
+.title { display: block; margin-bottom: 25px; font-size: 30px; line-height: 1.4; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; color: #151515; letter-spacing: 0.05em; }
 .title > a { color: inherit; text-decoration: none; border-bottom: 1px solid; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .title > a:hover { color: #E43C3C; border-color: rgba(228, 60, 60, 0.3); }
 
@@ -177,7 +177,26 @@ a.btn { line-height: 35px; }
 .scroll-to-top { background: none; }
 .scroll-to-top .icon { display: block; }
 
+.news-heading { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #D0D3DD; }
+.news-heading .title { display: inline; margin: 0; vertical-align: middle; }
+
+.news-heading__date { vertical-align: middle; margin-left: 15px; font-family: "Calibri", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 15px; color: #565658; color: rgba(21, 21, 21, 0.7); }
+
+.more-link { margin-top: 43px; color: #012C77; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; text-decoration: none; }
+.more-link:hover { color: #E43C3C; }
+.more-link a { color: inherit; text-decoration: none; }
+
+a.more-link { display: inline-block; }
+
 .l { width: 980px; margin: auto; padding: 0 35px; }
+
+.l-news { *zoom: 1; }
+.l-news:after { content: " "; display: table; clear: both; }
+
+.l-news__left { float: left; box-sizing: border-box; width: 310px; }
+.l-news__left > img { max-width: 100%; }
+
+.l-news__rigth { margin-left: 330px; }
 
 .menu-wrapper { min-height: 67px; position: relative; z-index: 1; }
 
@@ -344,6 +363,20 @@ a.btn { line-height: 35px; }
 .news-tiles__row:before { content: ""; position: absolute; top: 0; left: 1%; right: 1%; height: 1px; background: #D0D3DD; }
 .news-tiles__row:after { content: " "; display: table; clear: both; }
 .news-tiles__row:first-child { margin-top: 0; }
+
+.text { font-size: 15px; color: #151515; line-height: 1.6; letter-spacing: 0.03em; }
+.text p { margin: 28px 0; }
+.text p:first-child { margin-top: 0; }
+.text p:last-child { margin-bottom: 0; }
+.text .lead { font-size: 18px; }
+.text .title { margin: 33px 0 18px; }
+.text .title:first-child { margin-top: 0; }
+
+ul.marked-list { list-style-type: none; }
+ul.marked-list > li { position: relative; padding-left: 20px; }
+ul.marked-list > li:before { content: ""; position: absolute; top: 0.46667em; left: 0; width: 6px; height: 6px; border-radius: 50%; background: #0C419E; }
+
+ol.marked-list { list-style-type: decimal; }
 
 
 

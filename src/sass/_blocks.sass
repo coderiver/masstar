@@ -17,7 +17,6 @@
   text-decoration: none
   color: #000
   +trans
-  // transition: color 0.2s linear, background 0.2s linear
   transition-property: color, background
   > span
     display: inline-block
@@ -121,6 +120,7 @@ a.btn
   display: block
   margin-bottom: 25px
   font-size: 30px
+  line-height: 1.4
   +f(b)
   color: $dark
   +spacing(50)
@@ -369,3 +369,34 @@ a.btn
   background: none
   .icon
     display: block
+
+
+.news-heading
+  margin-bottom: 40px
+  padding-bottom: 20px
+  border-bottom: 1px solid $hrcolor
+  .title
+    display: inline
+    margin: 0
+    vertical-align: middle
+
+.news-heading__date
+  vertical-align: middle
+  margin-left: 15px
+  +f(r)
+  font-size: 15px
+  +color(gray)
+
+.more-link
+  margin-top: 43px
+  color: $link
+  +trans(color)
+  text-decoration: none
+  &:hover
+    color: $red
+  a
+    color: inherit
+    text-decoration: none
+
+a.more-link
+  display: inline-block

@@ -342,3 +342,42 @@
   +clr
   &:first-child
     margin-top: 0
+
+.text
+  font-size: 15px
+  color: $dark
+  line-height: 1.6
+  +spacing(30)
+  p
+    margin: 28px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  .lead
+    font-size: 18px
+  .title
+    margin: 33px 0 18px
+    &:first-child
+      margin-top: 0
+
+// .marked-list
+
+ul.marked-list
+  list-style-type: none
+  > li
+    position: relative
+    padding-left: 20px
+    &:before
+      content: ""
+      position: absolute
+      top: em(7,15)
+      left: 0
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background: #0C419E
+
+ol.marked-list
+  list-style-type: decimal
+
