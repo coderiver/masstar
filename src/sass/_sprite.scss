@@ -1,9 +1,10 @@
 $icons: (
-  flex-logo: (X: -173px, Y:-109px, W: 29px, H: 31px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
-  logo-small: (X: 0px, Y:-109px, W: 117px, H: 37px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
-  logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
-  phone-blue: (X: 0px, Y:-156px, W: 16px, H: 16px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
-  phone-large: (X: -127px, Y:-109px, W: 36px, H: 36px, TW: 211px, TH: 172px, IMG: '../img/icons.png'),
+  flex-logo: (X: -127px, Y:-109px, W: 29px, H: 31px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
+  logo-small: (X: 0px, Y:-109px, W: 117px, H: 37px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
+  logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
+  phone-blue: (X: -267px, Y:-73px, W: 16px, H: 16px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
+  phone-large: (X: -221px, Y:-73px, W: 36px, H: 36px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
+  to-top: (X: -221px, Y:0px, W: 63px, H: 63px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
 );
 
 
@@ -26,7 +27,7 @@ $icons: (
   width: 29px;
   height: 31px;
   background-image: url('../img/icons.png');
-  background-position: -173px -109px;
+  background-position: -127px -109px;
 }
 
 .icon-logo-small {
@@ -47,13 +48,20 @@ $icons: (
   width: 16px;
   height: 16px;
   background-image: url('../img/icons.png');
-  background-position: 0px -156px;
+  background-position: -267px -73px;
 }
 
 .icon-phone-large {
   width: 36px;
   height: 36px;
   background-image: url('../img/icons.png');
-  background-position: -127px -109px;
+  background-position: -221px -73px;
+}
+
+.icon-to-top {
+  width: 63px;
+  height: 63px;
+  background-image: url('../img/icons.png');
+  background-position: -221px 0px;
 }
 

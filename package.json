@@ -21,11 +21,6 @@
       "browserify-shim"
     ]
   },
-  "jscsConfig": {
-    "preset": "airbnb",
-    "validateIndentation": 4,
-    "disallowMultipleVarDecl": "exceptUndefined"
-  },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "browser-sync": "^2.7.13",
@@ -53,6 +48,7 @@
   },
   "dependencies": {
     "jquery": "^1.11.3",
+    "skrollr": "^0.6.26",
     "slick-carousel": "^1.5.5"
   }
 }

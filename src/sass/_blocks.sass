@@ -16,12 +16,15 @@
   text-transform: uppercase
   text-decoration: none
   color: #000
-  +trans(color)
+  +trans
+  // transition: color 0.2s linear, background 0.2s linear
+  transition-property: color, background
   > span
     display: inline-block
     vertical-align: middle
   &:hover
-    color: $red
+    background: $red
+    color: #FFF
   &:active
     transform: translate(0, 1px)
     box-shadow: none
@@ -119,7 +122,7 @@ a.btn
   margin-bottom: 25px
   font-size: 30px
   +f(b)
-  color: #FFF
+  color: $dark
   +spacing(50)
   > a
     color: inherit
@@ -149,6 +152,10 @@ a.btn
       color: $red
       border-color: $red
       border-color: rgba($red, 0.3)
+
+.title_large
+  font-size: 42px
+  line-height: 1
 
 .title_white
   color: #FFF
@@ -196,7 +203,7 @@ a.btn
 
 
 .text
-  color: #151515
+  color: $dark
   font-size: 15px
   +spacing(30)
   > p
@@ -218,19 +225,26 @@ a.btn
   text-decoration: none
   color: $link
   font-size: 18px
-  +f(b)
   +spacing(30)
   line-height: 1.55
-  & + &
-    margin-top: 23px
   &:hover
     .news__title
       color: $red
       border-color: rgba($red, 0.3)
 
+.news__pic
+  overflow: hidden
+  max-height: 160px
+  margin-bottom: 20px
+  img
+    display: block
+    margin: auto
+    max-width: 100%
+
 .news__title
   border-bottom: 1px solid
   border-color: rgba($link, 0.3)
+  +f(b)
   +trans
 
 .news__date
@@ -238,6 +252,17 @@ a.btn
   +f(r)
   font-size: 15px
   +color(gray)
+
+.news_tile
+  float: left
+  width: 33.333%
+  padding: 0 percentage(10/1000)
+  box-sizing: border-box
+  .news__title
+    +f(r)
+  .news__date
+    display: block
+    margin: 5px 0 0
 
 
 .flex-logotype
@@ -260,3 +285,87 @@ a.btn
     +sprite(flex-logo)
   &:hover
     color: $red
+
+
+.breadcrumbs
+  margin: 40px 0 20px
+  color: $link
+  color: rgba($link, 0.7)
+  font-size: 0
+  +spacing(30)
+  > li
+    display: inline-block
+    font-size: 15px
+    vertical-align: middle
+    position: relative
+    &:before
+      content: " / "
+      display: inline-block
+      margin: 0 10px
+      color: $lightgray
+    &:first-child
+      &:before
+        display: none
+    &:last-child
+      a
+        color: #000
+        color: rgba(#000, 0.7)
+        cursor: default
+  a
+    text-decoration: none
+    color: inherit
+    +trans(color)
+    &:hover
+      color: $red
+
+
+.pagi
+  position: relative
+  margin: 50px 0
+  box-sizing: border-box
+  background: $lightbg
+  border-top: 1px solid $hrcolor
+  font-size: 0
+  padding: 0 100px
+  text-align: center
+
+.pagi__btn
+  display: inline-block
+  font-size: 18px
+  color: $link
+  +trans(color)
+  line-height: 66px
+  +spacing(30)
+  height: 66px
+  width: 66px
+  text-align: center
+  text-decoration: none
+  background: none
+  user-select: none
+  &:hover
+    color: $red
+  &.is-active
+    background: #D1D4DD
+    color: #000
+  &.is-inactive
+    color: rgba($dark, 0.3)
+    cursor: default
+    pointer-events: none
+
+.pagi__prev,
+.pagi__next
+  position: absolute
+  top: 0
+  width: 100px
+
+.pagi__prev
+  left: 0
+
+.pagi__next
+  right: 0
+
+
+.scroll-to-top
+  background: none
+  .icon
+    display: block

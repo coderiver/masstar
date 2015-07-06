@@ -1,22 +1,32 @@
 .menu-wrapper
-  height: 470px
+  min-height: 67px
+  position: relative
+  z-index: 1
 
 .menu
-  position: relative
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
   background: #0C419E
   min-height: 67px
-  &:after
-    content: ""
-    position: absolute
-    z-index: -1
-    top: 100%
-    left: 0
-    right: 0
-    width: 740px
-    height: 0
-    margin: auto
-    background-color: #000B20
-    box-shadow: 0 0 100px 22px #000B20
+  &.is-open
+    &:after
+      content: ""
+      position: absolute
+      z-index: -1
+      top: 100%
+      left: 0
+      right: 0
+      width: 740px
+      height: 0
+      margin: auto
+      background-color: #000B20
+      box-shadow: 0 0 100px 22px #000B20
+
+.menu_opened
+  position: relative
+
 
 .menu__head
   position: absolute

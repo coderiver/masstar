@@ -1,14 +1,22 @@
+block vars
+
 doctype html
 html
   head
     include partials/_head
 
-  body
+  //- if need some css class for body just add var bodyClass='my-class' on page in block vars
+  body(class=bodyClass)
 
     //BEGIN out
     .out
+      block header
+        include partials/_header
       block content
     //END out
 
+    include partials/_footer
+
     //LOAD SCRIPTS
     script(src="js/main.js")
+

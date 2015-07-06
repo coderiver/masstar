@@ -6,11 +6,20 @@ var Slider = require('./modules/slider.js');
 
 $(document).ready(function() {
 
-    var menu, slider;
+    var menu       = $('.menu:not(.menu_opened)');
+    var slider     = $('.slider');
+    var menuOpened = $('.menu.menu_opened');
 
-    menu = new Menu('.menu');
+    if (menu.length) {
+        menu = new Menu(menu);
+    }
 
-    slider = $('.slider');
+    if (menuOpened.length) {
+        menuOpened = new Menu(menuOpened, {
+            alwaysOpen: true,
+        });
+    }
+
     if (slider.length) {
         slider.each(function(index, el) {
             new Slider(el);

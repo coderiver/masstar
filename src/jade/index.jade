@@ -1,16 +1,19 @@
-extends _layout-index
+block vars
+  - var bodyClass = 'main-page'
+  - var menuMod = 'menu_opened'
+  - var headerMod = 'header_large'
+
+extends _layout
 
 block title
   title Main
 
 block content
-  include partials/_header
-
   .l
-    include partials/_menu
 
   //BEGIN map-wrapper
   .map-wrapper
+    .parralax
     .l
       .columns
         .columns__text

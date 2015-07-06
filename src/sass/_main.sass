@@ -1,6 +1,7 @@
 .header
-  background: $lightbg
   position: relative
+  z-index: 2
+  background: $lightbg
   .logo
     position: absolute
     left: 0
@@ -16,6 +17,17 @@
   .phone-number
     display: inline-block
     vertical-align: middle
+
+.header_large
+  background: none
+  &:before
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 100px
 
 .header__inner
   padding-left: 250px
@@ -65,10 +77,28 @@
   background: $lightbg
 
 .map-wrapper
+  position: relative
+  z-index: 0
   padding: 180px 0
   margin: -100px 0
+  overflow: hidden
+  .l
+    position: relative
+    z-index: 1
+  & + *
+    position: relative
+    z-index: 1
+
+.parralax
+  position: absolute
+  z-index: 0
+  top: -100px
+  bottom: -100px
+  left: 0
+  right: 0
   background: #070E1D img-url('map.jpg') no-repeat center center
   background-size: cover
+
 
 
 .columns
@@ -191,11 +221,13 @@
   padding-left: 40px
   .title
     margin-bottom: 60px
+  .news + .news
+    margin-top: 23px
 
 
 .links
   padding: 50px 0
-  border: solid #D0D3DD
+  border: solid $hrcolor
   border-width: 1px 0
   font-size: 18px
   line-height: 1.55
@@ -220,6 +252,12 @@
 
 .footer
   margin-top: 60px
+  background: $lightbg
+  position: relative
+  .scroll-to-top
+    position: absolute
+    bottom: 190px
+    left: 50px
 
 .footer__row
   display: table
@@ -284,3 +322,23 @@
   color: #000
   .flex-logotype
     margin-left: 10px
+
+
+.news-tiles
+  margin: 20px -10px 0
+
+.news-tiles__row
+  margin-top: 40px
+  padding-top: 51px
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: percentage(10/1000)
+    right: percentage(10/1000)
+    height: 1px
+    background: $hrcolor
+  +clr
+  &:first-child
+    margin-top: 0

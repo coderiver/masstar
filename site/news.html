@@ -2,16 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Main</title>
+    <title>news</title>
     <meta name="viewport" content="width=1050">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
-  <body class="main-page">
+  <body>
     <!--BEGIN out-->
     <div class="out">
       <!--BEGIN header-->
-      <header class="header header_large">
+      <header class="header">
         <div class="l">
           <div class="header__inner">
             <div class="header__logo"><a href="pages.html" class="logo">Масстар</a></div>
@@ -46,7 +46,7 @@
           </div>
           <!--BEGIN menu-->
           <div class="menu-wrapper">
-            <div class="menu menu_opened">
+            <div class="menu">
               <div class="menu__head">
                 <button type="button" class="menu__btn"><span>Оргстекло</span></button>
                 <button type="button" class="menu__btn"><span>Пластики</span></button>
@@ -117,92 +117,35 @@
         </div>
       </header>
       <!--END header-->
-      <div class="l"></div>
-      <!--BEGIN map-wrapper-->
-      <div class="map-wrapper">
-        <div class="parralax"></div>
-        <div class="l">
-          <div class="columns">
-            <div class="columns__text">
-              <h2 class="title title_white">Доставка по всей территории Российской Федерации</h2>
-              <div class="text text_light">
-                <p>
-                  Компания «Масстар» поставляет органическое стекло (акриловое стекло)
-                  на российский рынок уже более 18 лет. Мы ежемесячно отгружаем десятки
-                  тонн оргстекла сотням потребителей от Калининграда до Владивостока.
-                  Благодаря большим оборотам мы продаем оргстекло по низким ценам.
-                </p>
-                <p>
-                  Наша компания является VIP-дилером российского производителя
-                  органического стекла — завода «Дзержинское оргстекло».
-                </p>
-                <div class="btn-wrap"><a href="#" class="btn btn_w230">Бесплатная консультация</a></div>
-              </div>
-            </div>
-            <div class="columns__figure">
-              <div class="slider">
-                <div class="slider__slides">
-                  <div class="slide">
-                    <div class="slide__img"><img src="img/certificats/cert.jpg" alt=""></div>
-                    <div class="slide__content">
-                      <div class="title title_link"><a href="#">Сертификаты</a></div>
-                      <div class="text text_gray">
-                        <p>
-                          Сертификат, подтверждающий уникальное дилерское партнёрство
-                          с российским производителем органического стекла
-                          заводом «Дзержинское оргстекло»
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slide">
-                    <div class="slide__img"><img src="img/certificats/cert.jpg" alt=""></div>
-                    <div class="slide__content">
-                      <div class="title title_link"><a href="#">Сертификаты</a></div>
-                      <div class="text text_gray">
-                        <p>
-                          Сертификат, подтверждающий уникальное дилерское партнёрство
-                          с российским производителем
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__buttons">
-                  <button type="button" class="slider__prev"></button>
-                  <button type="button" class="slider__next"></button>
-                </div>
-              </div>
-              <div class="number"><strong class="number__value">23</strong><span class="number__vertical">Тонны</span>
-                <spam class="number__text">Оргстекла ежемесячно отгружаем сотням наших клиентов</spam>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--END map-wrapper-->
-      <!--BEGIN columns-->
       <div class="l">
-        <div class="columns">
-          <div class="columns__figure"><a href="#" class="tile">
-              <div style="background-image:url('img/news.jpg')" class="tile__head"><span class="tile__label">25 Сентября 2015</span></div>
-              <div class="tile__content"><strong class="title title_link"><span>«Масстар» заканчивает строительство экранов на М-5 «Урал»</span></strong>
-                <p class="text text_gray">
-                  Работы были начаты в 2012 года и сейчас выходят
-                  на завершающую стадию. Срок окончания работ – сентябрь
-                  2014 года.
-                </p>
-              </div></a></div>
-          <div class="columns__text">
-            <div class="news-block">
-              <h2 class="title title_white"><a href="#">Новости и события</a></h2><a href="#" class="news"><strong class="news__title">
-                  Сатинированные (матированные) оргстекло
-                  и поликарбонат перестали быть дефицитными продуктами</strong><span class="news__date">25 Сентября 2015</span></a><a href="#" class="news"><strong class="news__title">Компания «Масстар» начала монтаж экранов на Дмитровском шоссе</strong><span class="news__date">18 Сентября 2015</span></a><a href="#" class="news"><strong class="news__title">«Масстар» заканчивает строительство экранов на М-5 «Урал»</strong><span class="news__date">3 Сентября 2015</span></a>
-            </div>
-          </div>
+        <!--BEGIN breadcrumbs-->
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Новости и события</a></li>
+        </ul>
+        <!--END breadcrumbs-->
+        
+        <!--BEGIN news-tiles-->
+        <h1 class="title title_large">Новости и события</h1>
+        <div class="news-tiles">
+          <div class="news-tiles__row"><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news1.jpg" alt=""></div><strong class="news__title">Сатинированные (матированные) оргстекло и поликарбонат перестали быть дефицитными продуктами</strong><span class="news__date">25 Сентября 2015</span></a><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news2.jpg" alt=""></div><strong class="news__title">Компания «Масстар» начала монтаж экранов на Дмитровском шоссе</strong><span class="news__date">25 Сентября 2015</span></a><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news3.jpg" alt=""></div><strong class="news__title">«Масстар» заканчивает строитель- ство экранов на М-5</strong><span class="news__date">25 Сентября 2015</span></a></div>
+          <div class="news-tiles__row"><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news4.jpg" alt=""></div><strong class="news__title">Сатинированные (матированные) оргстекло и поликарбонат перестали быть дефицитными продуктами</strong><span class="news__date">25 Сентября 2015</span></a><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news5.jpg" alt=""></div><strong class="news__title">Сатинированные (матированные) оргстекло</strong><span class="news__date">25 Сентября 2015</span></a><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news6.jpg" alt=""></div><strong class="news__title">Сатинированные (матированные) оргстекло и поликарбонат</strong><span class="news__date">25 Сентября 2015</span></a></div>
+          <div class="news-tiles__row"><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news1.jpg" alt=""></div><strong class="news__title">Сатинированные (матированные) оргстекло и поликарбонат перестали быть дефицитными продуктами</strong><span class="news__date">25 Сентября 2015</span></a><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news2.jpg" alt=""></div><strong class="news__title">Компания «Масстар» начала монтаж экранов на Дмитровском шоссе</strong><span class="news__date">25 Сентября 2015</span></a><a href="#" class="news news_tile">
+              <div class="news__pic"><img src="img/news/news3.jpg" alt=""></div><strong class="news__title">«Масстар» заканчивает строитель- ство экранов на М-5</strong><span class="news__date">25 Сентября 2015</span></a></div>
         </div>
+        <!--END news-tiles-->
+        <!--BEGIN pagi-->
+        <div class="pagi"><a href="#" class="pagi__btn pagi__prev is-inactive">Позже</a><a href="#" class="pagi__btn is-active">1</a><a href="#" class="pagi__btn">2</a><a href="#" class="pagi__btn">3</a><a href="#" class="pagi__btn">...</a><a href="#" class="pagi__btn">25</a><a href="#" class="pagi__btn pagi__next">Раньше</a></div>
+        <!--END pagi-->
       </div>
-      <!--END columns-->
     </div>
     <!--END out-->
     <!--BEGIN footer-->
