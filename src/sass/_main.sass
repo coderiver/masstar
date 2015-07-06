@@ -1,6 +1,7 @@
 .header
   position: relative
   z-index: 2
+  margin-bottom: 40px
   background: $lightbg
   .logo
     position: absolute
@@ -20,6 +21,7 @@
 
 .header_large
   background: none
+  margin: 0
   &:before
     content: ""
     position: absolute
@@ -343,7 +345,7 @@
   &:first-child
     margin-top: 0
 
-.text
+.article
   font-size: 15px
   color: $dark
   line-height: 1.6
@@ -381,3 +383,18 @@ ul.marked-list
 ol.marked-list
   list-style-type: decimal
 
+
+.grid
+  margin: 35px -10px -30px
+  font-size: 0
+  &:first-child
+    margin-top: 0
+
+.grid__item
+  display: inline-block
+  vertical-align: top
+  width: 50%
+  box-sizing: border-box
+  padding: 0 10px
+  margin: 0 0 30px
+  font-size: 16px

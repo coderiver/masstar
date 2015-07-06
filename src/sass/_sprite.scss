@@ -1,4 +1,5 @@
 $icons: (
+  file: (X: -221px, Y:-119px, W: 18px, H: 24px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
   flex-logo: (X: -127px, Y:-109px, W: 29px, H: 31px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
   logo-small: (X: 0px, Y:-109px, W: 117px, H: 37px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
   logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
@@ -22,6 +23,13 @@ $icons: (
 }
 
 
+
+.icon-file {
+  width: 18px;
+  height: 24px;
+  background-image: url('../img/icons.png');
+  background-position: -221px -119px;
+}
 
 .icon-flex-logo {
   width: 29px;
