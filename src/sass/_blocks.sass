@@ -41,7 +41,7 @@ a.btn
   color: #1165AB
   box-shadow: 0 2px 3px #88A9E2
   &:hover
-    background: #0C419E
+    background: $blue
     color: #FFF
 
 .btn_w230
@@ -108,6 +108,10 @@ a.btn
     color: $link
     +spacing(30)
 
+.phone-number__light
+  a
+    color: #FFF
+
 .phone-number_large
   padding-left: 50px
   position: relative
@@ -142,7 +146,10 @@ a.btn
 
 .title_small
   font-size: 24px
+  margin: 33px 0 18px
   +spacing(30)
+  &:first-child
+    margin-top: 0
 
 .title_link
   display: inline-block
@@ -169,6 +176,9 @@ a.btn
   > a
     border-color: #FFF
     border-color: rgba(#FFF, 0.3)
+
+.title_nomrg
+  margin: 0
 
 
 .number
@@ -231,7 +241,7 @@ a.btn
 .text_gray
   +color(gray)
   a
-    color: rgba(#0C419E, 0.7)
+    color: rgba($blue, 0.7)
 
 
 .news
@@ -394,6 +404,9 @@ a.btn
     display: inline
     margin: 0
     vertical-align: middle
+  .file
+    float: right
+    margin-top: 8px
 
 .heading__date
   vertical-align: middle
@@ -402,15 +415,21 @@ a.btn
   font-size: 15px
   +color(gray)
 
-.heading__link
+.file
   display: inline-block
-  float: right
-  margin-top: 8px
+  position: relative
   color: $link
   text-decoration: none
   font-size: 18px
   +trans(color)
+  white-space: nowrap
   +f(b)
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+    +sprite(file)
   .icon
     vertical-align: middle
     margin-right: 10px
@@ -419,6 +438,9 @@ a.btn
     vertical-align: middle
   &:hover
     color: $red
+
+.file_small
+  font-size: 15px
 
 .more-link
   margin-top: 43px
@@ -449,13 +471,39 @@ a.more-link
 
 .aside-nav__link
   display: block
+  position: relative
   color: inherit
   text-decoration: none
   padding: 11px 0
   color: $link
   +trans(color)
+  > span
+    position: relative
+    z-index: 1
   &:hover
     color: $red
+  &.is-active
+    color: #232323
+    +f(b)
+    &:before
+      content: ""
+      position: absolute
+      z-index: 0
+      top: -1px
+      left: -7px
+      right: -7px
+      bottom: 0
+      background: #FFF
+      border-radius: 3px
+      box-shadow: 0 1px 2px rgba(136, 169, 226, 0.76)
+
+.aside-nav__content
+  font-size: 15px
+  padding: 15px 0
+
+.aside-nav__label
+  display: block
+  color: #858C9A
 
 
 .product-tile
@@ -505,3 +553,62 @@ a.more-link
 
 .product-tile__price
   float: right
+
+
+.product-link
+  text-decoration: none
+  color: $blue
+  font-size: 18px
+  line-height: 1.555
+  +f(b)
+  &:hover
+    .product-link__text
+      border-color: $red
+      border-color: rgba($red, 0.3)
+      color: $red
+
+.product-link__icon
+  +vertical
+  white-space: nowrap
+  text-align: left
+  &:before
+    min-height: 110px
+  img
+    display: inline-block
+    vertical-align: middle
+
+.product-link__text
+  border-bottom: 1px solid
+  border-color: $blue
+  border-color: rgba($blue, 0.3)
+  +trans
+
+
+.promo
+  margin: 25px 0
+  box-sizing: border-box
+  padding: 36px 20px
+  text-align: right
+  background: $blue
+  .phone-number
+    display: inline-block
+    vertical-align: middle
+  .btn
+    display: inline-block
+    vertical-align: middle
+    margin-left: 100px
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+.like-link
+  color: $link
+  border-bottom: 1px solid
+  border-color: $link
+  border-color: rgba($link, 0.3)
+  +trans
+  &:hover
+    color: $red
+    border-color: $red
+    border-color: rgba($red, 0.3)

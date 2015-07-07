@@ -1,5 +1,6 @@
 $lightbg: #EDEFF3
 $lightgray: #ADAFB2
+$blue: #0C419E
 $link: #012C77
 $dark: #151515
 $red: #E43C3C
@@ -45,3 +46,10 @@ button
 
 b, strong
   +f(b)
+
+a
+  color: $link
+  text-decoration: none
+  +trans(color)
+  &:hover
+    color: $red

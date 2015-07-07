@@ -23,6 +23,10 @@ $icons: (
   height: icon-attr($iconName, H);
   background-position: icon-attr($iconName, X) icon-attr($iconName, Y);
 }
+@mixin sprite-image($iconName) {
+  background-image: url(icon-attr($iconName, IMG));
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y);
+}
 {{/options.functions}}
 
 

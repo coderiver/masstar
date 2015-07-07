@@ -1,0 +1,354 @@
+extends _layout
+
+block title
+  title Plastiki
+
+block content
+  .l
+    .l-columns
+      aside.l-columns__aside
+        include partials/_aside-nav
+        include partials/_advantages
+        include partials/_slider-narrow
+        include partials/_slider-narrow2
+
+
+      .l-columns__main
+        //BEGIN breadcrumbs
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li: a(href="#") Каталог
+          li: a(href="#") Пластики
+          li: a(href="#") Сотовый поликарбонат
+        //END breadcrumbs
+
+        //BEGIN main content
+        .heading
+          a.file(href="#")
+            span Скачать прайс
+          h1.title.title_large
+            | Сотовый поликарбонат
+
+        .article
+          p.lead
+            | Сотовый (ячеистый) поликарбонат – пластик с очень тонкими стенками и малым весом.
+            | Лист сотового поликарбоната полый, в нем два и более слоев поликарбонатасоединены внутренними
+            | продольнымиребрами жесткости.
+
+          //BEGIN short-about
+          .short-about
+            .short-about__pic(style="background-image:url('img/sotovoy-polikarbonat.png')")
+            .short-about__content
+              strong.title.title_small
+                | Кратко
+              dl.short-about__row
+                dd Толщина, мм:
+                dt 4, 6, 8, 10, 16, 20, 24, 30, 32
+              dl.short-about__row
+                dd Размеры:
+                dt от 1 м2, а также <a href="#">резка в размер</a>
+              dl.short-about__row
+                dd Цвета:
+                dt прозрачный, серый, красный, синий, оранжевый, жёлтый, зелёный
+              dl.short-about__row
+                dd Производители:
+                dt Polygal, Novattro, Borrex
+          //END short-about
+
+          h3.title.title_small
+            | Характеристики по производителям
+
+          //BEGIN table
+          table.table
+            thead
+              tr
+                th Производитель
+                th Цвета
+                th Структура
+                th Толщина, <br> мм
+                th Вес, <br> г/м2
+                th Цена <br> опт, розница
+            tbody
+              tr
+                td(rowspan="4")
+                  b.table__producer Polygal <br>
+                  img(src="img/logos/polygal.png", alt="")
+                td(rowspan="6")
+                  b Прозрачные,<br>цветные:
+                  ul
+                    li серый
+                    li красный
+                    li синий
+                    li оранжевый
+                    li жёлтый
+                    li зелёный
+                td(rowspan="3")
+                  img(src="img/structure/1.png", alt="")
+                td 4
+                td 800
+                td
+                  b 14 500Р<br>14 950Р
+              tr
+                td 6
+                td 1300
+                td
+                  b 14 720Р<br>15 020Р
+              tr
+                td 8
+                td 1500
+                td
+                  b 15 720Р<br>16 020Р
+              tr
+                td(rowspan="3")
+                  img(src="img/structure/2.png", alt="")
+                td 10
+                td 1700
+                td
+                  b 18 720Р<br>19 020Р
+              tr
+                td(rowspan="2")
+                  .table__links
+                    span От производителя:
+                    a.file.file_small(href="#")
+                      span Характеристики
+                    br
+                    a.file.file_small(href="#")
+                      span Нормы
+                td 16
+                td 2700
+                td
+                  b 25 720Р<br>26 020Р
+              tr
+                td 20
+                td 3000
+                td
+                  b 40 720Р<br>42 020Р
+          .container-more
+            .container-more__content
+              table.table
+                tbody
+                  tr
+                    td(rowspan="4")
+                      b.table__producer Polygal <br>
+                      img(src="img/logos/borex.png", alt="")
+                    td(rowspan="6")
+                      b Прозрачные,<br>цветные:
+                      ul
+                        li серый
+                        li красный
+                        li синий
+                        li оранжевый
+                        li жёлтый
+                        li зелёный
+                    td(rowspan="3")
+                      img(src="img/structure/1.png", alt="")
+                    td 4
+                    td 800
+                    td
+                      b 14 500Р<br>14 950Р
+                  tr
+                    td 6
+                    td 1300
+                    td
+                      b 14 720Р<br>15 020Р
+                  tr
+                    td 8
+                    td 1500
+                    td
+                      b 15 720Р<br>16 020Р
+                  tr
+                    td(rowspan="3")
+                      img(src="img/structure/2.png", alt="")
+                    td 10
+                    td 1700
+                    td
+                      b 18 720Р<br>19 020Р
+                  tr
+                    td(rowspan="2")
+                      .table__links
+                        span От производителя:
+                        a.file.file_small(href="#")
+                          span Характеристики
+                        br
+                        a.file.file_small(href="#")
+                          span Нормы
+                    td 16
+                    td 2700
+                    td
+                      b 25 720Р<br>26 020Р
+                  tr
+                    td 20
+                    td 3000
+                    td
+                      b 40 720Р<br>42 020Р
+              table.table
+                tbody
+                  tr
+                    td(rowspan="4")
+                      b.table__producer Polygal <br>
+                      img(src="img/logos/gebau.png", alt="")
+                    td(rowspan="6")
+                      b Прозрачные,<br>цветные:
+                      ul
+                        li серый
+                        li красный
+                        li синий
+                        li оранжевый
+                        li жёлтый
+                        li зелёный
+                    td(rowspan="3")
+                      img(src="img/structure/1.png", alt="")
+                    td 4
+                    td 800
+                    td
+                      b 14 500Р<br>14 950Р
+                  tr
+                    td 6
+                    td 1300
+                    td
+                      b 14 720Р<br>15 020Р
+                  tr
+                    td 8
+                    td 1500
+                    td
+                      b 15 720Р<br>16 020Р
+                  tr
+                    td(rowspan="3")
+                      img(src="img/structure/2.png", alt="")
+                    td 10
+                    td 1700
+                    td
+                      b 18 720Р<br>19 020Р
+                  tr
+                    td(rowspan="2")
+                      .table__links
+                        span От производителя:
+                        a.file.file_small(href="#")
+                          span Характеристики
+                        br
+                        a.file.file_small(href="#")
+                          span Нормы
+                    td 16
+                    td 2700
+                    td
+                      b 25 720Р<br>26 020Р
+                  tr
+                    td 20
+                    td 3000
+                    td
+                      b 40 720Р<br>42 020Р
+            button.container-more__btn(type="button", data-alt-text="Скрыть")
+              | Показать ещё 2 производителей
+          //END table
+
+          h3.title.title_small
+            | Комплектующие материалы
+
+          .l-col
+              .column.one-third
+                a.product-link(href="")
+                  .product-link__icon
+                    img(src="img/structure/torcevoy.png", alt="")
+                  span.product-link__text
+                    | Торцевой профиль
+              .column.one-third
+                 a.product-link(href="")
+                  .product-link__icon
+                    img(src="img/structure/soedinitelny.png", alt="")
+                  span.product-link__text
+                    | Соединительный неразъемный
+              .column.one-third
+                 a.product-link(href="")
+                  .product-link__icon
+                    img(src="img/structure/poliskrep.png", alt="")
+                  span.product-link__text
+                    | Профиль “Полискреп”
+
+          h3.title.title_small
+            | Преимущества сотового поликарбоната
+
+          ul.marked-list
+            li
+              | Удивительно высокая <strong>ударная прочность</strong> (превышает прочность ПВХ в 8 раз, стекла – в 200 раз);
+            li
+              | <strong>Малый удельный вес</strong> (при одинаковой толщине материал легче акрила
+              | в 3 раза и примерно в 16 раз легче стекла);
+            li
+              | <strong>Высокий показатель теплоизоляции</strong> (пропускает тепло меньше, чем однослойное стекло);
+            li
+              | Отличная <strong>светопроницаемость</strong> (показатель прозрачности достигает 86%);
+            li
+              | <strong>Стойкость к атмосферным воздействиям</strong> (успешное применение в условиях
+              | чрезмерно низких и достаточно высоких температур в диапазоне от -40ºС до +120ºС);
+            li
+              | <strong>Защита от УФ-излучения</strong> (благодаря специальному защитному слою, листы сотового
+              | поликарбоната предотвращают проникновение в помещение ультрафиолетового излучения);
+
+            .container-more.container-more_simple
+              .container-more__content
+                ul.marked-list
+                  li
+                    | <strong>Химическая устойчивость</strong> (даже в повышенно агрессивной среде материал
+                    | не меняет свойства и химический состав);
+                  li
+                    | <strong>Огнестойкость</strong> (материал трудно воспламеняется и подлежит самозатуханию);
+                  li
+                    | <strong>Безопасность при остеклении</strong> (листы поликарбоната не трескаются, не бьются
+                    | благодаря вязкости полимера, при ударе исключено возникновение острых осколков);
+                  li
+                    | <strong>Неограниченные конструкционные возможности</strong> (благодаря легкости листов можно
+                    | создавать элегантные, легкие и оригинальные конструкции).
+              button.container-more__btn(type="button", data-alt-text="Скрыть")
+                | Показать ещё свойства
+
+
+            h3.title.title_small
+              | Область применения
+
+            .l-col
+              .column.one-third
+                ul.simple-list
+                  li.lead: strong В строительстве
+                  li Светорассеивающая кровля
+                  li Заборы
+                  li Архитектура малых форм
+                  li Выстовочные перегородки
+                  li Осветительное оборудование
+              .column.one-third
+                ul.simple-list
+                  li.lead: strong В рекламе
+                  li Наружная реклама (вывески)
+                  li Выставочные стенды
+                  li Витрины
+
+              .column.one-third
+                ul.simple-list
+                  li.lead: strong В строительстве
+                  li Теплицы
+                  li Зимние сады
+                  li Оранжереи
+            br
+            .l-col
+              .column.one-third
+                h3.title.title_small
+                  | Упаковка, транспортировка листов сотового поликарбоната
+              .column.two-third
+                p
+                  | Для защиты от механических повреждений и загрязнения листы сотового поликарбоната
+                  | оклеены полиэтиленовой пленкой. Транспортировать их можно в крытых ж/д вагонах, контейнерах,
+                  | автомобилях. Мы разрежем листы сотового поликарбоната по Вашим размерам. Доставим на Ваш склад.
+                p
+                  | Производитель гарантирует, что механические, оптические и термические свойства
+                  | листов сотового поликарбоната останутся неизменяемыми в течение минимум 14 лет.
+
+        //BEGIN promo
+        .promo
+          .phone-number.phone-number__light
+            span
+              | Многоканальный —
+            a(href="tel:4952150144")
+              |(495) 215-01-44
+          a.btn(href="#")
+            | Заказать поликарбонат
+        //END promo
+        //END main content
