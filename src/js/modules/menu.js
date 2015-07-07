@@ -26,7 +26,7 @@ Menu.prototype = {
 
     _initEvents: function() {
         var _ = this;
-        this.$buttons.on('click', function(e) {
+        this.$buttons.on('mouseover touchend', function(e) {
             var btn   = $(this);
             var index = $(this).index();
 
@@ -36,18 +36,34 @@ Menu.prototype = {
                 _.toggleTabs(index);
                 _.open();
             } else {
-                if (index === _.activeTab) {
-                    _.close();
-                } else {
-                    _.toggleTabs(index);
-                }
+                // if (index === _.activeTab) {
+                    // _.close();
+                // } else {
+                _.toggleTabs(index);
+                // }
+            }
+        });
+
+        this.$el.on('touchend', function(e) {
+            e.stopPropagation();
+        });
+
+        this.$el.on('mouseleave', function() {
+            if (_.opened) {
+                _.close();
+            }
+        });
+
+        $('body').on('touchend', function() {
+            if (_.opened) {
+                _.close();
             }
         });
     },
 
     _initModEvents: function() {
         var _ = this;
-        this.$buttons.on('click', function(e) {
+        this.$buttons.on('mouseover touchend', function(e) {
             var index = $(this).index();
             e.preventDefault();
             if (index !== _.activeTab) {

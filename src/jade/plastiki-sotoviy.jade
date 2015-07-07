@@ -12,7 +12,6 @@ block content
         include partials/_slider-narrow
         include partials/_slider-narrow2
 
-
       .l-columns__main
         //BEGIN breadcrumbs
         ul.breadcrumbs
@@ -46,7 +45,7 @@ block content
                 dt 4, 6, 8, 10, 16, 20, 24, 30, 32
               dl.short-about__row
                 dd Размеры:
-                dt от 1 м2, а также <a href="#">резка в размер</a>
+                dt от 1 м<sup>2</sup>, а также <a href="#">резка в размер</a>
               dl.short-about__row
                 dd Цвета:
                 dt прозрачный, серый, красный, синий, оранжевый, жёлтый, зелёный
@@ -343,12 +342,12 @@ block content
 
         //BEGIN promo
         .promo
-          .phone-number.phone-number__light
+          a.btn.btn_blue-color(href="#")
+            | Заказать поликарбонат
+          .phone-number.phone-number_light
             span
               | Многоканальный —
             a(href="tel:4952150144")
               |(495) 215-01-44
-          a.btn(href="#")
-            | Заказать поликарбонат
         //END promo
         //END main content
