@@ -219,12 +219,19 @@ a.btn
       margin-top: 0
     &:last-child
       margin-bottom: 0
+  a
+    color: $link
+    +trans(color)
+    &:hover
+      color: $red
 
 .text_light
   +color(light)
 
 .text_gray
   +color(gray)
+  a
+    color: rgba(#0C419E, 0.7)
 
 
 .news
@@ -452,7 +459,7 @@ a.more-link
 
 
 .product-tile
-  display: inline-block
+  display: block
   position: relative
   vertical-align: top
   box-sizing: border-box
@@ -460,6 +467,8 @@ a.more-link
   min-height: 340px
   background: #FFF
   box-shadow: 0 0 0 1px #BFC5D0
+  text-decoration: none
+  color: inherit
   +trans(box-shadow)
   &:hover
     box-shadow: 0 0 21px rgba(0, 40, 111, 0.18)

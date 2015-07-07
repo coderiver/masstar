@@ -12728,9 +12728,10 @@ var Slider = require('./modules/slider.js');
 
 $(document).ready(function() {
 
-    var menu       = $('.menu:not(.menu_opened)');
-    var slider     = $('.slider');
-    var menuOpened = $('.menu.menu_opened');
+    var menu         = $('.menu:not(.menu_opened)');
+    var slider       = $('.slider:not(.slider_narrow)');
+    var sliderNarrow = $('.slider.slider_narrow');
+    var menuOpened   = $('.menu.menu_opened');
 
     if (menu.length) {
         menu = new Menu(menu);
@@ -12744,6 +12745,12 @@ $(document).ready(function() {
 
     if (slider.length) {
         slider.each(function(index, el) {
+            new Slider(el);
+        });
+    };
+
+    if (sliderNarrow.length) {
+        sliderNarrow.each(function(index, el) {
             new Slider(el);
         });
     };
@@ -12883,7 +12890,7 @@ module.exports = Menu;
 },{}],5:[function(require,module,exports){
 function Slider(element, config) {
 
-    var $el, slickOptions;
+    var slickOptions;
 
     this.$el = element instanceof jQuery ? element : $(element);
     this.$slider = this.$el.find('.slider__slides');
@@ -12891,10 +12898,12 @@ function Slider(element, config) {
     defaults = {
         autoplay: true,
         autoplaySpeed: 5000,
-        // slide: this.$slider.find('.slider__slide'),
+        fade: false,
         arrows: true,
+        dots: false,
+        slide: this.$slider.find('.slide'),
         prevArrow: this.$el.find('.slider__prev'),
-        nextArrow: this.$el.find('.slider__next')
+        nextArrow: this.$el.find('.slider__next'),
     };
 
     slickOptions = $.extend(defaults, config || {});
@@ -12902,6 +12911,8 @@ function Slider(element, config) {
     this.$slider.slick(slickOptions);
 
     this.init();
+
+    return this;
 
 }
 
@@ -12911,9 +12922,9 @@ Slider.prototype = {
 
     init: function() {
         console.log(this);
-    }
+    },
 
-}
+};
 
 module.exports = Slider;
 

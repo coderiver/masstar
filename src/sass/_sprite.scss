@@ -1,11 +1,12 @@
 $icons: (
-  file: (X: -221px, Y:-119px, W: 18px, H: 24px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
-  flex-logo: (X: -127px, Y:-109px, W: 29px, H: 31px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
-  logo-small: (X: 0px, Y:-109px, W: 117px, H: 37px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
-  logo: (X: 0px, Y:0px, W: 211px, H: 99px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
-  phone-blue: (X: -267px, Y:-73px, W: 16px, H: 16px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
-  phone-large: (X: -221px, Y:-73px, W: 36px, H: 36px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
-  to-top: (X: -221px, Y:0px, W: 63px, H: 63px, TW: 284px, TH: 146px, IMG: '../img/icons.png'),
+  file: (X: -166px, Y:-105px, W: 18px, H: 24px, TW: 269px, TH: 142px, IMG: '../img/icons.png'),
+  flex-logo: (X: -127px, Y:-105px, W: 29px, H: 31px, TW: 269px, TH: 142px, IMG: '../img/icons.png'),
+  logo-small: (X: 0px, Y:-105px, W: 117px, H: 37px, TW: 269px, TH: 142px, IMG: '../img/icons.png'),
+  logo: (X: 0px, Y:0px, W: 196px, H: 95px, TW: 269px, TH: 142px, IMG: '../img/icons.png'),
+  phone-blue: (X: -252px, Y:-73px, W: 16px, H: 16px, TW: 269px, TH: 142px, IMG: '../img/icons.png'),
+  phone-large: (X: -206px, Y:-73px, W: 36px, H: 36px, TW: 269px, TH: 142px, IMG: '../img/icons.png'),
+  search: (X: -206px, Y:-119px, W: 16px, H: 16px, TW: 269px, TH: 142px, IMG: '../img/icons.png'),
+  to-top: (X: -206px, Y:0px, W: 63px, H: 63px, TW: 269px, TH: 142px, IMG: '../img/icons.png'),
 );
 
 
@@ -28,26 +29,26 @@ $icons: (
   width: 18px;
   height: 24px;
   background-image: url('../img/icons.png');
-  background-position: -221px -119px;
+  background-position: -166px -105px;
 }
 
 .icon-flex-logo {
   width: 29px;
   height: 31px;
   background-image: url('../img/icons.png');
-  background-position: -127px -109px;
+  background-position: -127px -105px;
 }
 
 .icon-logo-small {
   width: 117px;
   height: 37px;
   background-image: url('../img/icons.png');
-  background-position: 0px -109px;
+  background-position: 0px -105px;
 }
 
 .icon-logo {
-  width: 211px;
-  height: 99px;
+  width: 196px;
+  height: 95px;
   background-image: url('../img/icons.png');
   background-position: 0px 0px;
 }
@@ -56,20 +57,27 @@ $icons: (
   width: 16px;
   height: 16px;
   background-image: url('../img/icons.png');
-  background-position: -267px -73px;
+  background-position: -252px -73px;
 }
 
 .icon-phone-large {
   width: 36px;
   height: 36px;
   background-image: url('../img/icons.png');
-  background-position: -221px -73px;
+  background-position: -206px -73px;
+}
+
+.icon-search {
+  width: 16px;
+  height: 16px;
+  background-image: url('../img/icons.png');
+  background-position: -206px -119px;
 }
 
 .icon-to-top {
   width: 63px;
   height: 63px;
   background-image: url('../img/icons.png');
-  background-position: -221px 0px;
+  background-position: -206px 0px;
 }
 

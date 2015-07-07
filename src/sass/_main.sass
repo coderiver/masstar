@@ -123,6 +123,18 @@
   background: $lightbg
   box-sizing: border-box
 
+.slider__head
+  position: relative
+  padding: 0 60px 12px 0
+  border-bottom: 1px solid $hrcolor
+  .title
+    margin-bottom: 0
+  .slider__buttons
+    top: 2px
+    right: 2px
+    left: auto
+    bottom: auto
+
 .slider__slides
   +clr
 
@@ -159,10 +171,22 @@
     +arr(6,8,#BBC3D1, r)
     left: 1px
 
+.slider_narrow
+  background: none
+  margin-top: 48px
+  .slider__slides
+    padding: 0
+    margin: 0 -20px
+  .slider__prev,
+  .slider__next
+    background: $lightbg
+
+
 .slide
   float: left
   position: relative
   padding: 50px 40px 55px
+  box-sizing: border-box
   +clr
   .title
     margin-bottom: 7px
@@ -174,15 +198,39 @@
 
 .slide__img
   float: left
+  position: relative
   width: 96px
   height: 139px
-  box-shadow: 0 5px 25px -5px rgba(#002360, 0.28)
+  border: 2px solid #FFF
+  box-shadow: 0 3px 7px rgba(0, 35, 96, 0.28)
+  cursor: pointer
+  &:after
+    opacity: 0
+    visibility: hidden
+    content: ""
+    position: absolute
+    bottom: 7px
+    right: 7px
+    +sprite(search)
+    +trans
   img
     display: block
     max-width: 100%
+  &:hover
+    &:after
+      opacity: 1
+      visibility: visible
 
 .slide__content
   margin-left: 120px
+
+.slide_narrow
+  padding: 20px
+  width: 100%
+  .slide__img
+    float: right
+    &:first-child
+      float: left
 
 
 .tile
