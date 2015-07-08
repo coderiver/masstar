@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Contacts</title>
+    <title>Template</title>
     <meta name="viewport" content="width=1050">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -117,76 +117,69 @@
         </div>
       </header>
       <!--END header-->
-      <div class="l">
-        <!--BEGIN breadcrumbs-->
-        <ul class="breadcrumbs">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <!--END breadcrumbs-->
-        <!--BEGIN contacts-->
-        <div class="heading">
-          <h1 class="title title_large">Контактная информация</h1>
-        </div>
-        <div class="l-col">
-          <div class="column"><strong class="title title_small">Наш адрес</strong>
-            <div class="contact">
-              <p>125319, г. Москва, <b class="metro-station">Аэропорт</b> (970 м),<br>ул. Черняховского, д. 19 (территория завода «ЖБИ<br>№23»), (Долгота: 37.686293; Широта: 55.710058)<br><span class="info"><span>Как до нас добраться</span></span><br><em>
-                  Пн-пт: с 9:00 до 18:00 без обеда.<br>
-                  Выходные дни: суббота и воскресенье.</em></p>
-            </div><strong class="title title_small">Контактные данные</strong>
-            <div class="contact">
-              <p>тел./факс: <b>(495) 215-01-44</b> <small>(многоканальный)</small><br><a href="mailto:info@masstar.ru">info@masstar.ru</a><br>
-                <button type="button" class="btn btn_blue btn_gray btn_w340">Форма обратной связи</button>
-              </p>
-              <hr>
+      <div style="background:#2454a8;text-align:center" class="l"><br>
+        <div class="popup-inner">
+          <!--BEGIN message-->
+          <div class="message"><strong class="title title_center">Спасибо, Наталья!</strong>
+            <p class="message__text">
+              Ваш заказ принят! Мы свяжемся с вами
+              в течении рабочего дня!
+            </p><a href="#" class="message__close">Закрыть</a>
+          </div>
+          <!--END message-->
+        </div><br><br><br>
+        <div class="popup-inner">
+          <!--BEGIN form-->
+          <form class="form"><strong class="title title_center">Форма заказа</strong>
+            <div class="field">
+              <label for="name" class="field__label">Имя<sup>*</sup></label>
+              <input type="text" name="name" id="name" required class="input">
             </div>
-          </div>
-          <div class="column">
-            <div class="contact contact_small"><img src="img/contacts.jpg" alt="">
-              <p><strong>ООО «Масстар»</strong><br>ИНН 7707018446, КПП 771401001, р/с № 40702810000000000581,<br>в Центральном филиале АБ «РОССИЯ» пос. Газопровод, Моcковская обл.,
-                к/с № 30101810400000000132, БИК 044599132 ОКВЭД 51.70; 45.21.1; 45.21.7; 74.20.11,
-                ОКПО 17549291
-              </p>
+            <div class="field">
+              <label for="phone" class="field__label">Телефон<sup>*</sup></label>
+              <input type="tel" name="phone" id="phone" value="чялорпявдп" required class="input is-error">
             </div>
+            <div class="field">
+              <label for="email" class="field__label">E-mail</label>
+              <input type="email" name="email" id="email" class="input">
+            </div>
+            <div class="field">
+              <label for="msg" class="field__label">Сообщение</label>
+              <textarea name="msg" id="msg" class="input"></textarea>
+            </div>
+            <button type="submit" class="btn btn_blue btn_gray btn_fw">Закзать</button>
+          </form>
+          <!--END form-->
+        </div><br><br><br>
+        <div class="popup-inner">
+          <!--BEGIN driving-direction-->
+          <div class="driving-direction">
+            <h3t class="title title_center">Как до нас добраться</h3t><strong class="title title_small">Схема проезда на автомобиле:</strong><img src="img/driving-direction.jpg" alt="driving-direction"><strong class="title title_small">Схема проезда на автомобиле:</strong>
+            <ul class="marked-list article">
+              <li>10 минут пешком от <b>ст.м. Аэропорт</b>.</li>
+              <li>
+                Садитесь в первый вагон из центра. Выходите из метро <b>направо</b>,<br>
+                затем <b>еще раз направо</b> (слева от Вас будет торговый комплекс<br>
+                «Галерея Аэропорт»), выходите на ул. Черняховского.
+              </li>
+              <li>
+                Идите по этой улице до тех пор, пока не увидете <b>проходную завода<br>«ЖБИ №23»</b>
+                (она находится в самом конце ул. Черняховского).
+              </li>
+              <li>На прходной скажите охране, что идете в <b>компанию «Масстар»</b>, Вас<br>пропустят.</li>
+              <li>
+                Выйдя из проходной, увидите <b>административное здание</b>,<br>
+                поднимайтесь на лифте на <b>6-й этаж, комн. 503</b>.
+              </li>
+            </ul>
           </div>
-        </div><strong class="title title_smallest">Отдел по пластику и оргстеклу</strong>
-        <div class="l-col">
-          <div class="column one-third">
-            <p class="contact">Виктор Владимирович<br>тел./факс: <b>(495) 215-01-44 (доб.111)</b><br><a href="mailto:info@masstar.ru">info@masstar.ru</a></p>
-          </div>
-          <div class="column one-third">
-            <p class="contact">Виктор Владимирович<br>тел./факс: <b>(495) 215-01-44 (доб.111)</b><br><a href="mailto:info@masstar.ru">info@masstar.ru</a></p>
-          </div>
-          <div class="column one-third">
-            <p class="contact">Виктор Владимирович<br>тел./факс: <b>(495) 215-01-44 (доб.111)</b><br><a href="mailto:info@masstar.ru">info@masstar.ru</a></p>
-          </div>
-        </div><strong class="title title_smallest">Отдел по изделиям из оргстекла</strong>
-        <div class="l-col">
-          <div class="column one-third">
-            <p class="contact">Виктор Владимирович<br>тел./факс: <b>(495) 215-01-44 (доб.111)</b><br><a href="mailto:info@masstar.ru">info@masstar.ru</a></p>
-          </div>
-          <div class="column one-third">
-            <p class="contact">Виктор Владимирович<br>тел./факс: <b>(495) 215-01-44 (доб.111)</b><br><a href="mailto:info@masstar.ru">info@masstar.ru</a></p>
-          </div>
-          <div class="column one-third"></div>
-        </div><strong class="title title_smallest">Отдел по шумозащите</strong>
-        <div class="l-col">
-          <div class="column one-third">
-            <p class="contact">Виктор Владимирович<br>тел./факс: <b>(495) 215-01-44 (доб.111)</b><br><a href="mailto:info@masstar.ru">info@masstar.ru</a></p>
-          </div>
-          <div class="column one-third">
-            <p class="contact">Виктор Владимирович<br>тел./факс: <b>(495) 215-01-44 (доб.111)</b><br><a href="mailto:info@masstar.ru">info@masstar.ru</a></p>
-          </div>
-          <div class="column one-third"></div>
+          <!--END driving-direction-->
         </div>
-        <!--END contacts-->
       </div>
     </div>
     <!--END out-->
     <!--BEGIN footer-->
     <footer class="footer">
-      <div id="map-canvas"><img src="img/map.jpg" style="display:block"></div>
       <div class="l">
         <!--BEGIN links-->
         <nav class="links">

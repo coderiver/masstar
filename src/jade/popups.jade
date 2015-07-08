@@ -1,0 +1,74 @@
+extends _layout
+
+block content
+  .l(style="background:#2454a8;text-align:center")
+
+    br
+
+    .popup-inner
+      //BEGIN message
+      .message
+        strong.title.title_center
+          | Спасибо, Наталья!
+        p.message__text
+          | Ваш заказ принят! Мы свяжемся с вами
+          | в течении рабочего дня!
+        a.message__close(href="#") Закрыть
+      //END message
+
+    br
+    br
+    br
+
+    .popup-inner
+      //BEGIN form
+      form.form
+        strong.title.title_center
+          | Форма заказа
+        .field
+          label.field__label(for="name") Имя<sup>*</sup>
+          input.input(type="text", name="name", id="name", required)
+        .field
+          label.field__label(for="phone") Телефон<sup>*</sup>
+          input.input.is-error(type="tel", name="phone", id="phone", value="чялорпявдп", required)
+        .field
+          label.field__label(for="email") E-mail
+          input.input(type="email", name="email", id="email")
+        .field
+          label.field__label(for="msg") Сообщение
+          textarea.input(name="msg", id="msg")
+        button.btn.btn_blue.btn_gray.btn_fw(type="submit")
+          | Закзать
+      //END form
+
+    br
+    br
+    br
+
+    .popup-inner
+      //BEGIN driving-direction
+      .driving-direction
+        h3t.title.title_center
+          | Как до нас добраться
+        strong.title.title_small
+          | Схема проезда на автомобиле:
+        img(src="img/driving-direction.jpg", alt="driving-direction")
+        strong.title.title_small
+          | Схема проезда на автомобиле:
+        ul.marked-list.article
+          li
+            | 10 минут пешком от <b>ст.м. Аэропорт</b>.
+          li
+            | Садитесь в первый вагон из центра. Выходите из метро <b>направо</b>,<br>
+            | затем <b>еще раз направо</b> (слева от Вас будет торговый комплекс<br>
+            | «Галерея Аэропорт»), выходите на ул. Черняховского.
+          li
+            | Идите по этой улице до тех пор, пока не увидете <b>проходную завода<br>«ЖБИ №23»</b>
+            | (она находится в самом конце ул. Черняховского).
+          li
+            | На прходной скажите охране, что идете в <b>компанию «Масстар»</b>, Вас<br>пропустят.
+          li
+            | Выйдя из проходной, увидите <b>административное здание</b>,<br>
+            | поднимайтесь на лифте на <b>6-й этаж, комн. 503</b>.
+
+      //END driving-direction

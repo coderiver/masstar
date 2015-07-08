@@ -1,3 +1,6 @@
+block vars
+  - var footerMap = true
+
 extends _layout
 
 block title
@@ -20,29 +23,30 @@ block content
       .column
         strong.title.title_small
           | Наш адрес
-
-        p.contact
-          | 125319, г. Москва, <b class="metro-station">Аэропорт</b> (970 м),
-          br
-          | ул. Черняховского, д. 19 (территория завода «ЖБИ
-          br
-          | №23»), (Долгота: 37.686293; Широта: 55.710058)
-          br
-          span.info
-            span Как до нас добраться
-          br
-          em
-            | Пн-пт: с 9:00 до 18:00 без обеда.<br>
-            | Выходные дни: суббота и воскресенье.
-
+        .contact
+          p
+            | 125319, г. Москва, <b class="metro-station">Аэропорт</b> (970 м),
+            br
+            | ул. Черняховского, д. 19 (территория завода «ЖБИ
+            br
+            | №23»), (Долгота: 37.686293; Широта: 55.710058)
+            br
+            span.info
+              span Как до нас добраться
+            br
+            em
+              | Пн-пт: с 9:00 до 18:00 без обеда.<br>
+              | Выходные дни: суббота и воскресенье.
         strong.title.title_small
           | Контактные данные
-
-        p.contact
-          | тел./факс: <b>(495) 215-01-44</b> (многоканальный)
-          br
-          a(href="mailto:info@masstar.ru") info@masstar.ru
-
+        .contact
+          p
+            | тел./факс: <b>(495) 215-01-44</b> <small>(многоканальный)</small>
+            br
+            a(href="mailto:info@masstar.ru") info@masstar.ru
+            br
+            button.btn.btn_blue.btn_gray.btn_w340(type="button") Форма обратной связи
+          hr
       .column
         .contact.contact_small
           img(src="img/contacts.jpg", alt="")
@@ -53,7 +57,68 @@ block content
             br
             | в Центральном филиале АБ «РОССИЯ» пос. Газопровод, Моcковская обл.,
             | к/с № 30101810400000000132, БИК 044599132 ОКВЭД 51.70; 45.21.1; 45.21.7; 74.20.11,
-            | ОКПО 17549291 
+            | ОКПО 17549291
 
+    strong.title.title_smallest
+      | Отдел по пластику и оргстеклу
+    .l-col
+      .column.one-third
+        p.contact
+          | Виктор Владимирович
+          br
+          | тел./факс: <b>(495) 215-01-44 (доб.111)</b>
+          br
+          a(href="mailto:info@masstar.ru") info@masstar.ru
+      .column.one-third
+        p.contact
+          | Виктор Владимирович
+          br
+          | тел./факс: <b>(495) 215-01-44 (доб.111)</b>
+          br
+          a(href="mailto:info@masstar.ru") info@masstar.ru
+      .column.one-third
+        p.contact
+          | Виктор Владимирович
+          br
+          | тел./факс: <b>(495) 215-01-44 (доб.111)</b>
+          br
+          a(href="mailto:info@masstar.ru") info@masstar.ru
 
+    strong.title.title_smallest
+      | Отдел по изделиям из оргстекла
+    .l-col
+      .column.one-third
+        p.contact
+          | Виктор Владимирович
+          br
+          | тел./факс: <b>(495) 215-01-44 (доб.111)</b>
+          br
+          a(href="mailto:info@masstar.ru") info@masstar.ru
+      .column.one-third
+        p.contact
+          | Виктор Владимирович
+          br
+          | тел./факс: <b>(495) 215-01-44 (доб.111)</b>
+          br
+          a(href="mailto:info@masstar.ru") info@masstar.ru
+      .column.one-third
+
+    strong.title.title_smallest
+      | Отдел по шумозащите
+    .l-col
+      .column.one-third
+        p.contact
+          | Виктор Владимирович
+          br
+          | тел./факс: <b>(495) 215-01-44 (доб.111)</b>
+          br
+          a(href="mailto:info@masstar.ru") info@masstar.ru
+      .column.one-third
+        p.contact
+          | Виктор Владимирович
+          br
+          | тел./факс: <b>(495) 215-01-44 (доб.111)</b>
+          br
+          a(href="mailto:info@masstar.ru") info@masstar.ru
+      .column.one-third
     //END contacts

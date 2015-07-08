@@ -803,13 +803,122 @@ ol.marked-list
     color: $blue
     &:hover
       color: $red
+  small
+    color: #616161
+    font-size: 14px
+  hr
+    display: block
+    border: none
+    max-width: 340px
+    margin: 30px 0
+    height: 1px
+    background: $hrcolor
+    &:last-child
+      margin-bottom: 0
   > img
     display: block
     max-width: 100%
     margin-bottom: 38px
   .info
     margin: 7px 0 15px
+  .btn
+    display: block
+    margin: 20px 0
+
 
 .contact_small
   font-size: 15px
   line-height: 1.86
+
+
+#map-canvas
+  height: 365px
+
+
+.popup-inner
+  background: #FFF
+  display: inline-block
+  text-align: left
+  // max-width: 410px
+  // margin: auto
+  border-bottom: 3px solid #D4D6DB
+
+.message
+  box-sizing: border-box
+  padding: 45px 65px
+  width: 410px
+  margin: auto
+  font-size: 15px
+  line-height: 1.67
+  text-align: center
+  a
+    text-decoration: underline
+  .title
+    margin-bottom: 18px
+
+.message__close
+  display: inline-block
+  margin-top: 28px
+
+
+.form
+  padding: 45px 80px 75px
+  box-sizing: border-box
+  width: 410px
+  margin: auto
+  font-size: 15px
+  line-height: 1.4
+  .title
+    text-align: center
+    margin-bottom: 10px
+  .btn
+    margin-top: 22px
+
+.field
+  margin-top: 13px
+
+.field__label
+  font-size: 15px
+  sup
+    color: $red
+
+.input
+  display: block
+  width: 100%
+  padding: 5px 10px
+  box-sizing: border-box
+  height: 36px
+  line-height: normal
+  background: #F9F9F9
+  border-radius: 0
+  border: 1px solid #BFC5D0
+  +f(r)
+  font-size: 15px
+  color: $dark
+  +trans
+  transition-property: background, border-color
+  &:focus
+    background: #FFF
+  &.is-error
+    border-color: $red
+    color: $red
+
+textarea.input
+  height: 110px
+  resize: none
+
+
+.driving-direction
+  width: 760px
+  box-sizing: border-box
+  padding: 35px 50px 60px
+  > img
+    display: block
+    max-width: 100%
+    margin: auto
+  .title
+    margin-bottom: 17px
+    + .title
+      margin-top: 0
+  .title_small
+    margin-bottom: 10px
