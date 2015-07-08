@@ -149,7 +149,7 @@ a.btn
   line-height: 1.4
   +f(b)
   color: $dark
-  +spacing(50)
+  +spacing(30)
   > a
     color: inherit
     text-decoration: none
@@ -159,17 +159,24 @@ a.btn
       color: $red
       border-color: rgba($red, 0.3)
 
-.title_small
+.title_medium
   font-size: 24px
   margin: 33px 0 18px
-  +spacing(30)
+  // +spacing(30)
+  &:first-child
+    margin-top: 0
+
+.title_small
+  font-size: 20px
+  margin: 33px 0 13px
+  // +spacing(30)
   &:first-child
     margin-top: 0
 
 .title_smallest
-  font-size: 20px
+  font-size: 18px
   margin: 33px 0 13px
-  +spacing(30)
+  // +spacing(30)
   &:first-child
     margin-top: 0
 
@@ -177,7 +184,7 @@ a.btn
   display: inline-block
   font-size: 24px
   color: $link
-  +spacing(30)
+  // +spacing(30)
   > a, > span
     border-bottom: 1px solid
     border-color: $link
@@ -683,3 +690,14 @@ a.more-link
     color: $red
     border-color: $red
     border-color: rgba($red, 0.3)
+
+.dashed-line
+  display: block
+  margin: 28px 0
+  height: 0
+  border: dashed $hrcolor
+  border-width: 1px 0 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
