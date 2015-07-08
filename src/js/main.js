@@ -1,12 +1,13 @@
 global.jQuery = global.$ = require('jquery');
 require('slick-carousel');
+require('../../bower_components/fancybox/source/jquery.fancybox.js');
 
 var Menu   = require('./modules/menu.js');
 var Slider = require('./modules/slider.js');
 
 $(document).ready(function() {
 
-    var menu          = $('.menu:not(.menu_opened)');
+    var menu          = $('.menu:not(.menu_opened):not(.menu_catalog)');
     var slider        = $('.slider:not(.slider_narrow)');
     var sliderNarrow  = $('.slider.slider_narrow');
     var menuOpened    = $('.menu.menu_opened');
@@ -60,4 +61,11 @@ $(document).ready(function() {
         });
     }
 
+    $('.js-box').fancybox({
+        helpers: {
+            overlay: {
+                locked: false,
+            },
+        },
+    });
 });

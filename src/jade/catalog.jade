@@ -1,0 +1,17 @@
+
+extends _layout
+
+block title
+  title Catalog
+
+block content
+  .l
+    ul.breadcrumbs
+      li: a(href="#") Главная
+      li: a(href="#") Каталог
+    .heading
+      h1.title.title_large
+        | Каталог продукции
+    - var menuButtons = false
+    - var menuMod = 'menu_catalog'
+    include partials/_menu

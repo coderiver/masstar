@@ -1,13 +1,14 @@
 //BEGIN menu
 .menu-wrapper
   .menu(class=menuMod)
-    .menu__head
-      button.menu__btn(type="button")
-        span Оргстекло
-      button.menu__btn(type="button")
-        span Пластики
-      button.menu__btn(type="button")
-        span Шумозащита
+    if menuButtons != false
+      .menu__head
+        button.menu__btn(type="button")
+          span Оргстекло
+        button.menu__btn(type="button")
+          span Пластики
+        button.menu__btn(type="button")
+          span Шумозащита
     .menu__content
       .menu__tab
         .menu__pic.bg-glass
@@ -25,8 +26,6 @@
               | Трубы и стержни из оргстекла
             li: a(href="#")
               | Изделия из оргстекла
-            li: a(href="#")
-              | Другие пластики
         .menu__tab-column.menu__promo
           p Оптом и в розницу. Разрежем по вашим размерам, упакуем и доставим по всей территории России.
           p Постоянный складской запас.
@@ -34,7 +33,7 @@
             a.btn.btn_mrg(href="#")
               | Заказать расчёт
       .menu__tab
-        .menu__pic.bg-glass
+        .menu__pic.bg-glass2
         h2.title.title_white
           | Каталог пластика
         .menu__tab-column
@@ -58,23 +57,17 @@
             a.btn.btn_mrg(href="#")
               | Заказать расчёт
       .menu__tab
-        .menu__pic.bg-glass
+        .menu__pic.bg-glass2
         h2.title.title_white
-          | Каталог оргстекла
+          | Шумозащита
         .menu__tab-column
           ul.menu__list
             li: a(href="#")
-              | Экструзионное оргстекло
+              | Построенные объекты
             li: a(href="#")
-              | Блочное оргстекло
+              | Отзывы заказчиков
             li: a(href="#")
-              | Авиационное оргстекло
-            li: a(href="#")
-              | Трубы и стержни из оргстекла
-            li: a(href="#")
-              | Изделия из оргстекла
-            li: a(href="#")
-              | Другие пластики
+              | Статьи и документы
         .menu__tab-column.menu__promo
           p Оптом и в розницу. Разрежем по вашим размерам, упакуем и доставим по всей территории России.
           p Постоянный складской запас.
