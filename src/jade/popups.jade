@@ -70,5 +70,23 @@ block content
           li
             | Выйдя из проходной, увидите <b>административное здание</b>,<br>
             | поднимайтесь на лифте на <b>6-й этаж, комн. 503</b>.
-
       //END driving-direction
+
+    br
+    br
+    br
+
+    .popup-inner
+      //BEGIN form
+      form.form
+        strong.title.title_center
+          | Обратный звонок
+        .field
+          label.field__label(for="name") Имя<sup>*</sup>
+          input.input(type="text", name="name", id="name", value="Наталья", required)
+        .field
+          label.field__label(for="phone") Телефон<sup>*</sup>
+          input.input(type="tel", name="phone", id="phone", required)
+        button.btn.btn_blue.btn_gray.btn_fw(type="submit")
+          | Закзать
+      //END form
