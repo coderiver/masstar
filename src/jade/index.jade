@@ -33,34 +33,7 @@ block content
               a.btn.btn_w230(href="#")
                 | Бесплатная консультация
         .columns__figure
-          .slider
-            .slider__slides
-              .slide
-                .slide__img
-                  img(src="img/certificats/cert.jpg", alt="")
-                .slide__content
-                  .title.title_link
-                    a(href="#")
-                      | Сертификаты
-                  .text.text_gray
-                    p.
-                      Сертификат, подтверждающий уникальное дилерское партнёрство
-                      с российским производителем органического стекла
-                      заводом «Дзержинское оргстекло»
-              .slide
-                .slide__img
-                  img(src="img/certificats/cert.jpg", alt="")
-                .slide__content
-                  .title.title_link
-                    a(href="#")
-                      | Сертификаты
-                  .text.text_gray
-                    p.
-                      Сертификат, подтверждающий уникальное дилерское партнёрство
-                      с российским производителем
-            .slider__buttons
-              button.slider__prev(type="button")
-              button.slider__next(type="button")
+          include partials/_slider
           .number
             strong.number__value
               | 23

@@ -1,0 +1,106 @@
+block vars
+  - var sliderMod = 'slider_mrg slider_about'
+
+extends _layout
+
+block title
+  title About company
+
+block content
+  .l
+    //BEGIN breadcrumbs
+    ul.breadcrumbs
+      li: a(href="#") Главная
+      li: a(href="#") Компания
+    //END breadcrumbs
+
+    .heading
+      h1.title.title_large
+        | Компания
+
+    //BEGIN intro
+    .l-col.about-intro
+      .column
+        img(src="img/about-company.jpg", alt="")
+      .column.article
+        p.lead
+          | Первое направление нашей деятельности – выполнение комплекса работ по выбору
+          | для производственных предприятий сырья и комплектующих.
+          | Прежде всего, листовых и гранулированных пластиков.
+        p
+          | Компания «Масстар» начинает прием заказов на оказание новой услуги – матирование
+          | (сатинирование) органического стекла и монолитного поликарбоната.
+          | Образцы можно посмотреть у нас в офисе. Присылайте заявки и уточняйте стоимость
+          | работ по т. (495) 215-01-44 и по электронной почте info@masstar.ru.
+
+    .l-col.about-intro
+      .column.one-fourth
+      .column.one-fourth
+        strong.title.title_small
+          | «Масстар» – инжиниринговая компания. 
+      .column.article
+        p
+          | Первое направление нашей деятельности – выполнение комплекса работ по выбору для производственных
+          | предприятий сырья и комплектующих. Прежде всего, листовых и гранулированных пластиков.
+          | Мы организуем испытания, обеспечиваем бесперебойные поставки и квалифицированное сопровождение
+          | использования материалов, внедренных в производственный цикл.
+    //END intro
+
+    //BEGIN neww-about-company
+    .l-col.about-news
+      .column
+         a(href="#").news.news_tile
+          .news__pic
+            img(src="img/news/news2.jpg", alt="")
+          strong.news__title
+            | Компания «Масстар» начала монтаж экранов на Дмитровском шоссе
+          span.news__date
+            | 25 Сентября 2015
+      .column
+        a(href="#").news.news_tile
+          .news__pic
+            img(src="img/news/news3.jpg", alt="")
+          strong.news__title
+            | «Масстар» заканчивает строитель- ство экранов на М-5
+          span.news__date
+            | 25 Сентября 2015
+    //END neww-about-company
+
+    //BEGIN large-slider
+    .large-slider
+      strong.title.title_small
+        | Оргстекло, сотовый и монолитный поликарбонат
+      .large-slider__aside
+        p.large-slider__aside-text
+          | Первое направление нашей деятельности – выполнение комплекса работ
+          | по выбору для производственных предприятий сырья и комплектующих
+      .large-slider__main
+        .large-slider__slides
+          div.large-slide(style="background-image:url('img/large-slider.jpg')")
+          div.large-slide(style="background-image:url('img/large-slider.jpg')")
+          div.large-slide(style="background-image:url('img/large-slider.jpg')")
+          div.large-slide(style="background-image:url('img/large-slider.jpg')")
+        button.large-slider__prev(type="button")
+          .ico.ico-slider-prev
+        button.large-slider__next(type="button")
+          .ico.ico-slider-next
+    //END large-slider
+
+    include partials/_slider
+
+    .l-col
+      .column.one-fourth
+        strong.title.title_small
+          | Гарантия качества
+      .column.three-fourth.article
+        p
+          | Наша компания следует неизменно высоким стандартам розничного обслуживания.
+          | Представленные товары, прошли несколько ступеней контроля качества, имеют всю
+          | необходимую сертификацию и соответствуют всем предусмотренным российским
+          | законодательством нормам.
+
+        p: em
+          | По всем вопросам, связанным с качеством продукции, можно обращаться в службу поддержки:
+          br
+          | <b>(495) 215-01-44</b> и по электронной почте <a href="mailto:info@masstar.ru">info@masstar.ru</a>
+
