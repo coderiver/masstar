@@ -1,0 +1,81 @@
+extends _layout
+
+block title
+  title Shumozaschita
+
+block content
+  .l
+    .l-columns
+      aside.l-columns__aside
+        include partials/_aside-nav2
+        include partials/_slider-narrow
+        include partials/_slider-narrow2
+
+      .l-columns__main
+        //BEGIN breadcrumbs
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li: a(href="#") Каталог
+          li: a(href="#") Шумозащита
+          li: a(href="#") Статьи и документы
+        //END breadcrumbs
+
+        //BEGIN main content
+        .heading
+          h1.title.title_large
+            | Статьи и документы
+
+        .article
+          p.lead
+            | Компания «Масстар» поставляет пластики на российский рынок уже более 18 лет.
+            | Мы ежемесячно отгружаем десятки тонн пластика сотням потребителей от Калининграда
+            | до Владивостока. Благодаря большим оборотам мы продаем оргстекло
+            | по низким ценам.
+
+          ul.grid
+            li.grid__item
+              a(href="#").news.news_tile
+                .news__pic
+                  img(src="img/docs1.jpg", alt="")
+                strong.news__title
+                  | Сатинированные (матированные) оргстекло и поликарбонат
+                  | перестали быть дефицитными продуктами
+                span.news__date
+                  | 25 Сентября 2015
+            li.grid__item
+              a(href="#").news.news_tile
+                .news__pic
+                  img(src="img/docs2.jpg", alt="")
+                strong.news__title
+                  | Сатинированные (матированные) оргстекло и поликарбонат
+                  | перестали быть дефицитными продуктами
+                span.news__date
+                  | 25 Сентября 2015
+            li.grid__item
+              a(href="#").news.news_tile
+                .news__pic
+                  img(src="img/docs1.jpg", alt="")
+                strong.news__title
+                  | Сатинированные (матированные) оргстекло и поликарбонат
+                  | перестали быть дефицитными продуктами
+                span.news__date
+                  | 25 Сентября 2015
+            li.grid__item
+              a(href="#").news.news_tile
+                .news__pic
+                  img(src="img/docs2.jpg", alt="")
+                strong.news__title
+                  | Сатинированные (матированные) оргстекло и поликарбонат
+                  | перестали быть дефицитными продуктами
+                span.news__date
+                  | 25 Сентября 2015
+            li.grid__item
+              a(href="#").news.news_tile
+                .news__pic
+                  img(src="img/docs1.jpg", alt="")
+                strong.news__title
+                  | Сатинированные (матированные) оргстекло и поликарбонат
+                  | перестали быть дефицитными продуктами
+                span.news__date
+                  | 25 Сентября 2015
+        //END main content

@@ -261,11 +261,6 @@ a.btn
       margin-top: 0
     &:last-child
       margin-bottom: 0
-  > a
-    color: $link
-    +trans(color)
-    &:hover
-      color: $red
 
 .text_light
   +color(light)
@@ -287,15 +282,29 @@ a.btn
     .news__title
       color: $red
       border-color: rgba($red, 0.3)
+    .news__pic:after
+      opacity: 0.42
+      visibility: visible
 
 .news__pic
   overflow: hidden
-  max-height: 160px
   margin-bottom: 20px
+  position: relative
   img
     display: block
     margin: auto
     max-width: 100%
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    +trans
+    visibility: hidden
+    opacity: 0
+    background: #FFF
 
 .news__title
   border-bottom: 1px solid
@@ -323,22 +332,11 @@ a.btn
     color: $dark
     .news__pic:after
       opacity: 0.42
-      visibility: visible
   .news__pic
-    max-height: 180px
     margin-bottom: 10px
-    position: relative
     &:after
-      content: ""
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      +trans
-      visibility: hidden
-      opacity: 0
       background: $blue
+
 
 
 .flex-logotype
@@ -491,6 +489,16 @@ a.btn
     vertical-align: middle
   &:hover
     color: $red
+
+.file__size
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  margin-left: 10px
+  top: 1px
+  font-size: 15px
+  color: #989898
+  +f(r)
 
 .file_small
   font-size: 15px
@@ -713,6 +721,11 @@ a.more-link
     color: $red
     border-color: $red
     border-color: rgba($red, 0.3)
+
+.like-link_light
+  color: #669DFB
+  border-color: #669DFB
+  border-color: rgba(#669DFB, 0.3)
 
 .dashed-line
   display: block

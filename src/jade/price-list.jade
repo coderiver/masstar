@@ -1,0 +1,95 @@
+extends _layout.jade
+
+block title
+  title Price List
+
+block content
+  .l
+    //BEGIN breadcrumbs
+    ul.breadcrumbs
+      li: a(href="#") Главная
+      li: a(href="#") Прайс-листы
+    //END breadcrumbs
+
+    //BEGIN main content
+    .heading
+      h1.title.title_large
+        | Прайс-листы
+
+    //BEGIN price lists
+    .l-col.l-col_mrg
+      .column.one-fourth
+        h2.title.title_medium
+          | Оргстекло
+      .column.three-fourth
+        ul.file-list
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на экструзионное стекло
+              span.file__size
+                | (PDF, 20.3 Mb)
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на блочное оргстекло
+              span.file__size
+                | (PDF, 20.3 Mb)
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на блочное оргстекло
+              span.file__size
+                | (PDF, 20.3 Mb)
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на трубы и стержни
+              span.file__size
+                | (PDF, 20.3 Mb)
+        hr.dashed-line
+
+    .l-col.l-col_mrg
+      .column.one-fourth
+        h2.title.title_medium
+          | Пластики
+      .column.three-fourth
+        ul.file-list
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на монолитный поликарбонат
+              span.file__size
+                | (PDF, 20.3 Mb)
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на сотовый поликарбонат
+              span.file__size
+                | (PDF, 20.3 Mb)
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на полистирол в листах
+              span.file__size
+                | (PDF, 20.3 Mb)
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на АБС в листах
+              span.file__size
+                | (PDF, 20.3 Mb)
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на вспененный ПВХ
+              span.file__size
+                | (PDF, 20.3 Mb)
+          li
+            a.file(href="#")
+              span
+                | Прайс-лист на ПЭТ
+              span.file__size
+                | (PDF, 20.3 Mb)
+    //END price lists
+

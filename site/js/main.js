@@ -14918,7 +14918,7 @@ Menu.prototype = {
             }
         });
 
-        this.$el.on('touchend', function(e) {
+        this.$el.on('click', function(e) {
             e.stopPropagation();
         });
 
@@ -14928,7 +14928,7 @@ Menu.prototype = {
             }
         });
 
-        $('body').on('touchend', function() {
+        $('body').on('click', function() {
             if (_.opened) {
                 _.close();
             }
