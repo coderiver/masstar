@@ -9,12 +9,18 @@
   font-style: normal;
 }
 
+$ico-anchor: "\e602";
+$ico-arr-right: "\e603";
+$ico-arr-left: "\e604";
+$ico-arr-down: "\e605";
+$ico-arr-up: "\e606";
+$ico-close: "\e607";
+$ico-slider-next: "\e600";
+$ico-slider-prev: "\e601";
 $ico-caret-down: "\f0d7";
 $ico-caret-up: "\f0d8";
 $ico-caret-left: "\f0d9";
 $ico-caret-right: "\f0da";
-$ico-slider-next: "\e600";
-$ico-slider-prev: "\e601";
 
 
 .ico {
@@ -43,6 +49,30 @@ $ico-slider-prev: "\e601";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ico-anchor:before {
+  content: "\e602";
+}
+.ico-arr-right:before {
+  content: "\e603";
+}
+.ico-arr-left:before {
+  content: "\e604";
+}
+.ico-arr-down:before {
+  content: "\e605";
+}
+.ico-arr-up:before {
+  content: "\e606";
+}
+.ico-close:before {
+  content: "\e607";
+}
+.ico-slider-next:before {
+  content: "\e600";
+}
+.ico-slider-prev:before {
+  content: "\e601";
+}
 .ico-caret-down:before {
   content: "\f0d7";
 }
@@ -54,10 +84,4 @@ $ico-slider-prev: "\e601";
 }
 .ico-caret-right:before {
   content: "\f0da";
-}
-.ico-slider-next:before {
-  content: "\e600";
-}
-.ico-slider-prev:before {
-  content: "\e601";
 }

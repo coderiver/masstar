@@ -113,79 +113,105 @@
         </div>
       </header>
       <!--END header-->
-      <div style="background:#2454a8;text-align:center" class="l"><br>
-        <div class="popup-inner">
-          <!--BEGIN message-->
-          <div class="message"><strong class="title title_center">Спасибо, Наталья!</strong>
-            <p class="message__text">
-              Ваш заказ принят! Мы свяжемся с вами
-              в течении рабочего дня!
-            </p><a href="#" class="message__close">Закрыть</a>
+      <div class="l">
+        <button type="button" data-popup="#message" class="btn btn_gray">Сообщение</button><br><br>
+        <button type="button" data-popup="#driving-direction" class="btn btn_gray">Как добраться</button><br><br>
+        <button type="button" data-popup="#callback" class="btn btn_gray">Обратный звонок</button><br><br>
+        <button type="button" data-popup="#form" class="btn btn_gray">Форма заказа</button><br><br>
+        <div><a rel="gallery" href="img/certificats/certificat.jpg" class="js-box"><img src="img/certificats/certificat.jpg" width="100" height="150" alt="certificat"></a><a rel="gallery" href="img/certificats/certificat.jpg" class="js-box"><img src="img/certificats/certificat.jpg" width="100" height="150" alt="certificat"></a><a rel="gallery" href="img/certificats/certificat.jpg" class="js-box"><img src="img/certificats/certificat.jpg" width="100" height="150" alt="certificat"></a></div><br><br>
+        <div><a href="img/certificats/certificat.jpg" class="js-box"><img src="img/certificats/certificat.jpg" width="100" height="150" alt="certificat"></a></div>
+        <!--BEGIN popup-->
+        <div id="message" class="popup">
+          <div class="popup__inner">
+            <button type="button" class="popup__close">Закрыть</button>
+            <!--BEGIN message-->
+            <div class="message"><strong class="title title_center">Спасибо, Наталья!</strong>
+              <p class="message__text">
+                Ваш заказ принят! Мы свяжемся с вами
+                в течении рабочего дня!
+              </p><a href="#" class="message__close js-popup-close">Закрыть</a>
+            </div>
+            <!--END message-->
           </div>
-          <!--END message-->
-        </div><br><br><br>
-        <div class="popup-inner">
-          <!--BEGIN form-->
-          <form class="form"><strong class="title title_center">Форма заказа</strong>
-            <div class="field">
-              <label for="name" class="field__label">Имя<sup>*</sup></label>
-              <input type="text" name="name" id="name" required class="input">
-            </div>
-            <div class="field">
-              <label for="phone" class="field__label">Телефон<sup>*</sup></label>
-              <input type="tel" name="phone" id="phone" value="чялорпявдп" required class="input is-error">
-            </div>
-            <div class="field">
-              <label for="email" class="field__label">E-mail</label>
-              <input type="email" name="email" id="email" class="input">
-            </div>
-            <div class="field">
-              <label for="msg" class="field__label">Сообщение</label>
-              <textarea name="msg" id="msg" class="input"></textarea>
-            </div>
-            <button type="submit" class="btn btn_blue btn_gray btn_fw">Закзать</button>
-          </form>
-          <!--END form-->
-        </div><br><br><br>
-        <div class="popup-inner">
-          <!--BEGIN driving-direction-->
-          <div class="driving-direction">
-            <h3t class="title title_center">Как до нас добраться</h3t><strong class="title title_medium">Схема проезда на автомобиле:</strong><img src="img/driving-direction.jpg" alt="driving-direction"><strong class="title title_medium">Схема проезда на автомобиле:</strong>
-            <ul class="marked-list article">
-              <li>10 минут пешком от <b>ст.м. Аэропорт</b>.</li>
-              <li>
-                Садитесь в первый вагон из центра. Выходите из метро <b>направо</b>,<br>
-                затем <b>еще раз направо</b> (слева от Вас будет торговый комплекс<br>
-                «Галерея Аэропорт»), выходите на ул. Черняховского.
-              </li>
-              <li>
-                Идите по этой улице до тех пор, пока не увидете <b>проходную завода<br>«ЖБИ №23»</b>
-                (она находится в самом конце ул. Черняховского).
-              </li>
-              <li>На прходной скажите охране, что идете в <b>компанию «Масстар»</b>, Вас<br>пропустят.</li>
-              <li>
-                Выйдя из проходной, увидите <b>административное здание</b>,<br>
-                поднимайтесь на лифте на <b>6-й этаж, комн. 503</b>.
-              </li>
-            </ul>
-          </div>
-          <!--END driving-direction-->
-        </div><br><br><br>
-        <div class="popup-inner">
-          <!--BEGIN form-->
-          <form class="form"><strong class="title title_center">Обратный звонок</strong>
-            <div class="field">
-              <label for="name" class="field__label">Имя<sup>*</sup></label>
-              <input type="text" name="name" id="name" value="Наталья" required class="input">
-            </div>
-            <div class="field">
-              <label for="phone" class="field__label">Телефон<sup>*</sup></label>
-              <input type="tel" name="phone" id="phone" required class="input">
-            </div>
-            <button type="submit" class="btn btn_blue btn_gray btn_fw">Закзать</button>
-          </form>
-          <!--END form-->
         </div>
+        <!--END popup-->
+        <!--BEGIN popup-->
+        <div id="driving-direction" class="popup">
+          <div class="popup__inner">
+            <button type="button" class="popup__close">Закрыть</button>
+            <!--BEGIN driving-direction-->
+            <div class="driving-direction">
+              <h3t class="title title_center">Как до нас добраться</h3t><strong class="title title_medium">Схема проезда на автомобиле:</strong><img src="img/driving-direction.jpg" alt="driving-direction"><strong class="title title_medium">Схема проезда на автомобиле:</strong>
+              <ul class="marked-list article">
+                <li>10 минут пешком от <b>ст.м. Аэропорт</b>.</li>
+                <li>
+                  Садитесь в первый вагон из центра. Выходите из метро <b>направо</b>,<br>
+                  затем <b>еще раз направо</b> (слева от Вас будет торговый комплекс<br>
+                  «Галерея Аэропорт»), выходите на ул. Черняховского.
+                </li>
+                <li>
+                  Идите по этой улице до тех пор, пока не увидете <b>проходную завода<br>«ЖБИ №23»</b>
+                  (она находится в самом конце ул. Черняховского).
+                </li>
+                <li>На прходной скажите охране, что идете в <b>компанию «Масстар»</b>, Вас<br>пропустят.</li>
+                <li>
+                  Выйдя из проходной, увидите <b>административное здание</b>,<br>
+                  поднимайтесь на лифте на <b>6-й этаж, комн. 503</b>.
+                </li>
+              </ul>
+            </div>
+            <!--END driving-direction-->
+          </div>
+        </div>
+        <!--END popup-->
+        <!--BEGIN popup-->
+        <div id="callback" class="popup">
+          <div class="popup__inner">
+            <button type="button" class="popup__close">Закрыть</button>
+            <!--BEGIN form-->
+            <form class="form"><strong class="title title_center">Обратный звонок</strong>
+              <div class="field">
+                <label for="name" class="field__label">Имя<sup>*</sup></label>
+                <input type="text" name="name" id="name" value="Наталья" required class="input">
+              </div>
+              <div class="field">
+                <label for="phone" class="field__label">Телефон<sup>*</sup></label>
+                <input type="tel" name="phone" id="phone" required class="input">
+              </div>
+              <button type="submit" class="btn btn_blue btn_gray btn_fw">Закзать</button>
+            </form>
+            <!--END form-->
+          </div>
+        </div>
+        <!--END popup-->
+        <!--BEGIN popup-->
+        <div id="form" class="popup">
+          <div class="popup__inner">
+            <button type="button" class="popup__close">Закрыть</button>
+            <!--BEGIN form-->
+            <form class="form"><strong class="title title_center">Форма заказа</strong>
+              <div class="field">
+                <label for="name" class="field__label">Имя<sup>*</sup></label>
+                <input type="text" name="name" id="name" required class="input">
+              </div>
+              <div class="field">
+                <label for="phone" class="field__label">Телефон<sup>*</sup></label>
+                <input type="tel" name="phone" id="phone" value="чялорпявдп" required class="input is-error">
+              </div>
+              <div class="field">
+                <label for="email" class="field__label">E-mail</label>
+                <input type="email" name="email" id="email" class="input">
+              </div>
+              <div class="field">
+                <label for="msg" class="field__label">Сообщение</label>
+                <textarea name="msg" id="msg" class="input"></textarea>
+              </div>
+              <button type="submit" class="btn btn_blue btn_gray btn_fw">Закзать</button>
+            </form>
+            <!--END form-->
+          </div>
+        </div>
+        <!--END popup-->
       </div>
     </div>
     <!--END out-->

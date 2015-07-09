@@ -1,0 +1,21 @@
+//BEGIN popup
+.popup#callback
+  .popup__inner
+    button.popup__close(type="button")
+      | Закрыть
+
+    //BEGIN form
+    form.form
+      strong.title.title_center
+        | Обратный звонок
+      .field
+        label.field__label(for="name") Имя<sup>*</sup>
+        input.input(type="text", name="name", id="name", value="Наталья", required)
+      .field
+        label.field__label(for="phone") Телефон<sup>*</sup>
+        input.input(type="tel", name="phone", id="phone", required)
+      button.btn.btn_blue.btn_gray.btn_fw(type="submit")
+        | Закзать
+    //END form
+
+//END popup

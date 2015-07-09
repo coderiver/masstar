@@ -133,8 +133,6 @@ Menu.prototype = {
             _._initEvents();
             _.$content.slideUp();
         }
-
-        console.log(_);
     }
 
 };

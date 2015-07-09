@@ -878,14 +878,6 @@ ol.marked-list
   height: 365px
 
 
-.popup-inner
-  background: #FFF
-  display: inline-block
-  text-align: left
-  // max-width: 410px
-  // margin: auto
-  border-bottom: 3px solid #D4D6DB
-
 .message
   box-sizing: border-box
   padding: 45px 65px
@@ -1053,3 +1045,142 @@ textarea.input
     margin-top: 24px
     &:first-child
       margin-top: 0
+
+.popup
+  display: none
+  position: fixed
+  z-index: 999
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 40px
+  +vertical
+  text-align: center
+  white-space: nowrap
+  background: $blue
+  background: rgba($blue, 0.9)
+  overflow: auto
+  &.is-active
+    .popup__inner
+      transform: translate3d(0,0,0)
+      opacity: 1
+
+.popup__inner
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  text-align: left
+  white-space: normal
+  background: #FFF
+  box-shadow: 0 1px 20px 0 rgba(0, 40, 111, 0.76)
+  border-bottom: 3px solid #D4D6DB
+  transform: translate3d(0,20%,0) scale(0.5)
+  transition: all 0.3s ease
+  opacity: 0
+
+.popup__close
+  position: absolute
+  bottom: 100%
+  right: 0
+  +f(r)
+  font-size: 15px
+  line-height: 30px
+  padding-right: 25px
+  background: none
+  color: #FFF
+  +trans(color)
+  &:after
+    @extend %ico
+    content: $ico-close
+    font-size: 12px
+    position: absolute
+    top: 50%
+    right: 0
+    margin-top: -6px
+  &:hover
+    color: $red
+
+.popup_gallery
+  .popup__inner
+    max-width: 100%
+    max-height: 100%
+    transition: none !important
+
+
+.popup-slider
+  position: relative
+
+.popup-slider__slides
+  +clr
+
+.popup-slider__slide
+  float: left
+
+.popup-slider__prev,
+.popup-slider__next
+  position: absolute
+  z-index: 2
+  top: 50%
+  background: none
+  font-size: 50px
+  padding: 50px
+  margin: -75px 0 0
+  color: #FFF
+  +trans(color)
+  &:hover
+    color: $red
+  &.fancybox-nav
+    top: 0
+    margin: 0
+    box-sizing: border-box
+    white-space: nowrap
+    min-width: 150px
+    &:after
+      content: ""
+      display: inline-block
+      vertical-align: middle
+      height: 100%
+      width: 0
+      font-size: 0
+    &:before
+      font-size: 50px
+      display: inline-block
+      vertical-align: middle
+
+.popup-slider__prev
+  right: 100%
+  &.fancybox-nav
+    text-align: right
+.popup-slider__next
+  left: 100%
+  &.fancybox-nav
+    text-align: left
+
+
+@keyframes fancy
+  from
+    transform: translate3d(0,20%,0) scale(0.5)
+  to
+    transform: translate3d(0,0,0)
+
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.fancybox-skin
+  animation: fancy 0.3s ease 1
+  box-shadow: 0 1px 20px 0 rgba(0, 40, 111, 0.76) !important
+  border-bottom: 3px solid #D4D6DB
+  border-radius: 0 !important
+  &.is-close
+    transform: translate3d(0,20%,0) scale(0.5)
+    opacity: 0
+    transition: all 0.3s ease
+
+.fancybox-nav,
+.fancybox-item .popup__close
+  animation: fade-in 0.3s ease 1
+

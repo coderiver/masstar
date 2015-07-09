@@ -9,7 +9,6 @@ block title
   title Main
 
 block content
-  .l
 
   //BEGIN map-wrapper
   .map-wrapper
@@ -30,7 +29,7 @@ block content
               Наша компания является VIP-дилером российского производителя
               органического стекла — завода «Дзержинское оргстекло».
             .btn-wrap
-              a.btn.btn_w230(href="#")
+              button.btn.btn_w230(type="button", data-popup="#callback")
                 | Бесплатная консультация
         .columns__figure
           include partials/_slider
@@ -81,4 +80,6 @@ block content
             span.news__date
               | 3 Сентября 2015
   //END columns
+
+  include popups/_callback
 

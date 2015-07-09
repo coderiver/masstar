@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="52px" height="51px" viewBox="0 0 52 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>anchor</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M26,51 C40.0832611,51 51.5,39.5832611 51.5,25.5 C51.5,11.4167389 40.0832611,0 26,0 C11.9167389,0 0.5,11.4167389 0.5,25.5 C0.5,39.5832611 11.9167389,51 26,51 L26,51 Z M26,21.7071068 L17.3535534,30.3535534 L17,30.7071068 L16.2928932,30 L16.6464466,29.6464466 L25.6464466,20.6464466 L25.8232233,20.4696699 L26,20.2928932 L26.3535534,20.6464466 L35.3535534,29.6464466 L35.7071068,30 L35,30.7071068 L34.6464466,30.3535534 L26,21.7071068 Z M26,50 C12.4690236,50 1.5,39.0309764 1.5,25.5 C1.5,11.9690236 12.4690236,1 26,1 C39.5309764,1 50.5,11.9690236 50.5,25.5 C50.5,39.0309764 39.5309764,50 26,50 Z" id="anchor" fill="#979797" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

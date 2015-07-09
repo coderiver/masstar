@@ -31,7 +31,7 @@ block content
             br
             | №23»), (Долгота: 37.686293; Широта: 55.710058)
             br
-            span.info
+            span.info(data-popup="#driving-direction")
               span Как до нас добраться
             br
             em
@@ -45,7 +45,7 @@ block content
             br
             a(href="mailto:info@masstar.ru") info@masstar.ru
             br
-            button.btn.btn_blue.btn_gray.btn_w340(type="button") Форма обратной связи
+            button.btn.btn_blue.btn_gray.btn_w340(type="button", data-popup="#form") Форма обратной связи
           hr
       .column
         .contact.contact_small
@@ -122,3 +122,6 @@ block content
           a(href="mailto:info@masstar.ru") info@masstar.ru
       .column.one-third
     //END contacts
+
+  include popups/_driving-direction
+  include popups/_form

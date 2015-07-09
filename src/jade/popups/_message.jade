@@ -1,0 +1,17 @@
+//BEGIN popup
+.popup#message
+  .popup__inner
+    button.popup__close(type="button")
+      | Закрыть
+
+    //BEGIN message
+    .message
+      strong.title.title_center
+        | Спасибо, Наталья!
+      p.message__text
+        | Ваш заказ принят! Мы свяжемся с вами
+        | в течении рабочего дня!
+      a.message__close.js-popup-close(href="#") Закрыть
+    //END message
+
+//END popup

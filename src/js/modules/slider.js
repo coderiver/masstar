@@ -20,7 +20,7 @@ function Slider(element, config) {
 
     this.$slider.slick(slickOptions);
 
-    this.init();
+    // this.init();
 
     return this;
 

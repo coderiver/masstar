@@ -14748,16 +14748,19 @@ require('../../bower_components/fancybox/source/jquery.fancybox.js');
 var Menu      = require('./modules/menu.js');
 var Slider    = require('./modules/slider.js');
 var Accordion = require('./modules/accordion.js');
+var Popup     = require('./modules/popup.js');
 
 $(document).ready(function() {
 
     var menu          = $('.menu:not(.menu_opened):not(.menu_catalog)');
     var slider        = $('.slider:not(.slider_narrow)');
     var sliderNarrow  = $('.slider.slider_narrow');
+    var popupSlider   = $('.popup-slider');
     var menuOpened    = $('.menu.menu_opened');
     var containerMore = $('.container-more');
     var largeSlider   = $('.large-slider');
     var accordion     = $('.accordion');
+    var popup         = new Popup();
 
     if (menu.length) {
         menu = new Menu(menu);
@@ -14781,6 +14784,27 @@ $(document).ready(function() {
         });
     }
 
+    if (largeSlider.length) {
+        largeSlider.find('.large-slider__slides').slick({
+            prevArrow: largeSlider.find('.large-slider__prev'),
+            nextArrow: largeSlider.find('.large-slider__next'),
+            slide: largeSlider.find('.large-slide'),
+            autoplay: true,
+            autoplySpeed: 7000
+        });
+    }
+
+    if (popupSlider.length) {
+        popupSlider.each(function(index, el) {
+            var $el = $(el);
+            $el.find('.popup-slider__slides').slick({
+                prevArrow: $el.find('.popup-slider__prev'),
+                nextArrow: $el.find('.popup-slider__next'),
+                autoplay: false
+            });
+        });
+    }
+
     if (containerMore.length) {
         containerMore.each(function(index, el) {
             var button  = $(this).find('.container-more__btn');
@@ -14796,22 +14820,31 @@ $(document).ready(function() {
         });
     }
 
-    if (largeSlider.length) {
-        largeSlider.find('.large-slider__slides').slick({
-            prevArrow: largeSlider.find('.large-slider__prev'),
-            nextArrow: largeSlider.find('.large-slider__next'),
-            slide: largeSlider.find('.large-slide'),
-            autoplay: true,
-            autoplySpeed: 7000
-        });
-    }
-
     $('.js-box').fancybox({
+        padding: 0,
+        margin: [20, 60, 20, 60],
+        nextEffect: 'fade',
+        prevEffect: 'fade',
+        openSpeed: 500,
+        closeSpeed: 300,
+        prevSpeed: 300,
+        nextSpeed: 300,
         helpers: {
             overlay: {
-                locked: false
+                locked: false,
+                css: {
+                    background: 'rgba(12, 65, 158, 0.9)'
+                }
             },
         },
+        tpl: {
+            closeBtn: '<a title="Закрыть" class="fancybox-item popup__close" href="javascript:;">Закрыть</a>',
+            next: '<a title="Следующий" class="fancybox-nav popup-slider__next ico ico-slider-next" href="javascript:;"><span></span></a>',
+            prev: '<a title="Предыдущий" class="fancybox-nav popup-slider__prev ico ico-slider-prev" href="javascript:;"><span></span></a>'
+        },
+        beforeClose: function() {
+            this.skin.addClass('is-close');
+        }
     });
 
     if (accordion.length) {
@@ -14819,11 +14852,18 @@ $(document).ready(function() {
             new Accordion(el);
         });
     }
+
+    $('[data-popup]').each(function() {
+        var $this = $(this);
+        $this.on('click', function(e) {
+            popup.open($this.data('popup'));
+        });
+    });
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"../../bower_components/fancybox/source/jquery.fancybox.js":1,"./modules/accordion.js":5,"./modules/menu.js":6,"./modules/slider.js":7,"jquery":2,"slick-carousel":3}],5:[function(require,module,exports){
+},{"../../bower_components/fancybox/source/jquery.fancybox.js":1,"./modules/accordion.js":5,"./modules/menu.js":6,"./modules/popup.js":7,"./modules/slider.js":8,"jquery":2,"slick-carousel":3}],5:[function(require,module,exports){
 function Accordion(element, config) {
 
     this.options = {
@@ -15007,8 +15047,6 @@ Menu.prototype = {
             _._initEvents();
             _.$content.slideUp();
         }
-
-        console.log(_);
     }
 
 };
@@ -15016,6 +15054,72 @@ Menu.prototype = {
 module.exports = Menu;
 
 },{}],7:[function(require,module,exports){
+function Popup(options) {
+
+    var defaults, opt;
+    var _ = this;
+
+    defaults = {
+        duration: 300,
+        popupSelector: '.popup',
+        innerSelector: '.popup__inner',
+        closePopupSelector: '.js-popup-close, .popup__close',
+        activeClass: 'is-active',
+        enableEvents: true
+    };
+
+    _.options = opt = $.extend(defaults, options || {});
+
+    _.open = function(element) {
+        var popup = element instanceof jQuery ? element : $(element);
+
+        // var inner = popup.find(opt.innerSelector);
+        popup.fadeIn({
+            duration: opt.duration,
+            complete: function() {
+                popup.addClass(opt.activeClass);
+            }
+        });
+    };
+
+    _.close = function(element) {
+        var popup = element instanceof jQuery ? element : $(element);
+
+        // var inner = popup.find(opt.innerSelector);
+        if (!popup.hasClass(opt.activeClass)) return;
+
+        popup
+            .removeClass(opt.activeClass)
+            .delay(opt.duration)
+            .fadeOut({
+                duration: opt.duration
+            });
+    };
+
+    _.initEvents = function() {
+        $(opt.closePopupSelector).on('click', function(e) {
+            e.preventDefault();
+            _.close($(this).parents(opt.popupSelector));
+        });
+
+        $(opt.popupSelector).on('click', function() {
+            _.close(this);
+        });
+
+        $(opt.innerSelector).on('click', function(e) {
+            e.stopPropagation();
+        });
+    };
+
+    if (opt.enableEvents) {
+        _.initEvents();
+    }
+
+}
+
+module.exports = Popup;
+
+},{}],8:[function(require,module,exports){
 function Slider(element, config) {
 
     var slickOptions;
@@ -15038,7 +15142,7 @@ function Slider(element, config) {
 
     this.$slider.slick(slickOptions);
 
-    this.init();
+    // this.init();
 
     return this;
 

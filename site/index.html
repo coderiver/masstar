@@ -113,7 +113,6 @@
         </div>
       </header>
       <!--END header-->
-      <div class="l"></div>
       <!--BEGIN map-wrapper-->
       <div class="map-wrapper">
         <div class="parralax"></div>
@@ -132,14 +131,16 @@
                   Наша компания является VIP-дилером российского производителя
                   органического стекла — завода «Дзержинское оргстекло».
                 </p>
-                <div class="btn-wrap"><a href="#" class="btn btn_w230">Бесплатная консультация</a></div>
+                <div class="btn-wrap">
+                  <button type="button" data-popup="#callback" class="btn btn_w230">Бесплатная консультация</button>
+                </div>
               </div>
             </div>
             <div class="columns__figure">
               <!--BEGIN slider-->
               <div class="slider">
                 <div class="slider__slides">
-                  <div class="slide"><a href="img/certificats/cert.jpg" class="slide__img js-box"><img src="img/certificats/cert.jpg" alt="certificat"></a>
+                  <div class="slide"><a rel="sertificats" href="img/certificats/cert.jpg" class="slide__img js-box"><img src="img/certificats/cert.jpg" alt="certificat"></a>
                     <div class="slide__content">
                       <div class="title title_link"><a href="#">Сертификаты</a></div>
                       <div class="text text_gray">
@@ -151,7 +152,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slide"><a href="img/certificats/cert.jpg" class="slide__img js-box"><img src="img/certificats/cert.jpg" alt="certificat"></a>
+                  <div class="slide"><a rel="sertificats" href="img/certificats/cert.jpg" class="slide__img js-box"><img src="img/certificats/cert.jpg" alt="certificat"></a>
                     <div class="slide__content">
                       <div class="title title_link"><a href="#">Сертификаты</a></div>
                       <div class="text text_gray">
@@ -199,6 +200,26 @@
         </div>
       </div>
       <!--END columns-->
+      <!--BEGIN popup-->
+      <div id="callback" class="popup">
+        <div class="popup__inner">
+          <button type="button" class="popup__close">Закрыть</button>
+          <!--BEGIN form-->
+          <form class="form"><strong class="title title_center">Обратный звонок</strong>
+            <div class="field">
+              <label for="name" class="field__label">Имя<sup>*</sup></label>
+              <input type="text" name="name" id="name" value="Наталья" required class="input">
+            </div>
+            <div class="field">
+              <label for="phone" class="field__label">Телефон<sup>*</sup></label>
+              <input type="tel" name="phone" id="phone" required class="input">
+            </div>
+            <button type="submit" class="btn btn_blue btn_gray btn_fw">Закзать</button>
+          </form>
+          <!--END form-->
+        </div>
+      </div>
+      <!--END popup-->
     </div>
     <!--END out-->
     <!--BEGIN footer-->
