@@ -42,3 +42,14 @@
   @if $color == light
     color: #CFD0D2
     color: rgba(#FFF, 0.7)
+
+=img-shadow
+  width: 96px
+  height: 140px
+  box-shadow: 0 3px 7px rgba(0, 35, 96, 0.28)
+  overflow: hidden
+  border: 2px solid #FFF
+  box-sizing: border-box
+  +trans(box-shadow)
+  &:hover
+    box-shadow: 0 3px 15px rgba(0, 35, 96, 0.5)

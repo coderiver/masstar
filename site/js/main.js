@@ -14745,8 +14745,9 @@ global.jQuery = global.$ = require('jquery');
 require('slick-carousel');
 require('../../bower_components/fancybox/source/jquery.fancybox.js');
 
-var Menu   = require('./modules/menu.js');
-var Slider = require('./modules/slider.js');
+var Menu      = require('./modules/menu.js');
+var Slider    = require('./modules/slider.js');
+var Accordion = require('./modules/accordion.js');
 
 $(document).ready(function() {
 
@@ -14756,6 +14757,7 @@ $(document).ready(function() {
     var menuOpened    = $('.menu.menu_opened');
     var containerMore = $('.container-more');
     var largeSlider   = $('.large-slider');
+    var accordion     = $('.accordion');
 
     if (menu.length) {
         menu = new Menu(menu);
@@ -14763,7 +14765,7 @@ $(document).ready(function() {
 
     if (menuOpened.length) {
         menuOpened = new Menu(menuOpened, {
-            alwaysOpen: true,
+            alwaysOpen: true
         });
     }
 
@@ -14800,22 +14802,76 @@ $(document).ready(function() {
             nextArrow: largeSlider.find('.large-slider__next'),
             slide: largeSlider.find('.large-slide'),
             autoplay: true,
-            autoplySpeed: 7000,
+            autoplySpeed: 7000
         });
     }
 
     $('.js-box').fancybox({
         helpers: {
             overlay: {
-                locked: false,
+                locked: false
             },
         },
     });
+
+    if (accordion.length) {
+        accordion.each(function(index, el) {
+            new Accordion(el);
+        });
+    }
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"../../bower_components/fancybox/source/jquery.fancybox.js":1,"./modules/menu.js":5,"./modules/slider.js":6,"jquery":2,"slick-carousel":3}],5:[function(require,module,exports){
+},{"../../bower_components/fancybox/source/jquery.fancybox.js":1,"./modules/accordion.js":5,"./modules/menu.js":6,"./modules/slider.js":7,"jquery":2,"slick-carousel":3}],5:[function(require,module,exports){
+function Accordion(element, config) {
+
+    this.options = {
+        item: '.accordion__item',
+        btn: '.accordion__btn',
+        content: '.accordion__content',
+        activeClass: 'is-active',
+        speed: 300
+    };
+
+    $.extend(this.options, config || {});
+
+    this.$el      = element instanceof jQuery ? element : $(element);
+    this.$item    = this.$el.find(this.options.item);
+    this.$btn     = this.$el.find(this.options.btn);
+    // this.$content = this.$el.find(this.options.content);
+
+    this.init();
+
+}
+
+Accordion.prototype = {
+
+    constructor: Accordion,
+
+    _initEvents: function() {
+        var _ = this;
+
+        _.$btn.on('click', function(e) {
+            var btn   = $(this);
+            var index = btn.index();
+            var content = btn.siblings(_.options.content);
+            e.preventDefault();
+            btn.toggleClass(_.options.activeClass);
+            content.slideToggle(_.options.speed);
+        });
+    },
+
+    init: function() {
+        this._initEvents();
+        console.log(this);
+    }
+
+};
+
+module.exports = Accordion;
+
+},{}],6:[function(require,module,exports){
 function Menu(element, options) {
 
     this.config = {
@@ -14825,7 +14881,7 @@ function Menu(element, options) {
         activeClass: 'is-active',
         openClass: 'is-open',
         activeTab: 0,
-        alwaysOpen: false,
+        alwaysOpen: false
     };
 
     $.extend(this.config, options || {});
@@ -14953,13 +15009,13 @@ Menu.prototype = {
         }
 
         console.log(_);
-    },
+    }
 
 };
 
 module.exports = Menu;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 function Slider(element, config) {
 
     var slickOptions;
@@ -14975,7 +15031,7 @@ function Slider(element, config) {
         dots: false,
         slide: this.$slider.find('.slide'),
         prevArrow: this.$el.find('.slider__prev'),
-        nextArrow: this.$el.find('.slider__next'),
+        nextArrow: this.$el.find('.slider__next')
     };
 
     slickOptions = $.extend(defaults, config || {});
@@ -14994,7 +15050,7 @@ Slider.prototype = {
 
     init: function() {
         console.log(this);
-    },
+    }
 
 };
 

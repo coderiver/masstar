@@ -190,9 +190,12 @@
   .slider__prev,
   .slider__next
     background: $lightbg
+  a
+    text-decoration: underline
 
 
 .slide
+  display: none
   float: left
   position: relative
   padding: 50px 40px 55px
@@ -200,7 +203,6 @@
   +clr
   .title
     margin-bottom: 7px
-  display: none
   &:first-child
     display: block
   &.slick-slide
@@ -210,27 +212,28 @@
   display: block
   float: left
   position: relative
-  width: 96px
-  height: 139px
-  border: 2px solid #FFF
-  box-shadow: 0 3px 7px rgba(0, 35, 96, 0.28)
+  // width: 96px
+  // height: 140px
+  // border: 2px solid #FFF
+  +img-shadow
   cursor: pointer
-  &:after
-    opacity: 0
-    visibility: hidden
-    content: ""
-    position: absolute
-    bottom: 7px
-    right: 7px
-    +sprite(search)
-    +trans
+  text-decoration: none
+  // &:after
+  //   opacity: 0
+  //   visibility: hidden
+  //   content: ""
+  //   position: absolute
+  //   bottom: 7px
+  //   right: 7px
+  //   +sprite(search)
+  //   +trans
   img
     display: block
     max-width: 100%
-  &:hover
-    &:after
-      opacity: 1
-      visibility: visible
+  // &:hover
+  //   &:after
+  //     opacity: 1
+  //     visibility: visible
 
 .slide__content
   margin-left: 120px
@@ -242,7 +245,10 @@
     float: right
     &:first-child
       float: left
-
+  .slide__content
+    clear: both
+    margin: 0
+    padding-top: 20px
 
 
 .large-slider
@@ -380,7 +386,7 @@
 
 
 .footer
-  margin-top: 60px
+  margin-top: 80px
   background: $lightbg
   position: relative
   .scroll-to-top
@@ -559,6 +565,11 @@ ol.marked-list
   margin: 0 0 30px
   font-size: 16px
 
+.grid_testimonials
+  margin-bottom: -70px
+  .grid__item
+    margin-bottom: 70px
+
 
 .short-about
   position: relative
@@ -619,6 +630,26 @@ ol.marked-list
   sup
     vertical-align: super
     font-size: 9px
+
+.short-about_mod
+  padding-left: 238px
+  .short-about__pic
+    top: 10px
+    left: 10px
+    bottom: 10px
+    width: 228px
+    cursor: default
+    &:after
+      display: none
+  .short-about__content
+    padding-bottom: 30px
+
+.short-about-group
+  text-align: right
+  margin: 20px 0
+  .short-about
+    margin: 15px 0
+    text-align: left
 
 
 .table
@@ -707,6 +738,17 @@ ol.marked-list
     line-height: 30px
     height: auto
     border: none
+
+.container-more_objects
+  margin-top: 50px
+  .l-col
+    margin-bottom: 50px
+  .container-more__btn
+    height: 67px
+    line-height: 67px
+    border: none
+    +f(r)
+    font-size: 18px
 
 
 .advantages
@@ -934,3 +976,75 @@ textarea.input
   margin-top: 40px
   .title
     line-height: 1
+
+
+.accordion__item
+  margin-top: 20px
+  &:first-child
+    margin-top: 0
+
+.accordion__btn
+  position: relative
+  padding-right: 16px
+  background: none
+  text-decoration: none
+  color: $link
+  font-size: 18px
+  +spacing(30)
+  +trans(color)
+  > span
+    border-bottom: 1px dotted
+  &:after
+    @extend %ico
+    content: $ico-caret-down
+    position: absolute
+    top: 5px
+    right: 0
+    font-size: 12px
+  &:hover
+    color: $red
+  &.is-active
+    color: $blue
+    &:after
+      content: $ico-caret-up
+
+.accordion__content
+  margin-top: 20px
+  display: none
+
+.qa
+  a
+    text-decoration: underline
+
+
+.testimonial
+  font-size: 15px
+  line-height: 1.46
+  +clr
+
+.testimonial__pic
+  display: block
+  float: left
+  +img-shadow
+  // width: 96px
+  // height: 140px
+  // overflow: hidden
+  // +trans(box-shadow)
+  // &:hover
+  //   box-shadow: 0 3px 15px rgba(0, 35, 96, 0.5)
+  img
+    display: block
+    width: 100%
+    max-width: 100%
+
+.testimonial__text
+  margin-left: 120px
+  p
+    margin: 10px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  .lead
+    line-height: 1.22
+

@@ -1,38 +1,46 @@
-// var $ = require('jquery');
+function Accordion(element, config) {
 
-function makeAccordion(wrapper, item, btn, content) {
+    this.options = {
+        item: '.accordion__item',
+        btn: '.accordion__btn',
+        content: '.accordion__content',
+        activeClass: 'is-active',
+        speed: 300
+    };
 
-    var accordion   = $(wrapper),
-        activeClass = 'is-active';
+    $.extend(this.options, config || {});
 
-    if ( accordion.length ) {
+    this.$el      = element instanceof jQuery ? element : $(element);
+    this.$item    = this.$el.find(this.options.item);
+    this.$btn     = this.$el.find(this.options.btn);
+    // this.$content = this.$el.find(this.options.content);
 
-        accordion.each(function() {
-            var el       = $(this),
-                btns     = el.find(btn),
-                items    = el.find(item),
-                contents = el.find(content);
-
-            btns.on('click', function(event) {
-                event.preventDefault();
-
-                var currentBtn     = $(this),
-                    currentItem    = currentBtn.parent(item),
-                    currentContent = currentBtn.siblings(content);
-
-                if ( currentItem.hasClass(activeClass) ) {
-                    currentItem.removeClass(activeClass);
-                    currentContent.slideUp(200);
-                } else {
-                    items.removeClass(activeClass);
-                    contents.slideUp(200);
-                    currentItem.addClass(activeClass);
-                    currentContent.slideDown(200);
-                }
-            });
-        });
-    }
+    this.init();
 
 }
 
-module.exports = makeAccordion;
+Accordion.prototype = {
+
+    constructor: Accordion,
+
+    _initEvents: function() {
+        var _ = this;
+
+        _.$btn.on('click', function(e) {
+            var btn   = $(this);
+            var index = btn.index();
+            var content = btn.siblings(_.options.content);
+            e.preventDefault();
+            btn.toggleClass(_.options.activeClass);
+            content.slideToggle(_.options.speed);
+        });
+    },
+
+    init: function() {
+        this._initEvents();
+        console.log(this);
+    }
+
+};
+
+module.exports = Accordion;

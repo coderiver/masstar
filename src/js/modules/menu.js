@@ -7,7 +7,7 @@ function Menu(element, options) {
         activeClass: 'is-active',
         openClass: 'is-open',
         activeTab: 0,
-        alwaysOpen: false,
+        alwaysOpen: false
     };
 
     $.extend(this.config, options || {});
@@ -135,7 +135,7 @@ Menu.prototype = {
         }
 
         console.log(_);
-    },
+    }
 
 };
 

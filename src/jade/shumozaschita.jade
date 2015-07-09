@@ -1,0 +1,195 @@
+extends _layout
+
+block title
+  title Shumozaschita
+
+block content
+  .l
+    .l-columns
+      aside.l-columns__aside
+        include partials/_aside-nav2
+        include partials/_slider-narrow
+        include partials/_slider-narrow2
+        include partials/_slider-narrow3
+
+      .l-columns__main
+        //BEGIN breadcrumbs
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li: a(href="#") Каталог
+          li: a(href="#") Шумозащита
+        //END breadcrumbs
+
+        //BEGIN main content
+        .heading
+          h1.title.title_large
+            | Шумозащита
+
+        .article
+          p.lead
+            | Компания «Масстар» поставляет пластики на российский рынок уже более 18 лет.
+            | Мы ежемесячно отгружаем десятки тонн пластика сотням потребителей от Калининграда
+            | до Владивостока. Благодаря большим оборотам мы продаем оргстекло
+            | по низким ценам.
+
+          //BEGIN short-about-group
+          .short-about-group
+            a.file(href="#")
+              span Скачать прайс
+            .short-about.short-about_mod
+              .short-about__pic(style="background-image:url('img/ekrany1.jpg')")
+              .short-about__content
+                strong.title.title_medium
+                  | Шумопоглощающие экраны
+                dl.short-about__row
+                  dd Уровень звука:
+                  dt 15 Дцб
+                dl.short-about__row
+                  dd Материал:
+                  dt пластик
+                dl.short-about__row
+                  dd Срок эксплуатации:
+                  dt пластик
+                dl.short-about__row
+                  dd Толщина, мм:
+                  dt 4, 6, 8, 10, 16, 20, 24, 30, 32
+                dl.short-about__row
+                  dd Длина панели:
+                  dt от 1 м<sup>2</sup>, а также <a href="#">резка в размер</a>
+                dl.short-about__row
+                  dd Цвета:
+                  dt прозрачный, серый, красный, синий, оранжевый, жёлтый, зелёный
+            .short-about.short-about_mod
+              .short-about__pic(style="background-image:url('img/ekrany2.jpg')")
+              .short-about__content
+                strong.title.title_medium
+                  | Шумоотражающие экраны
+                dl.short-about__row
+                  dd Уровень звука:
+                  dt 15 Дцб
+                dl.short-about__row
+                  dd Материал:
+                  dt пластик
+                dl.short-about__row
+                  dd Срок эксплуатации:
+                  dt пластик
+                dl.short-about__row
+                  dd Толщина, мм:
+                  dt 4, 6, 8, 10, 16, 20, 24, 30, 32
+                dl.short-about__row
+                  dd Длина панели:
+                  dt от 1 м<sup>2</sup>, а также <a href="#">резка в размер</a>
+                dl.short-about__row
+                  dd Цвета:
+                  dt прозрачный, серый, красный, синий, оранжевый, жёлтый, зелёный
+            .short-about.short-about_mod
+              .short-about__pic(style="background-image:url('img/ekrany3.jpg')")
+              .short-about__content
+                strong.title.title_medium
+                  | Комбинированные экраны
+                dl.short-about__row
+                  dd Уровень звука:
+                  dt 15 Дцб
+                dl.short-about__row
+                  dd Материал:
+                  dt пластик
+                dl.short-about__row
+                  dd Срок эксплуатации:
+                  dt пластик
+                dl.short-about__row
+                  dd Толщина, мм:
+                  dt 4, 6, 8, 10, 16, 20, 24, 30, 32
+                dl.short-about__row
+                  dd Длина панели:
+                  dt от 1 м<sup>2</sup>, а также <a href="#">резка в размер</a>
+                dl.short-about__row
+                  dd Цвета:
+                  dt прозрачный, серый, красный, синий, оранжевый, жёлтый, зелёный
+          //END short-about-group
+
+          h3.title.title_medium
+            | Преимущества шумозащитных экранов
+          ul.marked-list
+            li
+              | Удивительно высокая <strong>ударная прочность</strong> (превышает прочность ПВХ в 8 раз, стекла – в 200 раз);
+            li
+              | <strong>Малый удельный вес</strong> (при одинаковой толщине материал легче акрила
+              | в 3 раза и примерно в 16 раз легче стекла);
+            li
+              | <strong>Высокий показатель теплоизоляции</strong> (пропускает тепло меньше, чем однослойное стекло);
+            li
+              | Отличная <strong>светопроницаемость</strong> (показатель прозрачности достигает 86%);
+            li
+              | <strong>Стойкость к атмосферным воздействиям</strong> (успешное применение в условиях
+              | чрезмерно низких и достаточно высоких температур в диапазоне от -40ºС до +120ºС);
+            li
+              | <strong>Защита от УФ-излучения</strong> (благодаря специальному защитному слою, листы сотового
+              | поликарбоната предотвращают проникновение в помещение ультрафиолетового излучения);
+          .container-more.container-more_simple
+            .container-more__content
+              ul.marked-list
+                li
+                  | <strong>Химическая устойчивость</strong> (даже в повышенно агрессивной среде материал
+                  | не меняет свойства и химический состав);
+                li
+                  | <strong>Огнестойкость</strong> (материал трудно воспламеняется и подлежит самозатуханию);
+                li
+                  | <strong>Безопасность при остеклении</strong> (листы поликарбоната не трескаются, не бьются
+                  | благодаря вязкости полимера, при ударе исключено возникновение острых осколков);
+                li
+                  | <strong>Неограниченные конструкционные возможности</strong> (благодаря легкости листов можно
+                  | создавать элегантные, легкие и оригинальные конструкции).
+            button.container-more__btn(type="button", data-alt-text="Скрыть")
+              | Показать ещё свойства
+
+          h3.title.title_medium
+            | Области применения
+          .l-col
+            .column.one-third
+              ul.simple-list
+                li.lead: strong В строительстве
+                li Светорассеивающая кровля
+                li Заборы
+                li Архитектура малых форм
+                li Выстовочные перегородки
+                li Осветительное оборудование
+            .column.one-third
+              ul.simple-list
+                li.lead: strong В рекламе
+                li Наружная реклама (вывески)
+                li Выставочные стенды
+                li Витрины
+            .column.one-third
+              ul.simple-list
+                li.lead: strong В строительстве
+                li Теплицы
+                li Зимние сады
+                li Оранжереи
+
+          h3.title.title_medium
+            | Построенные объекты
+          .l-col
+            .column
+              a.news.news_object(href="")
+                .news__pic: img(src="img/object1.jpg", alt="object1")
+                span МКАД г. Москва
+            .column
+              a.news.news_object(href="")
+                .news__pic: img(src="img/object2.jpg", alt="object1")
+                span Частная территория по ул. Могилевской, г. Москва
+
+          a.large-btn(href="#")
+            span.like-link Смотреть все объекты
+
+
+          //BEGIN promo
+          .promo
+            a.btn.btn_blue-color(href="#")
+              | Заказать комерческое предложение
+            .phone-number.phone-number_light
+              span
+                | Многоканальный —
+              a(href="tel:4952150144")
+                |(495) 215-01-44
+          //END promo
+        //END main content

@@ -2,8 +2,9 @@ global.jQuery = global.$ = require('jquery');
 require('slick-carousel');
 require('../../bower_components/fancybox/source/jquery.fancybox.js');
 
-var Menu   = require('./modules/menu.js');
-var Slider = require('./modules/slider.js');
+var Menu      = require('./modules/menu.js');
+var Slider    = require('./modules/slider.js');
+var Accordion = require('./modules/accordion.js');
 
 $(document).ready(function() {
 
@@ -13,6 +14,7 @@ $(document).ready(function() {
     var menuOpened    = $('.menu.menu_opened');
     var containerMore = $('.container-more');
     var largeSlider   = $('.large-slider');
+    var accordion     = $('.accordion');
 
     if (menu.length) {
         menu = new Menu(menu);
@@ -20,7 +22,7 @@ $(document).ready(function() {
 
     if (menuOpened.length) {
         menuOpened = new Menu(menuOpened, {
-            alwaysOpen: true,
+            alwaysOpen: true
         });
     }
 
@@ -57,15 +59,21 @@ $(document).ready(function() {
             nextArrow: largeSlider.find('.large-slider__next'),
             slide: largeSlider.find('.large-slide'),
             autoplay: true,
-            autoplySpeed: 7000,
+            autoplySpeed: 7000
         });
     }
 
     $('.js-box').fancybox({
         helpers: {
             overlay: {
-                locked: false,
+                locked: false
             },
         },
     });
+
+    if (accordion.length) {
+        accordion.each(function(index, el) {
+            new Accordion(el);
+        });
+    }
 });

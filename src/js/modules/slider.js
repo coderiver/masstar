@@ -13,7 +13,7 @@ function Slider(element, config) {
         dots: false,
         slide: this.$slider.find('.slide'),
         prevArrow: this.$el.find('.slider__prev'),
-        nextArrow: this.$el.find('.slider__next'),
+        nextArrow: this.$el.find('.slider__next')
     };
 
     slickOptions = $.extend(defaults, config || {});
@@ -32,7 +32,7 @@ Slider.prototype = {
 
     init: function() {
         console.log(this);
-    },
+    }
 
 };
 

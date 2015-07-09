@@ -261,7 +261,7 @@ a.btn
       margin-top: 0
     &:last-child
       margin-bottom: 0
-  a
+  > a
     color: $link
     +trans(color)
     &:hover
@@ -316,6 +316,29 @@ a.btn
   .news__date
     display: block
     margin: 5px 0 0
+
+.news_object
+  color: $dark
+  &:hover
+    color: $dark
+    .news__pic:after
+      opacity: 0.42
+      visibility: visible
+  .news__pic
+    max-height: 180px
+    margin-bottom: 10px
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      +trans
+      visibility: hidden
+      opacity: 0
+      background: $blue
 
 
 .flex-logotype
@@ -701,3 +724,16 @@ a.more-link
     margin-top: 0
   &:last-child
     margin-bottom: 0
+
+.large-btn
+  font-size: 18px
+  display: block
+  line-height: 67px
+  text-decoration: none
+  background: $lightbg
+  text-align: center
+  margin: 50px 0 35px
+  &:hover
+    .like-link
+      color: $red
+      border-color: rgba($red, 0.3)
