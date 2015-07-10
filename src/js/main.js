@@ -116,4 +116,5 @@ $(document).ready(function() {
             popup.open($this.data('popup'));
         });
     });
+
 });

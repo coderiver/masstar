@@ -17,7 +17,6 @@ function Popup(options) {
     _.open = function(element) {
         var popup = element instanceof jQuery ? element : $(element);
 
-        // var inner = popup.find(opt.innerSelector);
         popup.fadeIn({
             duration: opt.duration,
             complete: function() {
@@ -29,7 +28,6 @@ function Popup(options) {
     _.close = function(element) {
         var popup = element instanceof jQuery ? element : $(element);
 
-        // var inner = popup.find(opt.innerSelector);
         if (!popup.hasClass(opt.activeClass)) return;
 
         popup

@@ -115,7 +115,7 @@
       <!--END header-->
       <!--BEGIN map-wrapper-->
       <div class="map-wrapper">
-        <div class="parralax"></div>
+        <div data-anchor-target=".map-wrapper" data-0="transform:translate3d(0, -100px, 0)" data-1500="transform:translate3d(0, 100px, 0)" class="parallax"></div>
         <div class="l">
           <div class="columns">
             <div class="columns__text">
@@ -305,6 +305,8 @@
     </footer>
     <!--END footer-->
     <!--LOAD SCRIPTS-->
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+    <script>skrollr.init();</script>
   </body>
 </html>

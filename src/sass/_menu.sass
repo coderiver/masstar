@@ -89,9 +89,10 @@
   padding: 112px 0 0 33.333%
   box-sizing: border-box
   height: 470px
-  font-size: 0
+  // font-size: 0
   background: #012C77 img-url('tiger.png') no-repeat 100% 50%
   overflow: hidden
+  +clr
   &:before
     content: ""
     position: absolute
@@ -118,11 +119,12 @@
 
 .menu__tab-column
   position: relative
+  float: left
   z-index: 1
   width: 50%
   box-sizing: border-box
-  display: inline-block
-  vertical-align: top
+  // display: inline-block
+  // vertical-align: top
   padding-right: 40px
   font-size: 15px
 

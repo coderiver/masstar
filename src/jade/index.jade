@@ -5,6 +5,11 @@ block vars
 
 extends _layout
 
+append scripts
+  script(type="text/javascript", src="js/skrollr.min.js")
+  script
+    | skrollr.init();
+
 block title
   title Main
 
@@ -12,7 +17,11 @@ block content
 
   //BEGIN map-wrapper
   .map-wrapper
-    .parralax
+    .parallax(
+      data-anchor-target=".map-wrapper",
+      data-0="transform:translate3d(0, -100px, 0)",
+      data-1500="transform:translate3d(0, 100px, 0)",
+      )
     .l
       .columns
         .columns__text

@@ -240,7 +240,7 @@ a.btn { line-height: 35px; }
 
 .phone-number_large { padding-left: 50px; position: relative; }
 .phone-number_large:before { content: ""; position: absolute; bottom: 9px; left: 0; background-image: url("../img/icons.png"); width: 36px; height: 36px; background-position: -54px -152px; }
-.phone-number_large > a { font-size: 48px; }
+.phone-number_large > a { font-size: 48px; white-space: nowrap; }
 .phone-number_large > span { margin-bottom: 9px; }
 
 .title { display: block; margin-bottom: 25px; font-size: 30px; line-height: 1.4; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; color: #151515; letter-spacing: 0.03em; }
@@ -481,7 +481,8 @@ a.more-link { display: inline-block; }
 .menu__btn.is-active:before { display: none; }
 .menu__btn.is-active > span:after { margin: -2px -4px 0 0; width: 0px; height: 0px; border-style: solid; border-width: 5px 4px 0 4px; border-color: #FFF transparent transparent transparent; }
 
-.menu__tab { display: none; position: relative; padding: 112px 0 0 33.333%; box-sizing: border-box; height: 470px; font-size: 0; background: #012C77 url("../img/tiger.png") no-repeat 100% 50%; overflow: hidden; }
+.menu__tab { display: none; position: relative; padding: 112px 0 0 33.333%; box-sizing: border-box; height: 470px; background: #012C77 url("../img/tiger.png") no-repeat 100% 50%; overflow: hidden; *zoom: 1; }
+.menu__tab:after { content: " "; display: table; clear: both; }
 .menu__tab:before { content: ""; position: absolute; z-index: 0; bottom: 60px; right: 230px; width: 0; height: 0; box-shadow: 0 0 285px 285px rgba(133, 167, 237, 0.25); }
 .menu__tab:nth-child(2) { background-color: #0C419E; }
 .menu__tab:last-child { background-color: #1165AB; }
@@ -489,7 +490,7 @@ a.more-link { display: inline-block; }
 
 .menu__pic { position: absolute; z-index: 1; top: 0; bottom: 0; left: 0; width: 33.333%; }
 
-.menu__tab-column { position: relative; z-index: 1; width: 50%; box-sizing: border-box; display: inline-block; vertical-align: top; padding-right: 40px; font-size: 15px; }
+.menu__tab-column { position: relative; float: left; z-index: 1; width: 50%; box-sizing: border-box; padding-right: 40px; font-size: 15px; }
 
 .menu__list { font-size: 18px; letter-spacing: 0.03em; color: #FFF; }
 .menu__list > li { margin-top: 17px; }
@@ -541,7 +542,7 @@ a.more-link { display: inline-block; }
 .map-wrapper .l { position: relative; z-index: 1; }
 .map-wrapper + * { position: relative; z-index: 1; }
 
-.parralax { position: absolute; z-index: 0; top: -100px; bottom: -100px; left: 0; right: 0; background: #070E1D url("../img/map-index.jpg") no-repeat center center; background-size: cover; }
+.parallax { position: absolute; z-index: 0; top: -100px; bottom: -100px; left: 0; right: 0; background: #070E1D url("../img/map-index.jpg") no-repeat center center; background-size: cover; }
 
 .columns { margin: 0 -10px; *zoom: 1; }
 .columns:after { content: " "; display: table; clear: both; }
