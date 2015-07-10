@@ -120,8 +120,8 @@ $(document).ready(function() {
         });
     });
 
-    if (parallax.length) {
-        parallax.parallax('50%', 0.15);
-    }
+    // if (parallax.length) {
+    //     parallax.parallax('50%', 0.15);
+    // }
 
 });

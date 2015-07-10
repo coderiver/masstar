@@ -84,6 +84,7 @@
   padding: 180px 0
   margin: -100px 0
   overflow: hidden
+  box-sizing: border-box
   .l
     position: relative
     z-index: 1
@@ -94,11 +95,13 @@
 .parallax
   position: absolute
   z-index: 0
-  top: -150px
-  bottom: -150px
+  // top: -150px
+  // bottom: -150px
+  top: 0
+  bottom: 0
   left: 0
   right: 0
-  background: #070E1D img-url('map-index.jpg') no-repeat center center
+  // background: #070E1D img-url('map-index.jpg') no-repeat center center
   background-size: cover
 
 
@@ -162,22 +165,29 @@
   border-radius: 50%
   text-align: center
   line-height: normal
+  color: #BBC3D1
+  font-size: 10px
+  +trans(color)
   &:active
     transform: translate(0,1px)
     box-shadow: none
   &:before
+    @extend %ico
     content: ""
-    display: inline-block
     vertical-align: middle
     position: relative
+  &:hover
+    color: $red
+
 .slider__prev
   margin-right: 3px
   &:before
-    +arr(6,8,#BBC3D1, l)
+    content: $ico-arr-left
     left: -1px
+
 .slider__next
   &:before
-    +arr(6,8,#BBC3D1, r)
+    content: $ico-arr-right
     left: 1px
 
 .slider_narrow
