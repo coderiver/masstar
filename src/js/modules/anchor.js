@@ -29,9 +29,12 @@ function Anchor(element, config) {
     };
 
     _.$el.on('click', function() {
+        $('html').animate({
+            scrollTop: 0
+        }, _.options.scrollDuration);
         $('body').animate({
             scrollTop: 0
-        }, 500);
+        }, _.options.scrollDuration);
     });
 
     win.on('scroll', function() {
