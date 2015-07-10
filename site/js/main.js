@@ -14761,6 +14761,7 @@ $(document).ready(function() {
     var containerMore = $('.container-more');
     var largeSlider   = $('.large-slider');
     var accordion     = $('.accordion');
+    var parallax      = $('.parallax');
     var anchor        = new Anchor('.scroll-to-top');
     var popup         = new Popup();
 
@@ -14861,6 +14862,10 @@ $(document).ready(function() {
             popup.open($this.data('popup'));
         });
     });
+
+    if (parallax.length) {
+        parallax.parallax('50%', 0.15);
+    }
 
 });
 

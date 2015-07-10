@@ -547,7 +547,7 @@ a.more-link { display: inline-block; }
 .map-wrapper .l { position: relative; z-index: 1; }
 .map-wrapper + * { position: relative; z-index: 1; }
 
-.parallax { position: absolute; z-index: 0; top: -100px; bottom: -100px; left: 0; right: 0; background: #070E1D url("../img/map-index.jpg") no-repeat center center; background-size: cover; }
+.parallax { position: absolute; z-index: 0; top: -150px; bottom: -150px; left: 0; right: 0; background: #070E1D url("../img/map-index.jpg") no-repeat center center; background-size: cover; }
 
 .columns { margin: 0 -10px; *zoom: 1; }
 .columns:after { content: " "; display: table; clear: both; }

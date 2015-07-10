@@ -6,7 +6,8 @@ block vars
 
 extends _layout
 
-//- append scripts
+append scripts
+  script(type="text/javascript" src="js/jquery.parallax-1.1.3.js")
 //-   script(type="text/javascript", src="js/skrollr.min.js")
 //-   script
 //-     | skrollr.init();
@@ -18,11 +19,7 @@ block content
 
   //BEGIN map-wrapper
   .map-wrapper
-    .parallax(
-      data-anchor-target=".map-wrapper",
-      data-0="transform:translate3d(0, -100px, 0)",
-      data-1500="transform:translate3d(0, 100px, 0)",
-      )
+    .parallax
     .l
       .columns
         .columns__text
