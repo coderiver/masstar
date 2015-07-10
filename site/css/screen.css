@@ -651,7 +651,8 @@ a.more-link { display: inline-block; }
 .links__list > li:first-child { margin-top: 0; }
 
 .footer { margin-top: 80px; background: #EDEFF3; position: relative; }
-.footer .scroll-to-top { position: absolute; bottom: 190px; left: 50px; }
+.footer .scroll-to-top { position: absolute; bottom: 190px; left: 50px; -webkit-transform: translate3d(-100px, 0, 0); transform: translate3d(-100px, 0, 0); opacity: 0; visibility: hidden; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
+.footer .scroll-to-top.is-active { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; visibility: visible; }
 
 .footer__row { display: table; table-layout: fixed; border-collapse: collapse; width: 100%; font-size: 15px; }
 

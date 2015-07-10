@@ -6,6 +6,7 @@ var Menu      = require('./modules/menu.js');
 var Slider    = require('./modules/slider.js');
 var Accordion = require('./modules/accordion.js');
 var Popup     = require('./modules/popup.js');
+var Anchor    = require('./modules/anchor.js');
 
 $(document).ready(function() {
 
@@ -17,6 +18,7 @@ $(document).ready(function() {
     var containerMore = $('.container-more');
     var largeSlider   = $('.large-slider');
     var accordion     = $('.accordion');
+    var anchor        = new Anchor('.scroll-to-top');
     var popup         = new Popup();
 
     if (menu.length) {
@@ -115,12 +117,6 @@ $(document).ready(function() {
         $this.on('click', function(e) {
             popup.open($this.data('popup'));
         });
-    });
-
-    $('.scroll-to-top').on('click', function() {
-        $('body').animate({
-            scrollTop: 0
-        }, 500);
     });
 
 });

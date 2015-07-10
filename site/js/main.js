@@ -14749,6 +14749,7 @@ var Menu      = require('./modules/menu.js');
 var Slider    = require('./modules/slider.js');
 var Accordion = require('./modules/accordion.js');
 var Popup     = require('./modules/popup.js');
+var Anchor    = require('./modules/anchor.js');
 
 $(document).ready(function() {
 
@@ -14760,6 +14761,7 @@ $(document).ready(function() {
     var containerMore = $('.container-more');
     var largeSlider   = $('.large-slider');
     var accordion     = $('.accordion');
+    var anchor        = new Anchor('.scroll-to-top');
     var popup         = new Popup();
 
     if (menu.length) {
@@ -14860,17 +14862,11 @@ $(document).ready(function() {
         });
     });
 
-    $('.scroll-to-top').on('click', function() {
-        $('body').animate({
-            scrollTop: 0
-        }, 500);
-    });
-
 });
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"../../bower_components/fancybox/source/jquery.fancybox.js":1,"./modules/accordion.js":5,"./modules/menu.js":6,"./modules/popup.js":7,"./modules/slider.js":8,"jquery":2,"slick-carousel":3}],5:[function(require,module,exports){
+},{"../../bower_components/fancybox/source/jquery.fancybox.js":1,"./modules/accordion.js":5,"./modules/anchor.js":6,"./modules/menu.js":7,"./modules/popup.js":8,"./modules/slider.js":9,"jquery":2,"slick-carousel":3}],5:[function(require,module,exports){
 function Accordion(element, config) {
 
     this.options = {
@@ -14919,6 +14915,58 @@ Accordion.prototype = {
 module.exports = Accordion;
 
 },{}],6:[function(require,module,exports){
+function Anchor(element, config) {
+
+    var _   = this;
+    var win = $(window);
+    var scrollPos = win.scrollTop();
+    var defaults = {
+        activeClass: 'is-active',
+        offset: 0,
+        scrollDuration: 500
+    };
+
+    _.$el     = element instanceof jQuery ? element : $(element);
+    _.active  = false;
+    _.options = $.extend(defaults, config || {});
+
+    _.init = function() {
+        _.visiblePos = _.$el.offset().top - win.height() - _.options.offset;
+        _.updateState();
+    };
+
+    _.updateState = function() {
+        if (!_.active && scrollPos >= _.visiblePos) {
+            _.$el.addClass(_.options.activeClass);
+            _.active = true;
+        } else if (_.active && scrollPos < _.visiblePos) {
+            _.$el.removeClass(_.options.activeClass);
+            _.active = false;
+        }
+    };
+
+    _.$el.on('click', function() {
+        $('body').animate({
+            scrollTop: 0
+        }, 500);
+    });
+
+    win.on('scroll', function() {
+        scrollPos = win.scrollTop();
+        _.updateState();
+    });
+
+    win.on('resize', function() {
+        _.init();
+    });
+
+    _.init();
+
+}
+
+module.exports = Anchor;
+
+},{}],7:[function(require,module,exports){
 function Menu(element, options) {
 
     this.config = {
@@ -15109,7 +15157,7 @@ Menu.prototype = {
 
 module.exports = Menu;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 function Popup(options) {
 
     var defaults, opt;
@@ -15173,7 +15221,7 @@ function Popup(options) {
 
 module.exports = Popup;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 function Slider(element, config) {
 
     var slickOptions;
