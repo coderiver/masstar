@@ -79,7 +79,7 @@ $(document).ready(function() {
 
     $('.js-box').fancybox({
         padding: 0,
-        margin: [20, 60, 20, 60],
+        margin: [40, 60, 20, 60],
         nextEffect: 'fade',
         prevEffect: 'fade',
         openSpeed: 500,
@@ -115,6 +115,12 @@ $(document).ready(function() {
         $this.on('click', function(e) {
             popup.open($this.data('popup'));
         });
+    });
+
+    $('.scroll-to-top').on('click', function() {
+        $('body').animate({
+            scrollTop: 0
+        }, 500);
     });
 
 });

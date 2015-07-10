@@ -14822,7 +14822,7 @@ $(document).ready(function() {
 
     $('.js-box').fancybox({
         padding: 0,
-        margin: [20, 60, 20, 60],
+        margin: [40, 60, 20, 60],
         nextEffect: 'fade',
         prevEffect: 'fade',
         openSpeed: 500,
@@ -14858,6 +14858,12 @@ $(document).ready(function() {
         $this.on('click', function(e) {
             popup.open($this.data('popup'));
         });
+    });
+
+    $('.scroll-to-top').on('click', function() {
+        $('body').animate({
+            scrollTop: 0
+        }, 500);
     });
 
 });
@@ -14921,15 +14927,19 @@ function Menu(element, options) {
         content: '.menu__content',
         activeClass: 'is-active',
         openClass: 'is-open',
+        stickyClass: 'is-fixed',
         activeTab: 0,
-        alwaysOpen: false
+        alwaysOpen: false,
+        sticky: true,
     };
 
     $.extend(this.config, options || {});
 
     this.$el       = element instanceof jQuery ? element : $(element);
     this.activeTab = this.config.activeTab;
-    this.opened    = this.config.alwaysOpen ? true : false;
+    this.opened    = false;
+
+    // this.opened    = this.config.alwaysOpen ? true : false;
 
     this.init();
 
@@ -14950,12 +14960,8 @@ Menu.prototype = {
             if (!_.opened) {
                 _.toggleTabs(index);
                 _.open();
-            } else {
-                // if (index === _.activeTab) {
-                    // _.close();
-                // } else {
+            } else if (index !== _.activeTab) {
                 _.toggleTabs(index);
-                // }
             }
         });
 
@@ -14964,13 +14970,13 @@ Menu.prototype = {
         });
 
         this.$el.on('mouseleave', function() {
-            if (_.opened) {
+            if (_.opened && !_.config.alwaysOpen) {
                 _.close();
             }
         });
 
         $('body').on('click', function() {
-            if (_.opened) {
+            if (_.opened && !_.config.alwaysOpen) {
                 _.close();
             }
         });
@@ -14994,6 +15000,42 @@ Menu.prototype = {
         $(_.$tabs[_.activeTab]).removeClass(_.config.activeClass);
         $(_.$tabs[index]).addClass(_.config.activeClass);
         _.activeTab = index;
+    },
+
+    makeSticky: function() {
+        var _      = this;
+        var win    = $(window);
+        var scroll = win.scrollTop();
+        var scrollDirection;
+        var offset = _.$el.offset().top;
+
+        win.on('scroll', function() {
+            var updatedScroll = win.scrollTop();
+            if (updatedScroll >= scroll) {
+                scrollDirection = 'FORVARD';
+            } else {
+                scrollDirection = 'BACKWARD';
+            }
+
+            scroll = win.scrollTop();
+
+            if (scrollDirection == 'FORVARD' && scroll > offset) {
+                _.$el.addClass(_.config.stickyClass);
+                _.close();
+            }
+
+            if (scrollDirection == 'BACKWARD') {
+
+                if (scroll <= offset) {
+                    _.$el.removeClass(_.config.stickyClass);
+                    if (_.config.alwaysOpen) {
+                        _.open();
+                    }
+                } else {
+                    _.close();
+                }
+            }
+        });
     },
 
     open: function() {
@@ -15041,12 +15083,25 @@ Menu.prototype = {
         _.$tabs    = _.$el.find(_.config.tab);
         _.$content = _.$el.find(_.config.content);
 
+        // if (_.config.alwaysOpen) {
+        //     _._initModEvents();
+        //     _.toggleTabs(_.activeTab);
+        // } else {
+        //     _._initEvents();
+        //     _.$content.slideUp();
+        // }
+
         if (_.config.alwaysOpen) {
-            _._initModEvents();
             _.toggleTabs(_.activeTab);
+            _.open();
         } else {
-            _._initEvents();
             _.$content.slideUp();
+        }
+
+        _._initEvents();
+
+        if (_.config.sticky) {
+            _.makeSticky();
         }
     }
 

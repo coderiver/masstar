@@ -442,9 +442,20 @@ a.btn
 
 
 .scroll-to-top
-  background: none
-  .icon
+  background: #FFF
+  background: rgba(#FFF, 0.5)
+  box-sizing: border-box
+  border-radius: 50%
+  padding: 7px
+  color: #012C77
+  color: rgba(#012C77, 0.2)
+  +trans(color)
+  font-size: 48px
+  .icon,
+  .ico
     display: block
+  &:hover
+    color: $red
 
 
 .heading

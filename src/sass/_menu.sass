@@ -3,6 +3,9 @@
   position: relative
   z-index: 1
 
+.menu-wrapper_large
+  height: 470px
+
 .menu
   position: absolute
   top: 0
@@ -23,6 +26,16 @@
       margin: auto
       background-color: #000B20
       box-shadow: 0 0 100px 22px #000B20
+  &.is-fixed
+    position: fixed
+    top: 0
+    left: 0
+    right: auto
+    left: 50%
+    right: auto
+    width: 980px
+    margin-left: -490px
+    z-index: 99
 
 .menu_opened
   position: relative
@@ -46,42 +59,64 @@
   font-size: 22px
   line-height: normal
   font-weight: normal
+  transform: translate3d(0,0,0)
   +spacing(50)
-  > span
-    display: inline-block
-    padding-right: 20px
-    position: relative
-    &:after
-      content: ""
-      position: absolute
-      top: 50%
-      right: 4px
-      margin: -4px -2px 0 0
-      +arr(5,8,#FFF,r)
+  // &:after
+  //   content: ""
+  //   position: absolute
+  //   z-index: 0
+  //   top: 0
+  //   left: 0
+  //   right: 0
+  //   bottom: 0
+  //   background: #012C77
+  //   transition: all 0.2s ease 0.2s
   &:before
     content: ""
     position: absolute
+    z-index: 1
     bottom: 0
     left: 0
     right: 0
     height: 3px
     background: #001740
+    transition: all 0.2s ease
+  > span
+    display: inline-block
+    padding-right: 20px
+    position: relative
+    z-index: 1
+    &:after
+      @extend %ico
+      position: absolute
+      content: $ico-arr-right
+      top: 50%
+      right: 4px
+      margin: -4px -2px 0 0
+      font-size: 9px
   &:nth-child(2)
     background: #0C419E
     &:before
       background: #092556
+    // &:after
+    //   background: #0C419E
   &:last-child
     background: #1165AB
     &:before
       background: #0F4B7D
+    // &:after
+    //   background: #1165AB
   &.is-active
     background: none
+    transition: background 0.1s linear 0.2s
     &:before
       display: none
     > span
       &:after
-        margin: -2px -4px 0 0
-        +arr(8,5,#FFF,b)
+        margin: -3px -2px 0 0
+        content: $ico-arr-down
+  .menu.is-open &
+    transition: none
 
 .menu__tab
   display: none
@@ -89,9 +124,9 @@
   padding: 112px 0 0 33.333%
   box-sizing: border-box
   height: 470px
-  // font-size: 0
   background: #012C77 img-url('tiger.png') no-repeat 100% 50%
   overflow: hidden
+  transform: translate3d(0,0,0)
   +clr
   &:before
     content: ""
@@ -123,8 +158,6 @@
   z-index: 1
   width: 50%
   box-sizing: border-box
-  // display: inline-block
-  // vertical-align: top
   padding-right: 40px
   font-size: 15px
 

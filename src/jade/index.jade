@@ -1,14 +1,15 @@
 block vars
   - var bodyClass = 'main-page'
   - var menuMod = 'menu_opened'
+  - var menuWrapperMod = 'menu-wrapper_large'
   - var headerMod = 'header_large'
 
 extends _layout
 
-append scripts
-  script(type="text/javascript", src="js/skrollr.min.js")
-  script
-    | skrollr.init();
+//- append scripts
+//-   script(type="text/javascript", src="js/skrollr.min.js")
+//-   script
+//-     | skrollr.init();
 
 block title
   title Main
