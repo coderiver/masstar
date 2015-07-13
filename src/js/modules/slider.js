@@ -11,7 +11,7 @@ function Slider(element, config) {
         fade: false,
         arrows: true,
         dots: false,
-        slide: this.$slider.find('.slide'),
+        slide: '.slide',
         prevArrow: this.$el.find('.slider__prev'),
         nextArrow: this.$el.find('.slider__next')
     };

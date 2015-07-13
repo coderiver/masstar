@@ -17,7 +17,6 @@
   },
   "browserify": {
     "transform": [
-      "debowerify",
       "browserify-shim"
     ]
   },
@@ -48,6 +47,6 @@
   },
   "dependencies": {
     "jquery": "^1.11.3",
-    "slick-carousel": "^1.5.5"
+    "slick-carousel": "^1.5.6"
   }
 }

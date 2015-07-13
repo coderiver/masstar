@@ -384,8 +384,11 @@ a.more-link { display: inline-block; }
 
 .product-tile { display: block; position: relative; vertical-align: top; box-sizing: border-box; padding: 20px 20px 75px 20px; min-height: 340px; background: #FFF; box-shadow: 0 0 0 1px #BFC5D0; text-decoration: none; color: inherit; -webkit-transition: box-shadow 0.2s linear; transition: box-shadow 0.2s linear; }
 .product-tile:hover { box-shadow: 0 0 21px rgba(0, 40, 111, 0.18); }
+.product-tile:hover .title_link a { color: #E43C3C; border-color: rgba(228, 60, 60, 0.3); }
+.product-tile:hover .product-tile__logos { opacity: 1; }
+.product-tile:hover .btn_blue { color: #FFF; background: #0C419E; }
 
-.product-tile__logos { margin: 20px -15px 0 0; font-size: 0; }
+.product-tile__logos { margin: 20px -15px 0 0; font-size: 0; opacity: 0.7; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
 .product-tile__logos > li { display: inline-block; vertical-align: bottom; margin-right: 15px; }
 .product-tile__logos img { display: block; max-width: 100%; }
 
@@ -397,7 +400,7 @@ a.more-link { display: inline-block; }
 
 .product-tile__price { float: right; }
 
-.product-link { text-decoration: none; color: #0C419E; font-size: 18px; line-height: 1.555; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+.product-link { display: block; text-decoration: none; color: #0C419E; font-size: 18px; line-height: 1.555; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
 .product-link:hover .product-link__text { border-color: #E43C3C; border-color: rgba(228, 60, 60, 0.3); color: #E43C3C; }
 
 .product-link__icon { font-size: 0; white-space: nowrap; text-align: left; }
@@ -585,6 +588,7 @@ a.more-link { display: inline-block; }
 .slider_narrow .slider__slides { padding: 0; margin: 0 -20px; }
 .slider_narrow .slider__prev, .slider_narrow .slider__next { background: #EDEFF3; }
 .slider_narrow a { text-decoration: underline; }
+.slider_narrow a:hover { color: #E43C3C; }
 
 .slide { display: none; float: left; position: relative; padding: 50px 40px 55px; box-sizing: border-box; *zoom: 1; }
 .slide:after { content: " "; display: table; clear: both; }
