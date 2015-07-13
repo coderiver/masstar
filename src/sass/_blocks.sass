@@ -27,8 +27,11 @@
   &:active
     transform: translate(0, 1px)
     box-shadow: none
-  .icon
+  .icon,
+  .ico
     margin-right: 10px
+  .ico-phone
+    font-size: 20px
 
 a.btn
   line-height: 35px
@@ -131,11 +134,14 @@ a.btn
   padding-left: 50px
   position: relative
   &:before
-    content: ""
+    @extend %ico
+    content: $ico-phone
+    font-size: 47px
     position: absolute
-    bottom: 9px
+    bottom: 4px
     left: 0
-    +sprite(phone-large)
+    color: $link
+    // +sprite(phone-large)
   > a
     font-size: 48px
     white-space: nowrap
@@ -352,12 +358,14 @@ a.btn
   color: $link
   +trans
   &:before
-    content: ""
+    @extend %ico
+    content: $ico-flex-media
     position: absolute
     top: 50%
     left: 0
-    margin-top: -15.5px
-    +sprite(flex-logo)
+    margin-top: -15px
+    // +sprite(flex-logo)
+    font-size: 30px
   &:hover
     color: $red
 
@@ -488,11 +496,14 @@ a.btn
   white-space: nowrap
   +f(b)
   &:before
-    content: ""
+    // content: ""
+    // +sprite(file)
+    @extend %ico
+    content: $ico-file
+    font-size: 24px
     display: inline-block
     vertical-align: middle
     margin-right: 10px
-    +sprite(file)
   .icon
     vertical-align: middle
     margin-right: 10px

@@ -15157,7 +15157,6 @@ function Accordion(element, config) {
     this.$el      = element instanceof jQuery ? element : $(element);
     this.$item    = this.$el.find(this.options.item);
     this.$btn     = this.$el.find(this.options.btn);
-    // this.$content = this.$el.find(this.options.content);
 
     this.init();
 
@@ -15182,7 +15181,6 @@ Accordion.prototype = {
 
     init: function() {
         this._initEvents();
-        console.log(this);
     }
 
 };
@@ -15256,14 +15254,18 @@ function Menu(element, options) {
         stickyClass: 'is-fixed',
         activeTab: 0,
         alwaysOpen: false,
-        sticky: true,
+        sticky: true
     };
 
     $.extend(this.config, options || {});
 
+    // 470px - height of menu
+    this.config.shiftY = this.config.alwaysOpen ? 470 : 0;
+
     this.$el       = element instanceof jQuery ? element : $(element);
     this.activeTab = this.config.activeTab;
     this.opened    = false;
+    this.isFixed   = false;
 
     // this.opened    = this.config.alwaysOpen ? true : false;
 
@@ -15297,6 +15299,10 @@ Menu.prototype = {
 
         this.$el.on('mouseleave', function() {
             if (_.opened && !_.config.alwaysOpen) {
+                _.close();
+            }
+
+            if (_.opened && _.config.alwaysOpen && _.isFixed) {
                 _.close();
             }
         });
@@ -15333,7 +15339,7 @@ Menu.prototype = {
         var win    = $(window);
         var scroll = win.scrollTop();
         var scrollDirection;
-        var offset = _.$el.offset().top;
+        var offset = _.$el.offset().top + _.config.shiftY;
 
         win.on('scroll', function() {
             var updatedScroll = win.scrollTop();
@@ -15345,36 +15351,61 @@ Menu.prototype = {
 
             scroll = win.scrollTop();
 
-            if (scrollDirection == 'FORVARD' && scroll > offset) {
-                _.$el.addClass(_.config.stickyClass);
-                _.close();
+            if (scrollDirection == 'FORVARD' && scroll > offset && !_.isFixed) {
+                _._toggleFixedPosition();
             }
 
-            if (scrollDirection == 'BACKWARD') {
-
-                if (scroll <= offset) {
-                    _.$el.removeClass(_.config.stickyClass);
-                    if (_.config.alwaysOpen) {
-                        _.open();
-                    }
-                } else {
-                    _.close();
-                }
+            if (scrollDirection == 'BACKWARD' && scroll <= offset && _.isFixed) {
+                _._toggleFixedPosition();
             }
         });
     },
 
-    open: function() {
+    _toggleFixedPosition: function() {
+        var _ = this;
+        if (_.config.alwaysOpen) {
+            if (_.isFixed) {
+                _.$el.removeClass(_.config.stickyClass);
+                _.open(0, 0);
+                _.isFixed = false;
+            } else {
+                _.close(0);
+                _.$el.css('top', -67);
+                _.$el.addClass(_.config.stickyClass);
+                _.$el.animate({top: 0}, 300, function() {
+                    _.$el.css('top', '');
+                });
+
+                _.isFixed = true;
+            }
+        } else {
+            if (_.isFixed) {
+                _.$el.removeClass(_.config.stickyClass);
+                _.isFixed = false;
+            } else {
+                _.$el.addClass(_.config.stickyClass);
+                _.close(0);
+                _.isFixed = true;
+            }
+        }
+    },
+
+    open: function(duration, index) {
         if (this.opened) return;
 
-        var _ = this;
+        var _        = this;
+        var duration = $.isNumeric(duration) ? duration : 300;
 
         _.$content.slideDown({
-            duration: 300,
+            duration: duration,
             start: function() {
                 setTimeout(function() {
                     _.$el.addClass(_.config.openClass);
                 }, 100);
+
+                if ($.isNumeric(index)) {
+                    _.toggleTabs(index);
+                }
             },
 
             complete: function() {
@@ -15383,13 +15414,14 @@ Menu.prototype = {
         });
     },
 
-    close: function() {
+    close: function(duration) {
         if (!this.opened) return;
 
-        var _ = this;
+        var _        = this;
+        var duration = $.isNumeric(duration) ? duration : 300;
 
         _.$content.slideUp({
-            duration: 300,
+            duration: duration,
             start: function() {
                 setTimeout(function() {
                     $(_.$buttons[_.activeTab]).removeClass(_.config.activeClass);

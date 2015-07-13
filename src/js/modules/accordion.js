@@ -13,7 +13,6 @@ function Accordion(element, config) {
     this.$el      = element instanceof jQuery ? element : $(element);
     this.$item    = this.$el.find(this.options.item);
     this.$btn     = this.$el.find(this.options.btn);
-    // this.$content = this.$el.find(this.options.content);
 
     this.init();
 
@@ -38,7 +37,6 @@ Accordion.prototype = {
 
     init: function() {
         this._initEvents();
-        console.log(this);
     }
 
 };
