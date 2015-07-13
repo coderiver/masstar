@@ -627,9 +627,10 @@ a.more-link
   +trans(box-shadow)
   &:hover
     box-shadow: 0 0 21px rgba(0, 40, 111, 0.18)
-    .title_link a
-      color: $red
-      border-color: rgba($red, 0.3)
+    .title_link
+      > *
+        color: $red
+        border-color: rgba($red, 0.3)
     .product-tile__logos
       opacity: 1
     .btn_blue

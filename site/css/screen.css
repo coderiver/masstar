@@ -384,7 +384,7 @@ a.more-link { display: inline-block; }
 
 .product-tile { display: block; position: relative; vertical-align: top; box-sizing: border-box; padding: 20px 20px 75px 20px; min-height: 340px; background: #FFF; box-shadow: 0 0 0 1px #BFC5D0; text-decoration: none; color: inherit; -webkit-transition: box-shadow 0.2s linear; transition: box-shadow 0.2s linear; }
 .product-tile:hover { box-shadow: 0 0 21px rgba(0, 40, 111, 0.18); }
-.product-tile:hover .title_link a { color: #E43C3C; border-color: rgba(228, 60, 60, 0.3); }
+.product-tile:hover .title_link > * { color: #E43C3C; border-color: rgba(228, 60, 60, 0.3); }
 .product-tile:hover .product-tile__logos { opacity: 1; }
 .product-tile:hover .btn_blue { color: #FFF; background: #0C419E; }
 
@@ -785,6 +785,8 @@ ol.marked-list { list-style-type: decimal; }
 
 .advantage { display: block; color: inherit; text-decoration: none; line-height: 1.333; font-size: 15px; max-width: 150px; margin: auto; }
 .advantage + .advantage { margin-top: 30px; }
+.advantage:hover { color: inherit; }
+.advantage:hover .advantage__title { color: #E43C3C; border-color: rgba(228, 60, 60, 0.3); }
 
 .advantage__icon { width: 80px; height: 80px; margin: 0 auto 5px; border-radius: 50%; box-sizing: border-box; text-align: center; line-height: 80px; background: #EDEFF3; }
 .advantage__icon .icon { vertical-align: middle; }

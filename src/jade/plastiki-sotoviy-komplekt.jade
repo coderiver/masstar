@@ -1,4 +1,8 @@
 extends _layout
+block vars
+  - var asideNavActive = 'is-active'
+  - var asideSubNav = true
+  - var asideSubNavActive = 'is-active'
 
 block title
   title Plastiki
@@ -37,7 +41,7 @@ block content
 
           //BEGIN short-about
           .short-about
-            .short-about__pic(style="background-image:url('img/torcevoy-prof.jpg')")
+            a.short-about__pic.js-box(style="background-image:url('img/torcevoy-prof.jpg')", href="img/torcevoy-prof.jpg")
             .short-about__content
               strong.title.title_medium
                 | Кратко
@@ -89,7 +93,7 @@ block content
                   li
                     | <strong>Неограниченные конструкционные возможности</strong> (благодаря легкости листов можно
                     | создавать элегантные, легкие и оригинальные конструкции).
-              button.container-more__btn(type="button", data-alt-text="Скрыть")
+              button.container-more__btn(type="button", data-alt-text="Скрыть свойства")
                 | Показать ещё свойства
 
             br

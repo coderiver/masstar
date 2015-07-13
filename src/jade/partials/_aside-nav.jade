@@ -4,17 +4,18 @@ ul.aside-nav
     a.aside-nav__link(href="#")
       span Монолитный поликарбонат
   li.aside-nav__item
-    a.aside-nav__link.is-active(href="#")
+    a.aside-nav__link(href="#", class= asideNavActive)
       span Сотовый поликарбонат
-    .aside-nav__subnav
-      span.aside-nav__label Комплектующие:
-      ul
-        li: a.aside-nav__sublink.is-active(href="#")
-          span Торцевой профиль
-        li: a.aside-nav__sublink(href="#")
-          span Соединительный неразъемный
-        li: a.aside-nav__sublink(href="#")
-          span «Полискреп»
+    if asideSubNav
+      .aside-nav__subnav
+        span.aside-nav__label Комплектующие:
+        ul
+          li: a.aside-nav__sublink(href="#", class= asideSubNavActive)
+            span Торцевой профиль
+          li: a.aside-nav__sublink(href="#")
+            span Соединительный неразъемный
+          li: a.aside-nav__sublink(href="#")
+            span «Полискреп»
   li.aside-nav__item
     a.aside-nav__link(href="#")
       span Полистирол в листах
