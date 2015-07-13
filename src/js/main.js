@@ -48,7 +48,7 @@ $(document).ready(function() {
         largeSlider.find('.large-slider__slides').slick({
             prevArrow: largeSlider.find('.large-slider__prev'),
             nextArrow: largeSlider.find('.large-slider__next'),
-            slide: largeSlider.find('.large-slide'),
+            slide: '.large-slide',
             autoplay: true,
             autoplySpeed: 7000
         });

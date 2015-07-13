@@ -576,7 +576,7 @@ a.more-link { display: inline-block; }
 
 .slider__prev, .slider__next { width: 24px; height: 24px; line-height: 24px; background: #FFF; box-shadow: 2px 2px 0 0 #D1D7E2; border-radius: 50%; text-align: center; line-height: normal; color: #BBC3D1; font-size: 10px; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
 .slider__prev:active, .slider__next:active { -webkit-transform: translate(0, 1px); -ms-transform: translate(0, 1px); transform: translate(0, 1px); box-shadow: none; }
-.slider__prev:before, .slider__next:before { content: ""; vertical-align: middle; position: relative; }
+.slider__prev:before, .slider__next:before { content: ""; position: relative; }
 .slider__prev:hover, .slider__next:hover { color: #E43C3C; }
 
 .slider__prev { margin-right: 3px; }
