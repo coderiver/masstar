@@ -5,15 +5,15 @@
       | Закрыть
 
     //BEGIN form
-    form.form
+    form.form#callback-form(name="callback", novalidate)
       strong.title.title_center
         | Обратный звонок
       .field
-        label.field__label(for="name") Имя<sup>*</sup>
-        input.input(type="text", name="name", id="name", value="Наталья", required)
+        label.field__label(for="callback_name") Имя<sup>*</sup>
+        input.input(type="text", name="name", id="callback_name", required)
       .field
-        label.field__label(for="phone") Телефон<sup>*</sup>
-        input.input(type="tel", name="phone", id="phone", required)
+        label.field__label(for="callback_phone") Телефон<sup>*</sup>
+        input.input(type="tel", name="phone", id="callback_phone", required)
       button.btn.btn_blue.btn_gray.btn_fw(type="submit")
         | Закзать
     //END form

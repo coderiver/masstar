@@ -540,7 +540,7 @@ ul.marked-list
     &:before
       content: ""
       position: absolute
-      top: em(7,15)
+      top: em(10,15)
       left: 0
       width: 6px
       height: 6px
@@ -958,7 +958,7 @@ ol.marked-list
   color: $dark
   +trans
   transition-property: background, border-color
-  &:focus
+  &:focus, &.is-dirty
     background: #FFF
   &.is-error
     border-color: $red
@@ -1003,7 +1003,7 @@ textarea.input
 
 .accordion__btn
   position: relative
-  padding-right: 16px
+  padding: 0 16px 1px 0
   background: none
   text-decoration: none
   color: $link
@@ -1016,13 +1016,14 @@ textarea.input
     @extend %ico
     content: $ico-caret-down
     position: absolute
-    top: 5px
+    top: 6px
     right: 0
     font-size: 12px
   &:hover
     color: $red
   &.is-active
-    color: $blue
+    // color: $blue
+    color: $dark
     &:after
       content: $ico-caret-up
 

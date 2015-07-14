@@ -1,12 +1,15 @@
 global.jQuery = global.$ = require('jquery');
 require('slick-carousel');
+require('jquery-touchswipe');
+require('validate-js');
 require('../../bower_components/fancybox/source/jquery.fancybox.js');
 
-var Menu      = require('./modules/menu.js');
-var Slider    = require('./modules/slider.js');
-var Accordion = require('./modules/accordion.js');
-var Popup     = require('./modules/popup.js');
-var Anchor    = require('./modules/anchor.js');
+var Menu             = require('./modules/menu.js');
+var Slider           = require('./modules/slider.js');
+var Accordion        = require('./modules/accordion.js');
+var Popup            = require('./modules/popup.js');
+var Anchor           = require('./modules/anchor.js');
+var formErrorHandler = require('./modules/form-error-handler.js');
 
 $(document).ready(function() {
 
@@ -21,6 +24,8 @@ $(document).ready(function() {
     var parallax      = $('.parallax');
     var anchor        = new Anchor('.scroll-to-top');
     var popup         = new Popup();
+    var orderForm     = $('#order-form');
+    var callbackForm  = $('#callback-form');
 
     if (menu.length) {
         menu = new Menu(menu);
@@ -102,6 +107,20 @@ $(document).ready(function() {
             next: '<a title="Следующий" class="fancybox-nav popup-slider__next ico ico-slider-next" href="javascript:;"><span></span></a>',
             prev: '<a title="Предыдущий" class="fancybox-nav popup-slider__prev ico ico-slider-prev" href="javascript:;"><span></span></a>'
         },
+        afterShow: function() {
+            var _ = this;
+            _.outer.swipe({
+                allowPageScroll: 'auto',
+                swipeLeft: function() {
+                    $.fancybox.prev();
+                },
+
+                swipeRight: function() {
+                    $.fancybox.next();
+                }
+            });
+        },
+
         beforeClose: function() {
             this.skin.addClass('is-close');
         }
@@ -119,5 +138,55 @@ $(document).ready(function() {
             popup.open($this.data('popup'));
         });
     });
+
+    // order form validation
+    if (orderForm.length) {
+        var orderValidator = new FormValidator(orderForm.attr('name'), [{
+            name: 'name',
+            display: 'name',
+            rules: 'required'
+        }, {
+            name: 'phone',
+            display: 'phone number',
+            rules: 'required|numeric|min_length[7]'
+        }, {
+            name: 'email',
+            display: 'e-mail',
+            rules: 'valid_email'
+        }], function(errors) {
+            formErrorHandler(errors);
+        });
+    }
+
+    // callback form validation
+    if (callbackForm.length) {
+        var callbackValidator = new FormValidator(callbackForm.attr('name'), [{
+            name: 'name',
+            display: 'name',
+            rules: 'required'
+        }, {
+            name: 'phone',
+            display: 'phone number',
+            rules: 'required|numeric|min_length[7]'
+        }], function(errors) {
+            formErrorHandler(errors);
+        });
+    }
+
+    $('form .input')
+        .on('blur', function() {
+            var $this = $(this);
+            if ($this.val().length > 0) {
+                $this.addClass('is-dirty');
+            } else {
+                $this.removeClass('is-dirty');
+            }
+        })
+        .on('focus', function() {
+            var $this = $(this);
+            if ($this.hasClass('is-error')) {
+                $this.removeClass('is-error');
+            }
+        });
 
 });

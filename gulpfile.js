@@ -5,7 +5,6 @@ var requireDir = require('require-dir');
 requireDir('./gulp/tasks', {recurse: true});
 
 gulp.task('build', [
-  'svg-sprite',
   'sprite',
   'sass',
   'jade-all',

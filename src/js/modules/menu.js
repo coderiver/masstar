@@ -40,17 +40,31 @@ Menu.prototype = {
 
             e.preventDefault();
 
+            if (e.type == 'touchend' && index === _.activeTab && _.opened) {
+                if (_.config.alwaysOpen) {
+                    if (_.isFixed) {
+                        console.log(_.isFixed);
+                        _.close();
+                    }
+                } else {
+                    _.close();
+                }
+
+                return;
+            }
+
             if (!_.opened) {
                 _.toggleTabs(index);
                 _.open();
             } else if (index !== _.activeTab) {
                 _.toggleTabs(index);
             }
+
         });
 
-        this.$el.on('click', function(e) {
-            e.stopPropagation();
-        });
+        // this.$el.on('click', function(e) {
+        //     e.stopPropagation();
+        // });
 
         this.$el.on('mouseleave', function() {
             if (_.opened && !_.config.alwaysOpen) {
@@ -62,11 +76,14 @@ Menu.prototype = {
             }
         });
 
-        $('body').on('click', function() {
-            if (_.opened && !_.config.alwaysOpen) {
-                _.close();
-            }
-        });
+        // $(document).on('click', function(e) {
+        //     console.log(e);
+        //     if (_.opened && _.alwaysOpen && _.isFixed) {
+        //         _.close();
+        //     } else if (_.opened && !_.alwaysOpen) {
+        //         _.close();
+        //     }
+        // });
     },
 
     _initModEvents: function() {
