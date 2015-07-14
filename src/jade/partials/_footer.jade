@@ -2,7 +2,12 @@
 footer.footer
   if footerMap
     #map-canvas
-      img(src="img/map.jpg", style="display:block")
+      //- img(src="img/map.jpg", style="display:block")
+      script(
+        type="text/javascript",
+        charset="utf-8",
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=tiXWFrOR3FnebuyN2XjlX8l19XT-YMum&width=100%&height=365"
+        )
   .l
     include _links
 
