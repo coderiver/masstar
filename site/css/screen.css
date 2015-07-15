@@ -198,7 +198,7 @@ hr { margin: 40px 0; border: none; height: 1px; background: #EDEFF3; }
 .slick-loading .slick-slide { visibility: hidden; }
 .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
 
-.btn { display: inline-block; min-width: 180px; height: 35px; box-sizing: border-box; padding: 0 10px; border-radius: 3px; background: #FFF; box-shadow: 1px 2px 3px 0px #001130; letter-spacing: 0.07em; font-family: "Calibri", Helvetica, Arial, sans-serif; font-weight: normal; text-align: center; font-size: 13px; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; text-transform: uppercase; text-decoration: none; color: #000; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; -webkit-transition-property: color, background; transition-property: color, background; }
+.btn { display: inline-block; min-width: 180px; height: 35px; box-sizing: border-box; padding: 0 10px; border-radius: 3px; background: #FFF; box-shadow: 1px 2px 3px 0px #001130; letter-spacing: 0.07em; text-align: center; font-size: 13px; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; text-transform: uppercase; text-decoration: none; color: #000; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; -webkit-transition-property: color, background; transition-property: color, background; }
 .btn > span { display: inline-block; vertical-align: middle; }
 .btn:hover { background: #E43C3C; color: #FFF; }
 .btn:active { -webkit-transform: translate(0, 1px); -ms-transform: translate(0, 1px); transform: translate(0, 1px); box-shadow: none; }
@@ -658,7 +658,7 @@ a.more-link { display: inline-block; }
 .links a { text-decoration: none; display: inline-block; color: #012C77; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
 .links a:hover { color: #E43C3C; }
 
-.links__list { float: left; width: 25%; }
+.links__list { float: left; width: 25%; box-sizing: border-box; padding: 0 50px 0 0; }
 .links__list > li { margin-top: 22px; }
 .links__list > li:first-child { margin-top: 0; }
 

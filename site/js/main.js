@@ -131,6 +131,7 @@ $(document).ready(function() {
         var $this = $(this);
         $this.on('click', function(e) {
             popup.open($this.data('popup'));
+            return false;
         });
     });
 
