@@ -1,9 +1,3 @@
-global.jQuery = global.$ = require('jquery');
-require('slick-carousel');
-require('jquery-touchswipe');
-require('validate-js');
-require('../../bower_components/fancybox/source/jquery.fancybox.js');
-
 var Menu             = require('./modules/menu.js');
 var Slider           = require('./modules/slider.js');
 var Accordion        = require('./modules/accordion.js');
@@ -141,52 +135,32 @@ $(document).ready(function() {
 
     // order form validation
     if (orderForm.length) {
-        var orderValidator = new FormValidator(orderForm.attr('name'), [{
-            name: 'name',
-            display: 'name',
-            rules: 'required'
-        }, {
-            name: 'phone',
-            display: 'phone number',
-            rules: 'required|numeric|min_length[7]'
-        }, {
-            name: 'email',
-            display: 'e-mail',
-            rules: 'valid_email'
-        }], function(errors) {
-            formErrorHandler(errors);
+        orderForm.validate({
+            debug: true
         });
     }
 
     // callback form validation
     if (callbackForm.length) {
-        var callbackValidator = new FormValidator(callbackForm.attr('name'), [{
-            name: 'name',
-            display: 'name',
-            rules: 'required'
-        }, {
-            name: 'phone',
-            display: 'phone number',
-            rules: 'required|numeric|min_length[7]'
-        }], function(errors) {
-            formErrorHandler(errors);
+        callbackForm.validate({
+            debug: true
         });
     }
 
-    $('form .input')
-        .on('blur', function() {
-            var $this = $(this);
-            if ($this.val().length > 0) {
-                $this.addClass('is-dirty');
-            } else {
-                $this.removeClass('is-dirty');
-            }
-        })
-        .on('focus', function() {
-            var $this = $(this);
-            if ($this.hasClass('is-error')) {
-                $this.removeClass('is-error');
-            }
-        });
+    // $('form .input')
+    //     .on('blur', function() {
+    //         var $this = $(this);
+    //         if ($this.val().length > 0) {
+    //             $this.addClass('is-dirty');
+    //         } else {
+    //             $this.removeClass('is-dirty');
+    //         }
+    //     })
+    //     .on('focus', function() {
+    //         var $this = $(this);
+    //         if ($this.hasClass('is-error')) {
+    //             $this.removeClass('is-error');
+    //         }
+    //     });
 
 });

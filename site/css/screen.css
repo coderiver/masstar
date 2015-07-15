@@ -845,8 +845,8 @@ ol.marked-list { list-style-type: decimal; }
 .field__label sup { color: #E43C3C; }
 
 .input { display: block; width: 100%; padding: 5px 10px; box-sizing: border-box; height: 36px; line-height: normal; background: #F9F9F9; border-radius: 0; border: 1px solid #BFC5D0; font-family: "Calibri", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 15px; color: #151515; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; -webkit-transition-property: background, border-color; transition-property: background, border-color; }
-.input:focus, .input.is-dirty { background: #FFF; }
-.input.is-error { border-color: #E43C3C; color: #E43C3C; }
+.input:focus, .input.is-dirty, .input.valid { background: #FFF; }
+.input.is-error, .input.error { border-color: #E43C3C; color: #E43C3C; }
 
 textarea.input { height: 110px; resize: none; }
 
