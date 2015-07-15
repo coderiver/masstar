@@ -699,8 +699,6 @@ ol.marked-list
     padding: 15px 0 16px 20px
     box-sizing: border-box
     vertical-align: top
-    &:first-child
-      max-width: 160px
     &:last-child
       text-align: right
       padding-right: 20px
@@ -726,6 +724,39 @@ ol.marked-list
     background: $hrcolor
   .file
     margin-top: 13px
+
+.table_head-hidden
+  thead
+    background: none
+    border: none
+    user-select: none
+    pointer-events: none
+    td, th
+      height: 0
+      padding-top: 0
+      padding-bottom: 0
+      line-height: 0
+      overflow: hidden
+      vertical-align: top
+      background: none
+
+
+.table_product
+  table-layout: fixed
+  td, th
+    &:first-child
+      width: percentage(175/730)
+    &:nth-child(2)
+      width: percentage(120/730)
+    &:nth-child(3)
+      width: percentage(135/730)
+    &:nth-child(4)
+      width: percentage(90/730)
+    &:nth-child(5)
+      width: percentage(75/730)
+    &:nth-child(6)
+      width: percentage(110/730)
+
 
 
 // .container-more
