@@ -198,7 +198,7 @@ hr { margin: 40px 0; border: none; height: 1px; background: #EDEFF3; }
 .slick-loading .slick-slide { visibility: hidden; }
 .slick-vertical .slick-slide { display: block; height: auto; border: 1px solid transparent; }
 
-.btn { display: inline-block; min-width: 180px; height: 35px; box-sizing: border-box; padding: 0 10px; border-radius: 3px; background: #FFF; box-shadow: 1px 2px 3px 0px #001130; letter-spacing: 0.07em; text-align: center; font-size: 13px; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-style: normal; text-transform: uppercase; text-decoration: none; color: #000; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; -webkit-transition-property: color, background; transition-property: color, background; }
+.btn { display: inline-block; min-width: 180px; height: 35px; box-sizing: border-box; padding: 0 10px; border-radius: 3px; background: #FFF; box-shadow: 1px 2px 3px 0px #001130; letter-spacing: 0.07em; text-align: center; font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 13px; line-height: normal; font-style: normal; text-transform: uppercase; text-decoration: none; color: #000; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; -webkit-transition-property: color, background; transition-property: color, background; }
 .btn > span { display: inline-block; vertical-align: middle; }
 .btn:hover { background: #E43C3C; color: #FFF; }
 .btn:active { -webkit-transform: translate(0, 1px); -ms-transform: translate(0, 1px); transform: translate(0, 1px); box-shadow: none; }
@@ -672,7 +672,7 @@ a.more-link { display: inline-block; }
 .footer__row_align-mid .phone-number { margin: -20px 0 0 -50px; }
 .footer__row_align-mid .icon-logo-small { position: relative; top: 10px; }
 
-.footer__cell { display: table-cell; width: 33.333%; height: 150px; box-sizing: border-box; padding: 35px 0 25px; }
+.footer__cell { display: table-cell; width: 490px; height: 150px; box-sizing: border-box; padding: 35px 0 25px; }
 .footer__cell:first-child { width: 245px; }
 .footer__cell:last-child { width: 245px; text-align: right; }
 
