@@ -133,34 +133,26 @@ $(document).ready(function() {
         });
     });
 
+    var validationOptions = {
+        debug: true,
+        rules: {
+            phone: {
+                minlength: 7
+            }
+        },
+        errorPlacement: function(error, element) {
+            return true;
+        }
+    };
+
     // order form validation
     if (orderForm.length) {
-        orderForm.validate({
-            debug: true
-        });
+        orderForm.validate(validationOptions);
     }
 
     // callback form validation
     if (callbackForm.length) {
-        callbackForm.validate({
-            debug: true
-        });
+        callbackForm.validate(validationOptions);
     }
-
-    // $('form .input')
-    //     .on('blur', function() {
-    //         var $this = $(this);
-    //         if ($this.val().length > 0) {
-    //             $this.addClass('is-dirty');
-    //         } else {
-    //             $this.removeClass('is-dirty');
-    //         }
-    //     })
-    //     .on('focus', function() {
-    //         var $this = $(this);
-    //         if ($this.hasClass('is-error')) {
-    //             $this.removeClass('is-error');
-    //         }
-    //     });
 
 });

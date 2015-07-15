@@ -958,11 +958,12 @@ ol.marked-list
   color: $dark
   +trans
   transition-property: background, border-color
-  &:focus, &.is-dirty, &.valid
+  &:focus, &.valid
     background: #FFF
-  &.is-error, &.error
+  &.error
     border-color: $red
     color: $red
+    background: #F9F9F9
 
 textarea.input
   height: 110px
