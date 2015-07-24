@@ -663,6 +663,7 @@ a.more-link { display: inline-block; }
 .links__list > li:first-child { margin-top: 0; }
 
 .footer { margin-top: 80px; background: #EDEFF3; position: relative; }
+.footer #map-canvas { height: 365px; }
 .footer .scroll-to-top { position: absolute; bottom: 190px; left: 50px; -webkit-transform: translate3d(-100px, 0, 0); transform: translate3d(-100px, 0, 0); opacity: 0; visibility: hidden; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
 .footer .scroll-to-top.is-active { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; visibility: visible; }
 
@@ -837,8 +838,6 @@ ol.marked-list { list-style-type: decimal; }
 
 .contact_small { font-size: 15px; line-height: 1.86; }
 
-#map-canvas { height: 365px; }
-
 .message { box-sizing: border-box; padding: 45px 65px; width: 410px; margin: auto; font-size: 15px; line-height: 1.67; text-align: center; }
 .message a { text-decoration: underline; }
 .message .title { margin-bottom: 18px; }
@@ -946,6 +945,11 @@ textarea.input { height: 110px; resize: none; }
 .fancybox-skin.is-close { -webkit-transform: translate3d(0, 20%, 0) scale(0.5); transform: translate3d(0, 20%, 0) scale(0.5); opacity: 0; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 
 .fancybox-nav, .fancybox-item .popup__close { -webkit-animation: fade-in 0.3s ease 1; animation: fade-in 0.3s ease 1; }
+
+.contacts-group { margin: 0 -10px -20px; font-size: 0; }
+.contacts-group .contact { display: inline-block; vertical-align: top; width: 33.333%; box-sizing: border-box; padding: 0 10px; margin-bottom: 20px; }
+
+.map-small { width: 480px; height: 260px; }
 
 
 

@@ -1,5 +1,9 @@
 extends _layout
 
+append scripts
+  script(type="text/javascript", src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+  script(type="text/javascript", src="js/map.js")
+
 block title
   title Delivery
 
@@ -73,5 +77,6 @@ block content
         p: em
           | Пн-пт: с 9:00 до 18:00 без обеда.<br>
           | Выходные дни: суббота и воскресенье.
-        img(src="img/map-small.jpg", alt="map")
+        //- img(src="img/map-small.jpg", alt="map")
+        #map-canvas.map-small
     //END delivery
