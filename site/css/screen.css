@@ -947,7 +947,7 @@ textarea.input { height: 110px; resize: none; }
 .fancybox-nav, .fancybox-item .popup__close { -webkit-animation: fade-in 0.3s ease 1; animation: fade-in 0.3s ease 1; }
 
 .contacts-group { margin: 0 -10px -20px; font-size: 0; }
-.contacts-group .contact { display: inline-block; vertical-align: top; width: 33.333%; box-sizing: border-box; padding: 0 10px; margin-bottom: 20px; }
+.contacts-group .contact { display: inline-block; vertical-align: top; width: 33.3%; box-sizing: border-box; padding: 0 10px; margin-bottom: 20px; }
 
 .map-small { width: 480px; height: 260px; }
 
