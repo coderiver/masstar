@@ -1,0 +1,16 @@
+extends _layout
+
+block title
+  title Sitemap
+
+block content
+  .l
+    ul.breadcrumbs
+      li: a(href="/") Главная
+      li: a(href="/") Карта сайта
+
+    .heading
+      h1.title.title_large
+        | Карта сайта
+
+    include partials/_sitemap

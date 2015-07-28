@@ -662,6 +662,11 @@ a.more-link { display: inline-block; }
 .links__list > li { margin-top: 22px; }
 .links__list > li:first-child { margin-top: 0; }
 
+.links__sublist { margin-bottom: 35px; padding-left: 10px; font-size: 16px; }
+.links__sublist > li { margin-top: 22px; }
+
+.links_sitemap { padding: 0; border: none; }
+
 .footer { margin-top: 80px; background: #EDEFF3; position: relative; }
 .footer #map-canvas { height: 365px; }
 .footer .scroll-to-top { position: absolute; bottom: 190px; left: 50px; -webkit-transform: translate3d(-100px, 0, 0); transform: translate3d(-100px, 0, 0); opacity: 0; visibility: hidden; -webkit-transition: all 0.5s ease; transition: all 0.5s ease; }
@@ -950,6 +955,11 @@ textarea.input { height: 110px; resize: none; }
 .contacts-group .contact { display: inline-block; vertical-align: top; width: 33.3%; box-sizing: border-box; padding: 0 10px; margin-bottom: 20px; }
 
 .map-small { width: 480px; height: 260px; }
+
+.not-found { text-align: center; margin: 80px 0 200px; }
+.not-found .btn-wrap { margin-top: 53px; }
+
+.not-found__title { font-family: "Calibri-Bold", Helvetica, Arial, sans-serif; font-weight: normal; font-size: 120px; letter-spacing: 0.03em; line-height: 1; color: #D0D5E0; }
 
 
 

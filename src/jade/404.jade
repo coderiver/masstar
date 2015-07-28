@@ -1,0 +1,19 @@
+extends _layout
+
+block title
+  title 404
+
+block content
+  .l
+    ul.breadcrumbs
+      li: a(href="/") Главная
+      li: a(href="#") 404
+
+    .not-found
+      h1.not-found__title
+        | Ошибка 404
+      strong
+        | Страницы не существует или она была удалена
+      .btn-wrap
+        a.btn.btn_blue.btn_gray(href="/")
+          | Главная
