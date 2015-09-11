@@ -7,6 +7,7 @@ function Menu(element, options) {
         activeClass: 'is-active',
         openClass: 'is-open',
         stickyClass: 'is-fixed',
+        delayBeforeOpen: 500,
         activeTab: 0,
         alwaysOpen: false,
         sticky: true
@@ -22,8 +23,6 @@ function Menu(element, options) {
     this.opened    = false;
     this.isFixed   = false;
 
-    // this.opened    = this.config.alwaysOpen ? true : false;
-
     this.init();
 
 }
@@ -34,16 +33,17 @@ Menu.prototype = {
 
     _initEvents: function() {
         var _ = this;
+        var timeout;
         this.$buttons.on('mouseover touchend', function(e) {
             var btn   = $(this);
-            var index = $(this).index();
+            var index = btn.index();
 
             e.preventDefault();
+            clearTimeout(timeout);
 
-            if (e.type == 'touchend' && index === _.activeTab && _.opened) {
+            if (e.type === 'touchend' && index === _.activeTab && _.opened) {
                 if (_.config.alwaysOpen) {
                     if (_.isFixed) {
-                        console.log(_.isFixed);
                         _.close();
                     }
                 } else {
@@ -54,19 +54,18 @@ Menu.prototype = {
             }
 
             if (!_.opened) {
-                _.toggleTabs(index);
-                _.open();
+                timeout = setTimeout(function() {
+                    _.toggleTabs(index);
+                    _.open();
+                }, _.config.delayBeforeOpen);
             } else if (index !== _.activeTab) {
                 _.toggleTabs(index);
             }
-
         });
 
-        // this.$el.on('click', function(e) {
-        //     e.stopPropagation();
-        // });
-
         this.$el.on('mouseleave', function() {
+            clearTimeout(timeout);
+
             if (_.opened && !_.config.alwaysOpen) {
                 _.close();
             }
@@ -75,15 +74,6 @@ Menu.prototype = {
                 _.close();
             }
         });
-
-        // $(document).on('click', function(e) {
-        //     console.log(e);
-        //     if (_.opened && _.alwaysOpen && _.isFixed) {
-        //         _.close();
-        //     } else if (_.opened && !_.alwaysOpen) {
-        //         _.close();
-        //     }
-        // });
     },
 
     _initModEvents: function() {
